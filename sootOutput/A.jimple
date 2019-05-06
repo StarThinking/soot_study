@@ -1,0 +1,43 @@
+public class A extends java.lang.Object
+{
+    private int af;
+
+    public void <init>()
+    {
+        A r0;
+
+        r0 := @this: A;
+
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+
+        r0.<A: int af> = 0;
+
+        return;
+    }
+
+    public int get()
+    {
+        A r0;
+        int $i0;
+
+        r0 := @this: A;
+
+        $i0 = r0.<A: int af>;
+
+        return $i0;
+    }
+
+    public void set(int)
+    {
+        A r0;
+        int i0;
+
+        r0 := @this: A;
+
+        i0 := @parameter0: int;
+
+        r0.<A: int af> = i0;
+
+        return;
+    }
+}
