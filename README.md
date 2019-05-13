@@ -1,9 +1,7 @@
 # Learn how to use Soot
 A guide to learn how to use Soot to do static analysis
 
-## Run examples
-
-### Prerequisite
+## Prerequisite
 
 ```.shell
 sudo apt-get update
@@ -11,6 +9,23 @@ sudo apt-get -y upgrade
 sudo apt-get -y install vim maven
 ```
 
-### Build
+## Build jar
+```.shell
+cd soot_study
+git clone https://github.com/Sable/soot
+cd soot
+mvn clean compile assembly:single
+```
 
-## Run
+## Build and run examples
+```.shell
+. ~/soot_study/export_cp.sh
+cd tutorial/guide/examples/analysis_framework/src
+javac dk/brics/soot/GenHelloWorld.java
+javac dk/brics/soot/RunLiveAnalysis.java
+javac testers/LiveVarsClass.java
+
+cd ~/soot_study/soot
+java dk/brics/soot/GenHelloWorld
+java dk/brics/soot/RunLiveAnalysis
+```
