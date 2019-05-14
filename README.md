@@ -1,11 +1,12 @@
 # Learn how to use Soot
 A guide to learn how to use Soot to do static analysis
 
-## Prerequisite
+## Prerequisite JDK 8
 
 ```.shell
 sudo apt-get update
 sudo apt-get -y upgrade
+sudo apt-get install openjdk-8-jdk
 sudo apt-get -y install vim maven
 ```
 
