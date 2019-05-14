@@ -1,0 +1,97 @@
+import soot.*;
+import soot.jimple.*; 
+import soot.jimple.AssignStmt;
+import soot.jimple.IfStmt;
+import soot.options.Options;
+import soot.toolkits.graph.Block;
+import soot.toolkits.graph.BlockGraph;
+import soot.toolkits.graph.BriefBlockGraph;
+import soot.toolkits.scalar.ArraySparseSet;
+import soot.toolkits.scalar.FlowSet;
+
+import soot.jimple.ThisRef;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+public class Test {
+	public static void main(String[] args) {
+		// Get Main Method
+
+		String classPath = args[0];
+		configureSoot(classPath);
+
+		Scene.v().loadNecessaryClasses();
+		Iterator<SootClass> scIter = Scene.v().getApplicationClasses().snapshotIterator();
+		while (scIter.hasNext()) {
+			SootClass sc = scIter.next();
+			System.out.println("ClassName: " + sc.getName() + ", Methods: " + sc.getMethodCount());
+
+			//SootMethod sMethod = Scene.v().getMainMethod();
+			ArrayList<SootMethod> smList = new ArrayList<SootMethod>(sc.getMethods());
+			for (SootMethod sMethod : smList) {
+				//if (testMethod.getName().equals("<init>") || testMethod.getName().equals("main"))
+				if (sMethod.getName().equals("<init>"))
+					continue;
+				// Create graph based on the method
+				//UnitGraph graph = new BriefUnitGraph(sMethod.getActiveBody());
+				BlockGraph graph = null;
+				try {
+					graph = new BriefBlockGraph(sMethod.retrieveActiveBody());
+				}
+				catch (Exception e) {
+					continue;
+				}
+				// Print live variables at the entry and exit of each node
+				Iterator<Block> graphIt = graph.getBlocks().iterator();
+
+				while (graphIt.hasNext()) {
+					Block block = graphIt.next();
+					ArraySparseSet arraySparseSet = new ArraySparseSet<>();
+
+					Iterator<Unit> unitIt = block.iterator();
+					System.out.println(block);
+					System.out.println("-------------");
+
+					/*
+					while(unitIt.hasNext()) {
+						Unit unit = unitIt.next();	
+						
+						if (unit instanceof InvokeStmt) {
+							InvokeStmt is = (InvokeStmt)unit;
+							InvokeExpr ie = is.getInvokeExpr();
+							System.out.println(ie.getMethod());
+							System.out.println(ie.getMethodRef());
+							System.out.println(ie.getArgs());
+						}	
+						//for (ValueBox useBox : unit.getUseBoxes()) {
+						//	if (useBox.getValue() instanceof Local) {
+						//		Local useLocal = (Local) useBox.getValue();
+						//		arraySparseSet.add(useLocal.getName());
+						//	}
+						//	else if (useBox.getValue() instanceof ThisRef) {
+						//		arraySparseSet.add(useBox.toString());
+						//	}
+						//}
+					}
+					 */
+					//System.out.println(arraySparseSet);
+					System.out.println("-------------");
+				}
+			}
+		}
+	}
+
+	private static void configureSoot(String classpath) {
+		Options.v().set_whole_program(true);  // process whole program
+		Options.v().set_allow_phantom_refs(true); // load phantom references
+		Options.v().set_prepend_classpath(true); // prepend class path
+		Options.v().set_src_prec(Options.src_prec_class); // process only .class files
+		ArrayList<String> list = new ArrayList<>();
+		list.add(classpath);
+		Options.v().set_process_dir(list); // process all .class files in directory
+		//Options.v().setPhaseOption("cg.spark", "on"); // use spark for call graph
+		Options.v().set_output_dir("/tmp/sootOutput"); // use spark for call graph
+	}
+}
