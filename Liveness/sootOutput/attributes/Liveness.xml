@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<attributes>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="8" eline="8" spos="0" epos="0"/>
+<text info="Live Variable: r0" aType="Live Variable"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="8" eline="8" spos="8" epos="10"/>
+<color r="45" g="255" b="84" fg="0" aType="Live Variable"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="23" eline="23" spos="0" epos="0"/>
+<text info="Live Variable: i2" aType="Live Variable"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="23" eline="23" spos="8" epos="10"/>
+<color r="45" g="255" b="84" fg="0" aType="Live Variable"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="25" eline="25" spos="0" epos="0"/>
+<text info="Live Variable: i3" aType="Live Variable"/>
+<text info="Live Variable: i2" aType="Live Variable"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="25" eline="25" spos="8" epos="10"/>
+<color r="45" g="255" b="84" fg="0" aType="Live Variable"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="25" eline="25" spos="13" epos="15"/>
+<color r="45" g="255" b="84" fg="0" aType="Live Variable"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="27" eline="27" spos="0" epos="0"/>
+<text info="Live Variable: i3" aType="Live Variable"/>
+<text info="Live Variable: i2" aType="Live Variable"/>
+<text info="Live Variable: i4" aType="Live Variable"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="27" eline="27" spos="8" epos="10"/>
+<color r="45" g="255" b="84" fg="0" aType="Live Variable"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="27" eline="27" spos="13" epos="15"/>
+<color r="45" g="255" b="84" fg="0" aType="Live Variable"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="29" eline="29" spos="0" epos="0"/>
+<text info="Live Variable: i3" aType="Live Variable"/>
+<text info="Live Variable: i2" aType="Live Variable"/>
+<text info="Live Variable: i4" aType="Live Variable"/>
+<text info="Live Variable: $r1" aType="Live Variable"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="29" eline="29" spos="8" epos="11"/>
+<color r="45" g="255" b="84" fg="0" aType="Live Variable"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="31" eline="31" spos="0" epos="0"/>
+<text info="Live Variable: i3" aType="Live Variable"/>
+<text info="Live Variable: i2" aType="Live Variable"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="33" eline="33" spos="0" epos="0"/>
+<text info="Live Variable: i3" aType="Live Variable"/>
+<text info="Live Variable: i5" aType="Live Variable"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="33" eline="33" spos="8" epos="10"/>
+<color r="45" g="255" b="84" fg="0" aType="Live Variable"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="35" eline="35" spos="0" epos="0"/>
+<text info="Live Variable: $r2" aType="Live Variable"/>
+<text info="Live Variable: i5" aType="Live Variable"/>
+<text info="Live Variable: i3" aType="Live Variable"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="35" eline="35" spos="8" epos="11"/>
+<color r="45" g="255" b="84" fg="0" aType="Live Variable"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="37" eline="37" spos="0" epos="0"/>
+<text info="Live Variable: $i0" aType="Live Variable"/>
+<text info="Live Variable: $r2" aType="Live Variable"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="37" eline="37" spos="8" epos="11"/>
+<color r="45" g="255" b="84" fg="0" aType="Live Variable"/>
+</attribute>
+</attributes>

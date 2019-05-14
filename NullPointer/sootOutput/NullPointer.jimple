@@ -1,0 +1,33 @@
+public class NullPointer extends java.lang.Object
+{
+
+    public void <init>()
+    {
+        NullPointer r0;
+
+        r0 := @this: NullPointer;
+
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public static void main(java.lang.String[])
+    {
+        java.lang.String[] r0;
+        java.io.PrintStream $r1;
+        java.lang.NullPointerException r2;
+
+        r0 := @parameter0: java.lang.String[];
+
+        $r1 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $r1.<java.io.PrintStream: void println(java.lang.String)>("Hello");
+
+        r2 = new java.lang.NullPointerException;
+
+        specialinvoke r2.<java.lang.NullPointerException: void <init>(java.lang.String)>("This statement would have triggered an Exception: $stack4 = virtualinvoke l2.<java.lang.Object: java.lang.String toString()>()");
+
+        throw r2;
+    }
+}

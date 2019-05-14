@@ -1,0 +1,35 @@
+public class NoNullPointer extends java.lang.Object
+{
+
+    public void <init>()
+    {
+        NoNullPointer r0;
+
+        r0 := @this: NoNullPointer;
+
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public static void main(java.lang.String[])
+    {
+        java.lang.String[] r0;
+        java.io.PrintStream $r3;
+        java.lang.Object $r4;
+
+        r0 := @parameter0: java.lang.String[];
+
+        $r3 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $r3.<java.io.PrintStream: void println(java.lang.String)>("Hello");
+
+        $r4 = new java.lang.Object;
+
+        specialinvoke $r4.<java.lang.Object: void <init>()>();
+
+        virtualinvoke $r4.<java.lang.Object: java.lang.String toString()>();
+
+        return;
+    }
+}
