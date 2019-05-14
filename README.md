@@ -17,7 +17,7 @@ cd soot
 mvn clean compile assembly:single
 ```
 
-## Build and run examples
+## Build and run examples, GenHelloWorld and RunLiveAnalysis
 ```.shell
 . ~/soot_study/export_cp.sh
 cd tutorial/guide/examples/analysis_framework/src
@@ -30,6 +30,14 @@ java dk/brics/soot/GenHelloWorld
 java dk/brics/soot/RunLiveAnalysis
 ```
 
+### Generate Jimple for RunLiveAnalysis
 ```
-java soot.Main -cp ~/soot_study/soot/tutorial/guide/examples/analysis_framework/src:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:/root/soot_study/soot/target/sootclasses-trunk-jar-with-dependencies.jar -output-format J dk.brics.soot.RunLiveAnalysis
+java soot.Main -cp ~/soot_study/soot/tutorial/guide/examples/analysis_framework/src:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:/root/soot_study/soot/target/sootclasses-trunk-jar-with-dependencies.jar:. -output-format J dk.brics.soot.RunLiveAnalysis
+```
+
+### CallGraphExample
+```
+javac testers/CallGraphs.java
+javac dk/brics/soot/callgraphs/CallGraphExample.java 
+java dk/brics/soot/callgraphs/CallGraphExample -cp /root/soot_study/soot/target/sootclasses-trunk-jar-with-dependencies.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar:/root/soot_study/soot/tutorial/guide/examples/analysis_framework/src:/root/soot_study/soot/tutorial/guide/examples/call_graph/src:.
 ```
