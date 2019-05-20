@@ -56,10 +56,12 @@ public class Test {
 
 	public boolean checkIfUsed(String valueBoxString) {
 		if (valueBoxString.contains(confClass) && valueBoxString.contains(confFunc) && valueBoxString.contains(paraName)) {
+                        System.out.println("valueBoxString " + valueBoxString + " returns true in branch1");
 			return true;
 		}
 		for (Value v : definedVariables) {
 			if (valueBoxString.contains(v.toString())) {
+                                System.out.println("valueBoxString " + valueBoxString + " returns true in branch2");
 				return true;
 			}
 		}
@@ -80,6 +82,7 @@ public class Test {
 						definedVariables.add(definedValue);
 					}
 					catch (Exception e) {
+                                                System.out.println(e);
 					}
 					history.add(historyString);
 				}

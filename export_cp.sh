@@ -1,3 +1,3 @@
 #!/bin/bash
 
-export CLASSPATH=/root/soot_study/soot/target/sootclasses-trunk-jar-with-dependencies.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar:/root/soot_study/soot/tutorial/guide/examples/analysis_framework/src:/root/soot_study/soot/tutorial/guide/examples/call_graph/src:.
+export CLASSPATH=/root/soot_study/soot/target/sootclasses-trunk-jar-with-dependencies.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar:/root/soot_study/soot/tutorial/guide/examples/analysis_framework/src:/root/soot_study/soot/tutorial/guide/examples/call_graph/src:~/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/*:.

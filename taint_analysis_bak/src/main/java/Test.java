@@ -22,11 +22,7 @@ import soot.jimple.internal.*;
 import soot.util.*;
 import soot.Type;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.Iterator;
+import java.util.*;
 import java.lang.Exception;
 
 public class Test {
@@ -34,7 +30,7 @@ public class Test {
         private String confGetFunc = null;
         private String paraName = null;
         private CallGraph cg = null;
-        private Set<String> defSet = new HashSet<String>();
+        private Set<String> useSet = new HashSet<String>();
 
         public Test(String classPath, String className) {
                 configureSoot(classPath);
@@ -46,33 +42,61 @@ public class Test {
 		cg = Scene.v().getCallGraph();
 	}
 
-        public void findUses(SootMethod method) {
-                Body body = method.getActiveBody();
+        public void findUsesInClass(String className, String defBoxValue) {
+                System.out.println("\tfindUsesInClass: className = " + className + ", defBoxValue = " + defBoxValue);
+                
+                SootClass sootClass = Scene.v().loadClassAndSupport(className);
+                sootClass.setApplicationClass();
+                Scene.v().loadNecessaryClasses();
+
+                System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                for (SootMethod method : sootClass.getMethods()) {
+                        Set<String> defSet4Method = new HashSet<String>();
+                        defSet4Method.add(defBoxValue);
+                        findUsesInMethod(method, defSet4Method);
+                }
+                System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        }
+
+        public void findUsesInMethod(SootMethod method, Set<String> defSet4Method) {
+                Body body = null;
+                try {
+                        body = method.getActiveBody();
+                } catch (Exception e) {
+                        System.out.println(e);
+                }
+
+                if (body == null)
+                        return;
+
                 for (Unit unit : body.getUnits()) {
-                        for (ValueBox valueBox : unit.getUseBoxes()) {
-                                if (defSet.contains(valueBox.getValue().toString())) {
-                                        System.out.println("The following unit uses def with value " 
-                                                + valueBox + ": " + unit);
-                                        System.out.println("LOC: " + method + ":" 
-                                                + unit.getTags().get(0));
+                        for (ValueBox useBox : unit.getUseBoxes()) {
+                                if (defSet4Method.contains(useBox.getValue().toString())) {
+                                        System.out.println("");
+                                        System.out.println("Expression uses definition(" + useBox + "): " + unit);
+                                        System.out.println("LOC: " + method + ":" + unit.getTags().get(0));
+                                        useSet.add(method + ":" + unit.getTags().get(0));
                                         
-                                        // try to new definition
+                                        // try to add new definition
                                         List<ValueBox> defBoxes = unit.getDefBoxes();
                                         if (!defBoxes.isEmpty()) {
                                                 for (ValueBox box : defBoxes) {
-                                                        System.out.println("New defBox: " +
-                                                                box);
-                                                        System.out.println("New defBox value: " + box.getValue().toString());
+                                                        //System.out.println("New Definition: " + box);
+                                                        defSet4Method.add(box.getValue().toString());
+                                                        System.out.println("New Definition Value added: " + box.getValue());
+                                                        // try to find uses of def belonged to hdfs class
+                                                        if (box.getValue().toString().contains("org.apache.hadoop.hdfs")) { 
+                                                                int begin = box.getValue().toString().indexOf("org.apache.hadoop.hdfs");
+                                                                int end = box.getValue().toString().indexOf(":");
+                                                                String className = box.getValue().toString().substring(begin, end);
+                                                                findUsesInClass(className, box.getValue().toString());
+                                                        }
                                                 }
                                         }
-
-                                        // org.apache.hadoop.hdfs
-
-
-                                        break;
                                 }
                         }
                 }
+                //System.out.println("defSet4Method size = " + defSet4Method.size());
         }
 
 	public void edgeAnalysis() {
@@ -85,16 +109,16 @@ public class Test {
                         SootMethod method = e.src();
                         if (unit.toString().contains(paraName)) { // unit filter
                                 System.out.println("---------------------------------");
-                                System.out.println("Unit: " + unit);
-                                System.out.println("Of method: " + method);
+                                System.out.println("Statement: " + unit);
+                                System.out.println("Method: " + method);
                                 List<ValueBox> defBoxes = unit.getDefBoxes();
                                 for (ValueBox box : defBoxes) {
-                                        System.out.println("DefBox: " + box);
-                                        defSet.add(box.getValue().toString());
-                                        //System.out.println("defBox getValue(): " + box.getValue());
-                                        findUses(method);
+                                        System.out.println("Definition: " + box);
+                                        Set<String> defSet4Method = new HashSet<String>();
+                                        defSet4Method.add(box.getValue().toString());
+                                        System.out.println("New Definition Value added: " + box.getValue());
+                                        findUsesInMethod(method, defSet4Method);
                                 }
-                                System.out.println("---------------------------------");
                         }
 		}
 	}
@@ -123,8 +147,12 @@ public class Test {
 		t.paraName = "\"dfs.replication\"";
 
 		t.edgeAnalysis();
-                //List<SootMethod> list = Scene.v().getSootClass("org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap").getMethods();
-                //for (SootMethod sm : list)
-                //        System.out.println("method: " + sm);
-	}
+                List<String> sortedResList = new ArrayList<String>(t.useSet);
+                Collections.sort(sortedResList);
+                Iterator<String> it = sortedResList.iterator();	
+                System.out.println("-------Results-------");
+                while(it.hasNext()){
+                      System.out.println(it.next());
+                }
+        }
 }
