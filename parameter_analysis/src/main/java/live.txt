@@ -1,0 +1,1156 @@
+classpath = /root/soot_study/soot/target/sootclasses-trunk-jar-with-dependencies.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/etc/hadoop:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/accessors-smart-1.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/jackson-core-asl-1.9.13.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/jersey-json-1.19.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/jul-to-slf4j-1.7.25.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/log4j-1.2.17.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/metrics-core-3.2.4.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/kerb-admin-1.0.1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/kerb-client-1.0.1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/jetty-security-9.3.24.v20180605.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/avro-1.7.7.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/audience-annotations-0.5.0.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/commons-codec-1.11.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/jetty-server-9.3.24.v20180605.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/jetty-webapp-9.3.24.v20180605.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/javax.servlet-api-3.1.0.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/jackson-xc-1.9.13.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/asm-5.0.4.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/jaxb-api-2.2.11.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/commons-logging-1.1.3.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/jettison-1.1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/jaxb-impl-2.2.3-1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/hadoop-auth-3.1.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/jetty-util-9.3.24.v20180605.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/curator-framework-2.13.0.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/kerb-util-1.0.1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/curator-client-2.13.0.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/commons-math3-3.1.1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/kerby-xdr-1.0.1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/htrace-core4-4.1.0-incubating.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/jcip-annotations-1.0-1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/commons-beanutils-1.9.3.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/kerby-pkix-1.0.1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/kerb-simplekdc-1.0.1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/kerby-config-1.0.1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/commons-cli-1.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/commons-configuration2-2.1.1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/httpcore-4.4.4.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/jetty-io-9.3.24.v20180605.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/json-smart-2.3.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/hadoop-annotations-3.1.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/kerb-server-1.0.1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/gson-2.2.4.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/paranamer-2.3.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/woodstox-core-5.0.3.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/jsch-0.1.54.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/stax2-api-3.1.4.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/jsr311-api-1.1.1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/nimbus-jose-jwt-4.41.1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/curator-recipes-2.13.0.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/jersey-servlet-1.19.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/slf4j-api-1.7.25.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/guava-11.0.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/jersey-server-1.19.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/httpclient-4.5.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/token-provider-1.0.1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/netty-3.10.5.Final.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/commons-io-2.5.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/kerby-util-1.0.1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/jackson-jaxrs-1.9.13.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/zookeeper-3.4.13.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/snappy-java-1.0.5.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/kerb-core-1.0.1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/commons-lang3-3.4.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/kerby-asn1-1.0.1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/kerb-crypto-1.0.1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/jsr305-3.0.0.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/commons-net-3.6.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/jackson-core-2.7.8.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/jackson-databind-2.7.8.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/kerb-common-1.0.1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/jsp-api-2.1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/jetty-xml-9.3.24.v20180605.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/commons-collections-3.2.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/commons-compress-1.18.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/jackson-mapper-asl-1.9.13.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/protobuf-java-2.5.0.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/jersey-core-1.19.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/re2j-1.1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/jackson-annotations-2.7.8.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/commons-lang-2.6.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/jetty-http-9.3.24.v20180605.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/kerb-identity-1.0.1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/slf4j-log4j12-1.7.25.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/lib/jetty-servlet-9.3.24.v20180605.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/hadoop-nfs-3.1.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/hadoop-kms-3.1.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/hadoop-common-3.1.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/hadoop-common-3.1.2-tests.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/accessors-smart-1.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/jackson-core-asl-1.9.13.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/jersey-json-1.19.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/log4j-1.2.17.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/netty-all-4.0.52.Final.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/kerb-admin-1.0.1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/kerb-client-1.0.1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/jetty-security-9.3.24.v20180605.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/avro-1.7.7.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/audience-annotations-0.5.0.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/commons-codec-1.11.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/okhttp-2.7.5.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/jetty-server-9.3.24.v20180605.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/jetty-webapp-9.3.24.v20180605.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/javax.servlet-api-3.1.0.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/jetty-util-ajax-9.3.24.v20180605.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/jackson-xc-1.9.13.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/asm-5.0.4.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/jaxb-api-2.2.11.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/commons-logging-1.1.3.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/jettison-1.1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/jaxb-impl-2.2.3-1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/hadoop-auth-3.1.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/jetty-util-9.3.24.v20180605.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/curator-framework-2.13.0.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/kerb-util-1.0.1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/curator-client-2.13.0.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/commons-math3-3.1.1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/kerby-xdr-1.0.1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/htrace-core4-4.1.0-incubating.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/jcip-annotations-1.0-1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/commons-beanutils-1.9.3.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/kerby-pkix-1.0.1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/kerb-simplekdc-1.0.1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/kerby-config-1.0.1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/json-simple-1.1.1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/commons-cli-1.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/commons-configuration2-2.1.1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/httpcore-4.4.4.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/jetty-io-9.3.24.v20180605.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/okio-1.6.0.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/json-smart-2.3.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/hadoop-annotations-3.1.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/kerb-server-1.0.1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/gson-2.2.4.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/paranamer-2.3.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/commons-daemon-1.0.13.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/woodstox-core-5.0.3.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/jsch-0.1.54.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/stax2-api-3.1.4.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/jsr311-api-1.1.1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/nimbus-jose-jwt-4.41.1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/curator-recipes-2.13.0.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/jersey-servlet-1.19.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/guava-11.0.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/jersey-server-1.19.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/httpclient-4.5.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/token-provider-1.0.1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/netty-3.10.5.Final.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/commons-io-2.5.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/kerby-util-1.0.1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/jackson-jaxrs-1.9.13.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/zookeeper-3.4.13.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/snappy-java-1.0.5.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/kerb-core-1.0.1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/commons-lang3-3.4.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/kerby-asn1-1.0.1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/kerb-crypto-1.0.1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/jsr305-3.0.0.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/commons-net-3.6.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/jackson-core-2.7.8.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/jackson-databind-2.7.8.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/kerb-common-1.0.1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/jetty-xml-9.3.24.v20180605.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/leveldbjni-all-1.8.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/commons-collections-3.2.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/commons-compress-1.18.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/jackson-mapper-asl-1.9.13.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/protobuf-java-2.5.0.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/jersey-core-1.19.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/re2j-1.1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/jackson-annotations-2.7.8.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/commons-lang-2.6.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/jetty-http-9.3.24.v20180605.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/kerb-identity-1.0.1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/lib/jetty-servlet-9.3.24.v20180605.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/hadoop-hdfs-native-client-3.1.2-tests.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/hadoop-hdfs-client-3.1.2-tests.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/hadoop-hdfs-3.1.2-tests.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/hadoop-hdfs-client-3.1.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/hadoop-hdfs-httpfs-3.1.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/hadoop-hdfs-rbf-3.1.2-tests.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/hadoop-hdfs-nfs-3.1.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/hadoop-hdfs-native-client-3.1.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/hadoop-hdfs-rbf-3.1.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/hadoop-hdfs-3.1.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/mapreduce/lib/junit-4.11.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/mapreduce/lib/hamcrest-core-1.3.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.1.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/mapreduce/hadoop-mapreduce-client-core-3.1.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-plugins-3.1.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-3.1.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/mapreduce/hadoop-mapreduce-client-shuffle-3.1.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/mapreduce/hadoop-mapreduce-client-app-3.1.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-3.1.2-tests.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/mapreduce/hadoop-mapreduce-client-common-3.1.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-3.1.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/mapreduce/hadoop-mapreduce-client-uploader-3.1.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/mapreduce/hadoop-mapreduce-client-nativetask-3.1.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/yarn/lib/metrics-core-3.2.4.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/yarn/lib/javax.inject-1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/yarn/lib/ehcache-3.3.1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/yarn/lib/geronimo-jcache_1.0_spec-1.0-alpha-1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/yarn/lib/jackson-jaxrs-base-2.7.8.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/yarn/lib/snakeyaml-1.16.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/yarn/lib/guice-servlet-4.0.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/yarn/lib/dnsjava-2.1.7.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/yarn/lib/json-io-2.5.1.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/yarn/lib/java-util-1.9.0.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/yarn/lib/mssql-jdbc-6.2.1.jre7.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/yarn/lib/jersey-client-1.19.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/yarn/lib/guice-4.0.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/yarn/lib/fst-2.50.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/yarn/lib/objenesis-1.0.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/yarn/lib/jersey-guice-1.19.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/yarn/lib/jackson-module-jaxb-annotations-2.7.8.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/yarn/lib/aopalliance-1.0.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/yarn/lib/jackson-jaxrs-json-provider-2.7.8.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/yarn/lib/swagger-annotations-1.5.4.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/yarn/lib/HikariCP-java7-2.4.12.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/yarn/hadoop-yarn-applications-unmanaged-am-launcher-3.1.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/yarn/hadoop-yarn-server-timeline-pluginstorage-3.1.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/yarn/hadoop-yarn-server-resourcemanager-3.1.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/yarn/hadoop-yarn-applications-distributedshell-3.1.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/yarn/hadoop-yarn-server-applicationhistoryservice-3.1.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/yarn/hadoop-yarn-services-core-3.1.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/yarn/hadoop-yarn-server-router-3.1.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/yarn/hadoop-yarn-api-3.1.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/yarn/hadoop-yarn-server-common-3.1.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/yarn/hadoop-yarn-server-sharedcachemanager-3.1.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/yarn/hadoop-yarn-services-api-3.1.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/yarn/hadoop-yarn-server-web-proxy-3.1.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/yarn/hadoop-yarn-server-nodemanager-3.1.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/yarn/hadoop-yarn-client-3.1.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/yarn/hadoop-yarn-server-tests-3.1.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/yarn/hadoop-yarn-common-3.1.2.jar:/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/yarn/hadoop-yarn-registry-3.1.2.jar.
+=======================================
+<init>
+---------------------------------------
+r0 := @this: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap
+Live in: {}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+---------------------------------------
+---------------------------------------
+r1 := @parameter0: org.apache.hadoop.hdfs.util.RwLock
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r1: org.apache.hadoop.hdfs.util.RwLock}
+---------------------------------------
+---------------------------------------
+r2 := @parameter1: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r1: org.apache.hadoop.hdfs.util.RwLock}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r2: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager, r1: org.apache.hadoop.hdfs.util.RwLock}
+---------------------------------------
+---------------------------------------
+r3 := @parameter2: org.apache.hadoop.conf.Configuration
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r2: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager, r1: org.apache.hadoop.hdfs.util.RwLock}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration, r1: org.apache.hadoop.hdfs.util.RwLock, r2: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager}
+---------------------------------------
+---------------------------------------
+specialinvoke r0.<java.lang.Object: void <init>()>()
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration, r1: org.apache.hadoop.hdfs.util.RwLock, r2: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration, r1: org.apache.hadoop.hdfs.util.RwLock, r2: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager}
+---------------------------------------
+---------------------------------------
+$r6 = virtualinvoke r3.<org.apache.hadoop.conf.Configuration: java.lang.String get(java.lang.String,java.lang.String)>("dfs.provided.storage.id", "DS-PROVIDED")
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration, r1: org.apache.hadoop.hdfs.util.RwLock, r2: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration, r1: org.apache.hadoop.hdfs.util.RwLock, r2: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager, $r6: java.lang.String}
+---------------------------------------
+---------------------------------------
+r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: java.lang.String storageId> = $r6
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration, r1: org.apache.hadoop.hdfs.util.RwLock, r2: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager, $r6: java.lang.String}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration, r1: org.apache.hadoop.hdfs.util.RwLock, r2: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager}
+---------------------------------------
+---------------------------------------
+$z0 = virtualinvoke r3.<org.apache.hadoop.conf.Configuration: boolean getBoolean(java.lang.String,boolean)>("dfs.namenode.provided.enabled", 0)
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration, r1: org.apache.hadoop.hdfs.util.RwLock, r2: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration, r1: org.apache.hadoop.hdfs.util.RwLock, r2: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager, $z0: boolean}
+---------------------------------------
+---------------------------------------
+r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: boolean providedEnabled> = $z0
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration, r1: org.apache.hadoop.hdfs.util.RwLock, r2: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager, $z0: boolean}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration, r1: org.apache.hadoop.hdfs.util.RwLock, r2: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager}
+---------------------------------------
+---------------------------------------
+$z1 = r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: boolean providedEnabled>
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration, r1: org.apache.hadoop.hdfs.util.RwLock, r2: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration, r1: org.apache.hadoop.hdfs.util.RwLock, r2: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager, $z1: boolean}
+---------------------------------------
+---------------------------------------
+if $z1 != 0 goto label1
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration, r1: org.apache.hadoop.hdfs.util.RwLock, r2: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager, $z1: boolean}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration, r1: org.apache.hadoop.hdfs.util.RwLock, r2: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager}
+---------------------------------------
+---------------------------------------
+r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: org.apache.hadoop.hdfs.server.common.blockaliasmap.BlockAliasMap aliasMap> = null
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+---------------------------------------
+---------------------------------------
+r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedDescriptor providedDescriptor> = null
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+---------------------------------------
+---------------------------------------
+r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo providedStorageInfo> = null
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+Live out: {}
+---------------------------------------
+---------------------------------------
+return
+Live in: {}
+Live out: {}
+---------------------------------------
+---------------------------------------
+$r7 = new org.apache.hadoop.hdfs.server.protocol.DatanodeStorage
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration, r1: org.apache.hadoop.hdfs.util.RwLock, r2: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration, r1: org.apache.hadoop.hdfs.util.RwLock, r2: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager, $r7: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage}
+---------------------------------------
+---------------------------------------
+$r10 = r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: java.lang.String storageId>
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration, r1: org.apache.hadoop.hdfs.util.RwLock, r2: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager, $r7: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration, r1: org.apache.hadoop.hdfs.util.RwLock, r2: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager, $r7: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, $r10: java.lang.String}
+---------------------------------------
+---------------------------------------
+$r9 = <org.apache.hadoop.hdfs.server.protocol.DatanodeStorage$State: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage$State NORMAL>
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration, r1: org.apache.hadoop.hdfs.util.RwLock, r2: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager, $r7: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, $r10: java.lang.String}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration, r1: org.apache.hadoop.hdfs.util.RwLock, r2: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager, $r7: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, $r10: java.lang.String, $r9: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage$State}
+---------------------------------------
+---------------------------------------
+$r8 = <org.apache.hadoop.fs.StorageType: org.apache.hadoop.fs.StorageType PROVIDED>
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration, r1: org.apache.hadoop.hdfs.util.RwLock, r2: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager, $r7: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, $r10: java.lang.String, $r9: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage$State}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration, r1: org.apache.hadoop.hdfs.util.RwLock, r2: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager, $r7: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, $r10: java.lang.String, $r9: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage$State, $r8: org.apache.hadoop.fs.StorageType}
+---------------------------------------
+---------------------------------------
+specialinvoke $r7.<org.apache.hadoop.hdfs.server.protocol.DatanodeStorage: void <init>(java.lang.String,org.apache.hadoop.hdfs.server.protocol.DatanodeStorage$State,org.apache.hadoop.fs.StorageType)>($r10, $r9, $r8)
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration, r1: org.apache.hadoop.hdfs.util.RwLock, r2: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager, $r7: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, $r10: java.lang.String, $r9: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage$State, $r8: org.apache.hadoop.fs.StorageType}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration, r1: org.apache.hadoop.hdfs.util.RwLock, r2: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager, $r7: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage}
+---------------------------------------
+---------------------------------------
+r4 = $r7
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration, r1: org.apache.hadoop.hdfs.util.RwLock, r2: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager, $r7: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration, r1: org.apache.hadoop.hdfs.util.RwLock, r2: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager, r4: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage}
+---------------------------------------
+---------------------------------------
+$r11 = new org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedDescriptor
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration, r1: org.apache.hadoop.hdfs.util.RwLock, r2: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager, r4: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration, r1: org.apache.hadoop.hdfs.util.RwLock, r2: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager, r4: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, $r11: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedDescriptor}
+---------------------------------------
+---------------------------------------
+specialinvoke $r11.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedDescriptor: void <init>()>()
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration, r1: org.apache.hadoop.hdfs.util.RwLock, r2: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager, r4: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, $r11: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedDescriptor}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration, r1: org.apache.hadoop.hdfs.util.RwLock, r2: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager, r4: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, $r11: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedDescriptor}
+---------------------------------------
+---------------------------------------
+r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedDescriptor providedDescriptor> = $r11
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration, r1: org.apache.hadoop.hdfs.util.RwLock, r2: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager, r4: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, $r11: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedDescriptor}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration, r1: org.apache.hadoop.hdfs.util.RwLock, r2: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager, r4: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage}
+---------------------------------------
+---------------------------------------
+$r12 = r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedDescriptor providedDescriptor>
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration, r1: org.apache.hadoop.hdfs.util.RwLock, r2: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager, r4: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration, r1: org.apache.hadoop.hdfs.util.RwLock, r2: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager, r4: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, $r12: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedDescriptor}
+---------------------------------------
+---------------------------------------
+$r13 = virtualinvoke $r12.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedDescriptor: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo createProvidedStorage(org.apache.hadoop.hdfs.server.protocol.DatanodeStorage)>(r4)
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration, r1: org.apache.hadoop.hdfs.util.RwLock, r2: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager, r4: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, $r12: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedDescriptor}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration, r1: org.apache.hadoop.hdfs.util.RwLock, r2: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager, $r13: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo}
+---------------------------------------
+---------------------------------------
+r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo providedStorageInfo> = $r13
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration, r1: org.apache.hadoop.hdfs.util.RwLock, r2: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager, $r13: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration, r1: org.apache.hadoop.hdfs.util.RwLock, r2: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager}
+---------------------------------------
+---------------------------------------
+$i0 = virtualinvoke r3.<org.apache.hadoop.conf.Configuration: int getInt(java.lang.String,int)>("dfs.replication", 3)
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration, r1: org.apache.hadoop.hdfs.util.RwLock, r2: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration, r1: org.apache.hadoop.hdfs.util.RwLock, r2: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager, $i0: int}
+---------------------------------------
+---------------------------------------
+r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: int defaultReplication> = $i0
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration, r1: org.apache.hadoop.hdfs.util.RwLock, r2: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager, $i0: int}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration, r1: org.apache.hadoop.hdfs.util.RwLock, r2: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager}
+---------------------------------------
+---------------------------------------
+r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager bm> = r2
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration, r1: org.apache.hadoop.hdfs.util.RwLock, r2: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration, r1: org.apache.hadoop.hdfs.util.RwLock}
+---------------------------------------
+---------------------------------------
+r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: org.apache.hadoop.hdfs.util.RwLock lock> = r1
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration, r1: org.apache.hadoop.hdfs.util.RwLock}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration}
+---------------------------------------
+---------------------------------------
+r5 = virtualinvoke r3.<org.apache.hadoop.conf.Configuration: java.lang.Class getClass(java.lang.String,java.lang.Class,java.lang.Class)>("dfs.provided.aliasmap.class", class "Lorg/apache/hadoop/hdfs/server/common/blockaliasmap/impl/TextFileRegionAliasMap;", class "Lorg/apache/hadoop/hdfs/server/common/blockaliasmap/BlockAliasMap;")
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r3: org.apache.hadoop.conf.Configuration}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r5: java.lang.Class, r3: org.apache.hadoop.conf.Configuration}
+---------------------------------------
+---------------------------------------
+$r14 = staticinvoke <org.apache.hadoop.util.ReflectionUtils: java.lang.Object newInstance(java.lang.Class,org.apache.hadoop.conf.Configuration)>(r5, r3)
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r5: java.lang.Class, r3: org.apache.hadoop.conf.Configuration}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r14: java.lang.Object}
+---------------------------------------
+---------------------------------------
+$r15 = (org.apache.hadoop.hdfs.server.common.blockaliasmap.BlockAliasMap) $r14
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r14: java.lang.Object}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r15: org.apache.hadoop.hdfs.server.common.blockaliasmap.BlockAliasMap}
+---------------------------------------
+---------------------------------------
+r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: org.apache.hadoop.hdfs.server.common.blockaliasmap.BlockAliasMap aliasMap> = $r15
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r15: org.apache.hadoop.hdfs.server.common.blockaliasmap.BlockAliasMap}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+---------------------------------------
+---------------------------------------
+$r17 = <org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: org.slf4j.Logger LOG>
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+Live out: {$r17: org.slf4j.Logger, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+---------------------------------------
+---------------------------------------
+$r16 = new java.lang.StringBuilder
+Live in: {$r17: org.slf4j.Logger, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+Live out: {$r17: org.slf4j.Logger, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r16: java.lang.StringBuilder}
+---------------------------------------
+---------------------------------------
+specialinvoke $r16.<java.lang.StringBuilder: void <init>()>()
+Live in: {$r17: org.slf4j.Logger, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r16: java.lang.StringBuilder}
+Live out: {$r17: org.slf4j.Logger, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r16: java.lang.StringBuilder}
+---------------------------------------
+---------------------------------------
+$r18 = virtualinvoke $r16.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Loaded alias map class: ")
+Live in: {$r17: org.slf4j.Logger, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r16: java.lang.StringBuilder}
+Live out: {$r17: org.slf4j.Logger, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r18: java.lang.StringBuilder}
+---------------------------------------
+---------------------------------------
+$r19 = r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: org.apache.hadoop.hdfs.server.common.blockaliasmap.BlockAliasMap aliasMap>
+Live in: {$r17: org.slf4j.Logger, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r18: java.lang.StringBuilder}
+Live out: {$r17: org.slf4j.Logger, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r18: java.lang.StringBuilder, $r19: org.apache.hadoop.hdfs.server.common.blockaliasmap.BlockAliasMap}
+---------------------------------------
+---------------------------------------
+$r20 = virtualinvoke $r19.<java.lang.Object: java.lang.Class getClass()>()
+Live in: {$r17: org.slf4j.Logger, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r18: java.lang.StringBuilder, $r19: org.apache.hadoop.hdfs.server.common.blockaliasmap.BlockAliasMap}
+Live out: {$r17: org.slf4j.Logger, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r20: java.lang.Class, $r18: java.lang.StringBuilder}
+---------------------------------------
+---------------------------------------
+$r21 = virtualinvoke $r18.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($r20)
+Live in: {$r17: org.slf4j.Logger, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r20: java.lang.Class, $r18: java.lang.StringBuilder}
+Live out: {$r17: org.slf4j.Logger, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r21: java.lang.StringBuilder}
+---------------------------------------
+---------------------------------------
+$r22 = virtualinvoke $r21.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" storage: ")
+Live in: {$r17: org.slf4j.Logger, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r21: java.lang.StringBuilder}
+Live out: {$r17: org.slf4j.Logger, $r22: java.lang.StringBuilder, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+---------------------------------------
+---------------------------------------
+$r23 = r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo providedStorageInfo>
+Live in: {$r17: org.slf4j.Logger, $r22: java.lang.StringBuilder, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+Live out: {$r17: org.slf4j.Logger, $r23: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo, $r22: java.lang.StringBuilder}
+---------------------------------------
+---------------------------------------
+$r24 = virtualinvoke $r22.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($r23)
+Live in: {$r17: org.slf4j.Logger, $r23: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo, $r22: java.lang.StringBuilder}
+Live out: {$r17: org.slf4j.Logger, $r24: java.lang.StringBuilder}
+---------------------------------------
+---------------------------------------
+$r25 = virtualinvoke $r24.<java.lang.StringBuilder: java.lang.String toString()>()
+Live in: {$r17: org.slf4j.Logger, $r24: java.lang.StringBuilder}
+Live out: {$r25: java.lang.String, $r17: org.slf4j.Logger}
+---------------------------------------
+---------------------------------------
+interfaceinvoke $r17.<org.slf4j.Logger: void info(java.lang.String)>($r25)
+Live in: {$r25: java.lang.String, $r17: org.slf4j.Logger}
+Live out: {}
+---------------------------------------
+---------------------------------------
+return
+Live in: {}
+Live out: {}
+---------------------------------------
+=======================================
+=======================================
+getStorage
+---------------------------------------
+r0 := @this: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap
+Live in: {}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+---------------------------------------
+---------------------------------------
+r1 := @parameter0: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+---------------------------------------
+---------------------------------------
+r2 := @parameter1: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+---------------------------------------
+---------------------------------------
+$z0 = r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: boolean providedEnabled>
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $z0: boolean}
+---------------------------------------
+---------------------------------------
+if $z0 == 0 goto label4
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $z0: boolean}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+---------------------------------------
+---------------------------------------
+$r3 = r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: java.lang.String storageId>
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r3: java.lang.String}
+---------------------------------------
+---------------------------------------
+$r4 = virtualinvoke r2.<org.apache.hadoop.hdfs.server.protocol.DatanodeStorage: java.lang.String getStorageID()>()
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r3: java.lang.String}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r4: java.lang.String, $r3: java.lang.String}
+---------------------------------------
+---------------------------------------
+$z1 = virtualinvoke $r3.<java.lang.String: boolean equals(java.lang.Object)>($r4)
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r4: java.lang.String, $r3: java.lang.String}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $z1: boolean}
+---------------------------------------
+---------------------------------------
+if $z1 == 0 goto label4
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $z1: boolean}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+---------------------------------------
+---------------------------------------
+$r5 = <org.apache.hadoop.fs.StorageType: org.apache.hadoop.fs.StorageType PROVIDED>
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r5: org.apache.hadoop.fs.StorageType}
+---------------------------------------
+---------------------------------------
+$r6 = virtualinvoke r2.<org.apache.hadoop.hdfs.server.protocol.DatanodeStorage: org.apache.hadoop.fs.StorageType getStorageType()>()
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r5: org.apache.hadoop.fs.StorageType}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r6: org.apache.hadoop.fs.StorageType, $r5: org.apache.hadoop.fs.StorageType}
+---------------------------------------
+---------------------------------------
+$z2 = virtualinvoke $r5.<org.apache.hadoop.fs.StorageType: boolean equals(java.lang.Object)>($r6)
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r6: org.apache.hadoop.fs.StorageType, $r5: org.apache.hadoop.fs.StorageType}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $z2: boolean}
+---------------------------------------
+---------------------------------------
+if $z2 == 0 goto label3
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $z2: boolean}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+---------------------------------------
+---------------------------------------
+$r8 = r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo providedStorageInfo>
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r8: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo}
+---------------------------------------
+---------------------------------------
+$r9 = virtualinvoke $r8.<org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage$State getState()>()
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r8: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r9: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage$State}
+---------------------------------------
+---------------------------------------
+$r10 = <org.apache.hadoop.hdfs.server.protocol.DatanodeStorage$State: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage$State FAILED>
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r9: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage$State}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r9: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage$State, $r10: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage$State}
+---------------------------------------
+---------------------------------------
+if $r9 != $r10 goto label1
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r9: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage$State, $r10: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage$State}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+---------------------------------------
+---------------------------------------
+$r14 = virtualinvoke r2.<org.apache.hadoop.hdfs.server.protocol.DatanodeStorage: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage$State getState()>()
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r14: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage$State}
+---------------------------------------
+---------------------------------------
+$r15 = <org.apache.hadoop.hdfs.server.protocol.DatanodeStorage$State: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage$State NORMAL>
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r14: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage$State}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r14: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage$State, $r15: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage$State}
+---------------------------------------
+---------------------------------------
+if $r14 != $r15 goto label1
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r14: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage$State, $r15: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage$State}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+---------------------------------------
+---------------------------------------
+$r17 = r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo providedStorageInfo>
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r17: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo}
+---------------------------------------
+---------------------------------------
+$r16 = <org.apache.hadoop.hdfs.server.protocol.DatanodeStorage$State: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage$State NORMAL>
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r17: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r16: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage$State, $r17: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo}
+---------------------------------------
+---------------------------------------
+virtualinvoke $r17.<org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo: void setState(org.apache.hadoop.hdfs.server.protocol.DatanodeStorage$State)>($r16)
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r16: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage$State, $r17: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+---------------------------------------
+---------------------------------------
+$r19 = <org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: org.slf4j.Logger LOG>
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r19: org.slf4j.Logger}
+---------------------------------------
+---------------------------------------
+$r18 = new java.lang.StringBuilder
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r19: org.slf4j.Logger}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r19: org.slf4j.Logger, $r18: java.lang.StringBuilder}
+---------------------------------------
+---------------------------------------
+specialinvoke $r18.<java.lang.StringBuilder: void <init>()>()
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r19: org.slf4j.Logger, $r18: java.lang.StringBuilder}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r19: org.slf4j.Logger, $r18: java.lang.StringBuilder}
+---------------------------------------
+---------------------------------------
+$r20 = virtualinvoke $r18.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Provided storage transitioning to state ")
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r19: org.slf4j.Logger, $r18: java.lang.StringBuilder}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r19: org.slf4j.Logger, $r20: java.lang.StringBuilder}
+---------------------------------------
+---------------------------------------
+$r21 = <org.apache.hadoop.hdfs.server.protocol.DatanodeStorage$State: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage$State NORMAL>
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r19: org.slf4j.Logger, $r20: java.lang.StringBuilder}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r19: org.slf4j.Logger, $r21: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage$State, $r20: java.lang.StringBuilder}
+---------------------------------------
+---------------------------------------
+$r22 = virtualinvoke $r20.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($r21)
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r19: org.slf4j.Logger, $r21: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage$State, $r20: java.lang.StringBuilder}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r19: org.slf4j.Logger, $r22: java.lang.StringBuilder}
+---------------------------------------
+---------------------------------------
+$r23 = virtualinvoke $r22.<java.lang.StringBuilder: java.lang.String toString()>()
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r19: org.slf4j.Logger, $r22: java.lang.StringBuilder}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r23: java.lang.String, $r19: org.slf4j.Logger}
+---------------------------------------
+---------------------------------------
+interfaceinvoke $r19.<org.slf4j.Logger: void info(java.lang.String)>($r23)
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r23: java.lang.String, $r19: org.slf4j.Logger}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+---------------------------------------
+---------------------------------------
+$r24 = virtualinvoke r2.<org.apache.hadoop.hdfs.server.protocol.DatanodeStorage: java.lang.String getStorageID()>()
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r24: java.lang.String}
+---------------------------------------
+---------------------------------------
+$r25 = virtualinvoke r1.<org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo getStorageInfo(java.lang.String)>($r24)
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r24: java.lang.String}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r25: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo}
+---------------------------------------
+---------------------------------------
+if $r25 != null goto label2
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r25: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+---------------------------------------
+---------------------------------------
+$r13 = r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo providedStorageInfo>
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r13: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo}
+---------------------------------------
+---------------------------------------
+virtualinvoke r1.<org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor: void injectStorage(org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo)>($r13)
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r13: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+---------------------------------------
+---------------------------------------
+specialinvoke r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: void processProvidedStorageReport()>()
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+---------------------------------------
+---------------------------------------
+$r11 = r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedDescriptor providedDescriptor>
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, $r11: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedDescriptor}
+---------------------------------------
+---------------------------------------
+$r12 = virtualinvoke $r11.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedDescriptor: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo getProvidedStorage(org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor,org.apache.hadoop.hdfs.server.protocol.DatanodeStorage)>(r1, r2)
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, $r11: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedDescriptor}
+Live out: {$r12: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo}
+---------------------------------------
+---------------------------------------
+return $r12
+Live in: {$r12: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo}
+Live out: {}
+---------------------------------------
+---------------------------------------
+$r7 = <org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: org.slf4j.Logger LOG>
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, $r7: org.slf4j.Logger}
+---------------------------------------
+---------------------------------------
+interfaceinvoke $r7.<org.slf4j.Logger: void warn(java.lang.String,java.lang.Object,java.lang.Object)>("Reserved storage {} reported as non-provided from {}", r2, r1)
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, $r7: org.slf4j.Logger}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage}
+---------------------------------------
+---------------------------------------
+$r26 = virtualinvoke r2.<org.apache.hadoop.hdfs.server.protocol.DatanodeStorage: java.lang.String getStorageID()>()
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage}
+Live out: {$r26: java.lang.String, r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor}
+---------------------------------------
+---------------------------------------
+$r27 = virtualinvoke r1.<org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo getStorageInfo(java.lang.String)>($r26)
+Live in: {$r26: java.lang.String, r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor}
+Live out: {$r27: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo}
+---------------------------------------
+---------------------------------------
+return $r27
+Live in: {$r27: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo}
+Live out: {}
+---------------------------------------
+=======================================
+=======================================
+processProvidedStorageReport
+---------------------------------------
+r0 := @this: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap
+Live in: {}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+---------------------------------------
+---------------------------------------
+$z0 = <org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: boolean $assertionsDisabled>
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $z0: boolean}
+---------------------------------------
+---------------------------------------
+if $z0 != 0 goto label1
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $z0: boolean}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+---------------------------------------
+---------------------------------------
+$r17 = r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: org.apache.hadoop.hdfs.util.RwLock lock>
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r17: org.apache.hadoop.hdfs.util.RwLock}
+---------------------------------------
+---------------------------------------
+$z1 = interfaceinvoke $r17.<org.apache.hadoop.hdfs.util.RwLock: boolean hasWriteLock()>()
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r17: org.apache.hadoop.hdfs.util.RwLock}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $z1: boolean}
+---------------------------------------
+---------------------------------------
+if $z1 != 0 goto label1
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $z1: boolean}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+---------------------------------------
+---------------------------------------
+$r18 = new java.lang.AssertionError
+Live in: {}
+Live out: {$r18: java.lang.AssertionError}
+---------------------------------------
+---------------------------------------
+specialinvoke $r18.<java.lang.AssertionError: void <init>(java.lang.Object)>("Not holding write lock")
+Live in: {$r18: java.lang.AssertionError}
+Live out: {$r18: java.lang.AssertionError}
+---------------------------------------
+---------------------------------------
+throw $r18
+Live in: {$r18: java.lang.AssertionError}
+Live out: {}
+---------------------------------------
+---------------------------------------
+$r2 = r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo providedStorageInfo>
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r2: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo}
+---------------------------------------
+---------------------------------------
+$i0 = virtualinvoke $r2.<org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo: int getBlockReportCount()>()
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r2: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $i0: int}
+---------------------------------------
+---------------------------------------
+if $i0 == 0 goto label2
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $i0: int}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+---------------------------------------
+---------------------------------------
+$r16 = r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedDescriptor providedDescriptor>
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r16: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedDescriptor}
+---------------------------------------
+---------------------------------------
+$i1 = virtualinvoke $r16.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedDescriptor: int activeProvidedDatanodes()>()
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r16: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedDescriptor}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $i1: int}
+---------------------------------------
+---------------------------------------
+if $i1 != 0 goto label3
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $i1: int}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+---------------------------------------
+---------------------------------------
+$r4 = <org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: org.slf4j.Logger LOG>
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r4: org.slf4j.Logger}
+---------------------------------------
+---------------------------------------
+$r3 = new java.lang.StringBuilder
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r4: org.slf4j.Logger}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r4: org.slf4j.Logger, $r3: java.lang.StringBuilder}
+---------------------------------------
+---------------------------------------
+specialinvoke $r3.<java.lang.StringBuilder: void <init>()>()
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r4: org.slf4j.Logger, $r3: java.lang.StringBuilder}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r4: org.slf4j.Logger, $r3: java.lang.StringBuilder}
+---------------------------------------
+---------------------------------------
+$r5 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Calling process first blk report from storage: ")
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r4: org.slf4j.Logger, $r3: java.lang.StringBuilder}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r4: org.slf4j.Logger, $r5: java.lang.StringBuilder}
+---------------------------------------
+---------------------------------------
+$r6 = r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo providedStorageInfo>
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r4: org.slf4j.Logger, $r5: java.lang.StringBuilder}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r4: org.slf4j.Logger, $r6: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo, $r5: java.lang.StringBuilder}
+---------------------------------------
+---------------------------------------
+$r7 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>($r6)
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r4: org.slf4j.Logger, $r6: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo, $r5: java.lang.StringBuilder}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r4: org.slf4j.Logger, $r7: java.lang.StringBuilder}
+---------------------------------------
+---------------------------------------
+$r8 = virtualinvoke $r7.<java.lang.StringBuilder: java.lang.String toString()>()
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r4: org.slf4j.Logger, $r7: java.lang.StringBuilder}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r8: java.lang.String, $r4: org.slf4j.Logger}
+---------------------------------------
+---------------------------------------
+interfaceinvoke $r4.<org.slf4j.Logger: void info(java.lang.String)>($r8)
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r8: java.lang.String, $r4: org.slf4j.Logger}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+---------------------------------------
+---------------------------------------
+$r10 = r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: org.apache.hadoop.hdfs.server.common.blockaliasmap.BlockAliasMap aliasMap>
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r10: org.apache.hadoop.hdfs.server.common.blockaliasmap.BlockAliasMap}
+---------------------------------------
+---------------------------------------
+$r9 = r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager bm>
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r10: org.apache.hadoop.hdfs.server.common.blockaliasmap.BlockAliasMap}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r10: org.apache.hadoop.hdfs.server.common.blockaliasmap.BlockAliasMap, $r9: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager}
+---------------------------------------
+---------------------------------------
+$r11 = virtualinvoke $r9.<org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: java.lang.String getBlockPoolId()>()
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r10: org.apache.hadoop.hdfs.server.common.blockaliasmap.BlockAliasMap, $r9: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r11: java.lang.String, $r10: org.apache.hadoop.hdfs.server.common.blockaliasmap.BlockAliasMap}
+---------------------------------------
+---------------------------------------
+r1 = virtualinvoke $r10.<org.apache.hadoop.hdfs.server.common.blockaliasmap.BlockAliasMap: org.apache.hadoop.hdfs.server.common.blockaliasmap.BlockAliasMap$Reader getReader(org.apache.hadoop.hdfs.server.common.blockaliasmap.BlockAliasMap$Reader$Options,java.lang.String)>(null, $r11)
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r11: java.lang.String, $r10: org.apache.hadoop.hdfs.server.common.blockaliasmap.BlockAliasMap}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r1: org.apache.hadoop.hdfs.server.common.blockaliasmap.BlockAliasMap$Reader}
+---------------------------------------
+---------------------------------------
+if r1 == null goto label3
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r1: org.apache.hadoop.hdfs.server.common.blockaliasmap.BlockAliasMap$Reader}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r1: org.apache.hadoop.hdfs.server.common.blockaliasmap.BlockAliasMap$Reader}
+---------------------------------------
+---------------------------------------
+$r13 = r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager bm>
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r1: org.apache.hadoop.hdfs.server.common.blockaliasmap.BlockAliasMap$Reader}
+Live out: {$r13: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager, r1: org.apache.hadoop.hdfs.server.common.blockaliasmap.BlockAliasMap$Reader, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+---------------------------------------
+---------------------------------------
+$r14 = r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo providedStorageInfo>
+Live in: {$r13: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager, r1: org.apache.hadoop.hdfs.server.common.blockaliasmap.BlockAliasMap$Reader, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+Live out: {$r14: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo, r1: org.apache.hadoop.hdfs.server.common.blockaliasmap.BlockAliasMap$Reader, $r13: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager}
+---------------------------------------
+---------------------------------------
+$r12 = new org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedBlockList
+Live in: {$r14: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo, r1: org.apache.hadoop.hdfs.server.common.blockaliasmap.BlockAliasMap$Reader, $r13: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager}
+Live out: {$r14: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo, $r12: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedBlockList, $r13: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager, r1: org.apache.hadoop.hdfs.server.common.blockaliasmap.BlockAliasMap$Reader}
+---------------------------------------
+---------------------------------------
+$r15 = virtualinvoke r1.<org.apache.hadoop.hdfs.server.common.blockaliasmap.BlockAliasMap$Reader: java.util.Iterator iterator()>()
+Live in: {$r14: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo, $r12: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedBlockList, $r13: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager, r1: org.apache.hadoop.hdfs.server.common.blockaliasmap.BlockAliasMap$Reader}
+Live out: {$r14: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo, $r12: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedBlockList, $r13: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager, $r15: java.util.Iterator}
+---------------------------------------
+---------------------------------------
+specialinvoke $r12.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedBlockList: void <init>(java.util.Iterator)>($r15)
+Live in: {$r14: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo, $r12: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedBlockList, $r13: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager, $r15: java.util.Iterator}
+Live out: {$r14: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo, $r12: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedBlockList, $r13: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager}
+---------------------------------------
+---------------------------------------
+virtualinvoke $r13.<org.apache.hadoop.hdfs.server.blockmanagement.BlockManager: void processFirstBlockReport(org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo,org.apache.hadoop.hdfs.protocol.BlockListAsLongs)>($r14, $r12)
+Live in: {$r14: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo, $r12: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedBlockList, $r13: org.apache.hadoop.hdfs.server.blockmanagement.BlockManager}
+Live out: {}
+---------------------------------------
+---------------------------------------
+return
+Live in: {}
+Live out: {}
+---------------------------------------
+=======================================
+=======================================
+getProvidedStorageInfo
+---------------------------------------
+r0 := @this: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap
+Live in: {}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+---------------------------------------
+---------------------------------------
+$r1 = r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo providedStorageInfo>
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+Live out: {$r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo}
+---------------------------------------
+---------------------------------------
+return $r1
+Live in: {$r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo}
+Live out: {}
+---------------------------------------
+=======================================
+=======================================
+newLocatedBlocks
+---------------------------------------
+r0 := @this: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap
+Live in: {}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+---------------------------------------
+---------------------------------------
+i0 := @parameter0: int
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+Live out: {i0: int, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+---------------------------------------
+---------------------------------------
+$z0 = r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: boolean providedEnabled>
+Live in: {i0: int, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+Live out: {i0: int, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $z0: boolean}
+---------------------------------------
+---------------------------------------
+if $z0 != 0 goto label1
+Live in: {i0: int, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $z0: boolean}
+Live out: {i0: int, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+---------------------------------------
+---------------------------------------
+$r2 = new org.apache.hadoop.hdfs.server.blockmanagement.LocatedBlockBuilder
+Live in: {i0: int}
+Live out: {$r2: org.apache.hadoop.hdfs.server.blockmanagement.LocatedBlockBuilder, i0: int}
+---------------------------------------
+---------------------------------------
+specialinvoke $r2.<org.apache.hadoop.hdfs.server.blockmanagement.LocatedBlockBuilder: void <init>(int)>(i0)
+Live in: {$r2: org.apache.hadoop.hdfs.server.blockmanagement.LocatedBlockBuilder, i0: int}
+Live out: {$r2: org.apache.hadoop.hdfs.server.blockmanagement.LocatedBlockBuilder}
+---------------------------------------
+---------------------------------------
+return $r2
+Live in: {$r2: org.apache.hadoop.hdfs.server.blockmanagement.LocatedBlockBuilder}
+Live out: {}
+---------------------------------------
+---------------------------------------
+$r1 = new org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedBlocksBuilder
+Live in: {i0: int, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+Live out: {$r1: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedBlocksBuilder, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, i0: int}
+---------------------------------------
+---------------------------------------
+specialinvoke $r1.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedBlocksBuilder: void <init>(org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap,int)>(r0, i0)
+Live in: {$r1: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedBlocksBuilder, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, i0: int}
+Live out: {$r1: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedBlocksBuilder}
+---------------------------------------
+---------------------------------------
+return $r1
+Live in: {$r1: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedBlocksBuilder}
+Live out: {}
+---------------------------------------
+=======================================
+=======================================
+removeDatanode
+---------------------------------------
+r0 := @this: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap
+Live in: {}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+---------------------------------------
+---------------------------------------
+r1 := @parameter0: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor}
+---------------------------------------
+---------------------------------------
+$z0 = r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: boolean providedEnabled>
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, $z0: boolean}
+---------------------------------------
+---------------------------------------
+if $z0 == 0 goto label2
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, $z0: boolean}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor}
+---------------------------------------
+---------------------------------------
+$z1 = <org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: boolean $assertionsDisabled>
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, $z1: boolean}
+---------------------------------------
+---------------------------------------
+if $z1 != 0 goto label1
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, $z1: boolean}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor}
+---------------------------------------
+---------------------------------------
+$r5 = r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: org.apache.hadoop.hdfs.util.RwLock lock>
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, $r5: org.apache.hadoop.hdfs.util.RwLock}
+---------------------------------------
+---------------------------------------
+$z2 = interfaceinvoke $r5.<org.apache.hadoop.hdfs.util.RwLock: boolean hasWriteLock()>()
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, $r5: org.apache.hadoop.hdfs.util.RwLock}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, $z2: boolean}
+---------------------------------------
+---------------------------------------
+if $z2 != 0 goto label1
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, $z2: boolean}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor}
+---------------------------------------
+---------------------------------------
+$r6 = new java.lang.AssertionError
+Live in: {}
+Live out: {$r6: java.lang.AssertionError}
+---------------------------------------
+---------------------------------------
+specialinvoke $r6.<java.lang.AssertionError: void <init>(java.lang.Object)>("Not holding write lock")
+Live in: {$r6: java.lang.AssertionError}
+Live out: {$r6: java.lang.AssertionError}
+---------------------------------------
+---------------------------------------
+throw $r6
+Live in: {$r6: java.lang.AssertionError}
+Live out: {}
+---------------------------------------
+---------------------------------------
+$r2 = r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedDescriptor providedDescriptor>
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, $r2: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedDescriptor}
+---------------------------------------
+---------------------------------------
+virtualinvoke $r2.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedDescriptor: int remove(org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor)>(r1)
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, $r2: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedDescriptor}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+---------------------------------------
+---------------------------------------
+$r3 = r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedDescriptor providedDescriptor>
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r3: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedDescriptor}
+---------------------------------------
+---------------------------------------
+$i1 = virtualinvoke $r3.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedDescriptor: int activeProvidedDatanodes()>()
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r3: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedDescriptor}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $i1: int}
+---------------------------------------
+---------------------------------------
+if $i1 != 0 goto label2
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $i1: int}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+---------------------------------------
+---------------------------------------
+$r4 = r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo providedStorageInfo>
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+Live out: {$r4: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo}
+---------------------------------------
+---------------------------------------
+virtualinvoke $r4.<org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo: void setBlockReportCount(int)>(0)
+Live in: {$r4: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo}
+Live out: {}
+---------------------------------------
+---------------------------------------
+return
+Live in: {}
+Live out: {}
+---------------------------------------
+=======================================
+=======================================
+getCapacity
+---------------------------------------
+r0 := @this: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap
+Live in: {}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+---------------------------------------
+---------------------------------------
+$r1 = r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo providedStorageInfo>
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo}
+---------------------------------------
+---------------------------------------
+if $r1 != null goto label1
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+---------------------------------------
+---------------------------------------
+return 0L
+Live in: {}
+Live out: {}
+---------------------------------------
+---------------------------------------
+$r2 = r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo providedStorageInfo>
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+Live out: {$r2: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo}
+---------------------------------------
+---------------------------------------
+$l0 = virtualinvoke $r2.<org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo: long getCapacity()>()
+Live in: {$r2: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo}
+Live out: {$l0: long}
+---------------------------------------
+---------------------------------------
+return $l0
+Live in: {$l0: long}
+Live out: {}
+---------------------------------------
+=======================================
+=======================================
+updateStorage
+---------------------------------------
+r0 := @this: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap
+Live in: {}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+---------------------------------------
+---------------------------------------
+r1 := @parameter0: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+---------------------------------------
+---------------------------------------
+r2 := @parameter1: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage}
+---------------------------------------
+---------------------------------------
+$r3 = virtualinvoke r2.<org.apache.hadoop.hdfs.server.protocol.DatanodeStorage: java.lang.String getStorageID()>()
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, $r3: java.lang.String}
+---------------------------------------
+---------------------------------------
+$z0 = specialinvoke r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: boolean isProvidedStorage(java.lang.String)>($r3)
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, $r3: java.lang.String}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, $z0: boolean}
+---------------------------------------
+---------------------------------------
+if $z0 == 0 goto label2
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, $z0: boolean}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage}
+---------------------------------------
+---------------------------------------
+$r5 = <org.apache.hadoop.fs.StorageType: org.apache.hadoop.fs.StorageType PROVIDED>
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, $r5: org.apache.hadoop.fs.StorageType}
+---------------------------------------
+---------------------------------------
+$r6 = virtualinvoke r2.<org.apache.hadoop.hdfs.server.protocol.DatanodeStorage: org.apache.hadoop.fs.StorageType getStorageType()>()
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, $r5: org.apache.hadoop.fs.StorageType}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, $r6: org.apache.hadoop.fs.StorageType, $r5: org.apache.hadoop.fs.StorageType}
+---------------------------------------
+---------------------------------------
+$z1 = virtualinvoke $r5.<org.apache.hadoop.fs.StorageType: boolean equals(java.lang.Object)>($r6)
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, $r6: org.apache.hadoop.fs.StorageType, $r5: org.apache.hadoop.fs.StorageType}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, $z1: boolean}
+---------------------------------------
+---------------------------------------
+if $z1 == 0 goto label1
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, $z1: boolean}
+Live out: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage}
+---------------------------------------
+---------------------------------------
+$r8 = r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo providedStorageInfo>
+Live in: {r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+Live out: {$r8: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo, r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor}
+---------------------------------------
+---------------------------------------
+virtualinvoke r1.<org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor: void injectStorage(org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo)>($r8)
+Live in: {$r8: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo, r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor}
+Live out: {}
+---------------------------------------
+---------------------------------------
+return
+Live in: {}
+Live out: {}
+---------------------------------------
+---------------------------------------
+$r7 = <org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: org.slf4j.Logger LOG>
+Live in: {r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor}
+Live out: {r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, $r7: org.slf4j.Logger}
+---------------------------------------
+---------------------------------------
+interfaceinvoke $r7.<org.slf4j.Logger: void warn(java.lang.String,java.lang.Object,java.lang.Object)>("Reserved storage {} reported as non-provided from {}", r2, r1)
+Live in: {r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor, $r7: org.slf4j.Logger}
+Live out: {r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor}
+---------------------------------------
+---------------------------------------
+virtualinvoke r1.<org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo updateStorage(org.apache.hadoop.hdfs.server.protocol.DatanodeStorage)>(r2)
+Live in: {r2: org.apache.hadoop.hdfs.server.protocol.DatanodeStorage, r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor}
+Live out: {}
+---------------------------------------
+---------------------------------------
+return
+Live in: {}
+Live out: {}
+---------------------------------------
+=======================================
+=======================================
+isProvidedStorage
+---------------------------------------
+r0 := @this: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap
+Live in: {}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+---------------------------------------
+---------------------------------------
+r1 := @parameter0: java.lang.String
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+Live out: {r1: java.lang.String, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+---------------------------------------
+---------------------------------------
+$z0 = r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: boolean providedEnabled>
+Live in: {r1: java.lang.String, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+Live out: {r1: java.lang.String, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $z0: boolean}
+---------------------------------------
+---------------------------------------
+if $z0 == 0 goto label1
+Live in: {r1: java.lang.String, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap, $z0: boolean}
+Live out: {r1: java.lang.String, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+---------------------------------------
+---------------------------------------
+$r2 = r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: java.lang.String storageId>
+Live in: {r1: java.lang.String, r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+Live out: {r1: java.lang.String, $r2: java.lang.String}
+---------------------------------------
+---------------------------------------
+$z1 = virtualinvoke $r2.<java.lang.String: boolean equals(java.lang.Object)>(r1)
+Live in: {r1: java.lang.String, $r2: java.lang.String}
+Live out: {$z1: boolean}
+---------------------------------------
+---------------------------------------
+if $z1 == 0 goto label1
+Live in: {$z1: boolean}
+Live out: {}
+---------------------------------------
+---------------------------------------
+$z2 = 1
+Live in: {}
+Live out: {$z2: boolean}
+---------------------------------------
+---------------------------------------
+goto label2
+Live in: {$z2: boolean}
+Live out: {$z2: boolean}
+---------------------------------------
+---------------------------------------
+$z2 = 0
+Live in: {}
+Live out: {$z2: boolean}
+---------------------------------------
+---------------------------------------
+return $z2
+Live in: {$z2: boolean}
+Live out: {}
+---------------------------------------
+=======================================
+=======================================
+chooseProvidedDatanode
+---------------------------------------
+r0 := @this: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap
+Live in: {}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+---------------------------------------
+---------------------------------------
+$r2 = r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedDescriptor providedDescriptor>
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+Live out: {$r2: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedDescriptor}
+---------------------------------------
+---------------------------------------
+$r1 = newarray (org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo)[0]
+Live in: {$r2: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedDescriptor}
+Live out: {$r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo[], $r2: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedDescriptor}
+---------------------------------------
+---------------------------------------
+$r3 = virtualinvoke $r2.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedDescriptor: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor chooseRandom(org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo[])>($r1)
+Live in: {$r1: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeStorageInfo[], $r2: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedDescriptor}
+Live out: {$r3: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor}
+---------------------------------------
+---------------------------------------
+return $r3
+Live in: {$r3: org.apache.hadoop.hdfs.server.blockmanagement.DatanodeDescriptor}
+Live out: {}
+---------------------------------------
+=======================================
+=======================================
+access$000
+---------------------------------------
+r0 := @parameter0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap
+Live in: {}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+---------------------------------------
+---------------------------------------
+$r1 = r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedDescriptor providedDescriptor>
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+Live out: {$r1: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedDescriptor}
+---------------------------------------
+---------------------------------------
+return $r1
+Live in: {$r1: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap$ProvidedDescriptor}
+Live out: {}
+---------------------------------------
+=======================================
+=======================================
+access$100
+---------------------------------------
+r0 := @parameter0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap
+Live in: {}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+---------------------------------------
+---------------------------------------
+$r1 = r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: java.lang.String storageId>
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+Live out: {$r1: java.lang.String}
+---------------------------------------
+---------------------------------------
+return $r1
+Live in: {$r1: java.lang.String}
+Live out: {}
+---------------------------------------
+=======================================
+=======================================
+access$200
+---------------------------------------
+r0 := @parameter0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap
+Live in: {}
+Live out: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+---------------------------------------
+---------------------------------------
+$i0 = r0.<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: int defaultReplication>
+Live in: {r0: org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap}
+Live out: {$i0: int}
+---------------------------------------
+---------------------------------------
+return $i0
+Live in: {$i0: int}
+Live out: {}
+---------------------------------------
+=======================================
+=======================================
+access$300
+---------------------------------------
+$r0 = <org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: org.slf4j.Logger LOG>
+Live in: {}
+Live out: {$r0: org.slf4j.Logger}
+---------------------------------------
+---------------------------------------
+return $r0
+Live in: {$r0: org.slf4j.Logger}
+Live out: {}
+---------------------------------------
+=======================================
+=======================================
+<clinit>
+---------------------------------------
+$r0 = class "Lorg/apache/hadoop/hdfs/server/blockmanagement/ProvidedStorageMap;"
+Live in: {}
+Live out: {$r0: java.lang.Class}
+---------------------------------------
+---------------------------------------
+$z0 = virtualinvoke $r0.<java.lang.Class: boolean desiredAssertionStatus()>()
+Live in: {$r0: java.lang.Class}
+Live out: {$z0: boolean}
+---------------------------------------
+---------------------------------------
+if $z0 != 0 goto label1
+Live in: {$z0: boolean}
+Live out: {}
+---------------------------------------
+---------------------------------------
+$z1 = 1
+Live in: {}
+Live out: {$z1: boolean}
+---------------------------------------
+---------------------------------------
+goto label2
+Live in: {$z1: boolean}
+Live out: {$z1: boolean}
+---------------------------------------
+---------------------------------------
+$z1 = 0
+Live in: {}
+Live out: {$z1: boolean}
+---------------------------------------
+---------------------------------------
+<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: boolean $assertionsDisabled> = $z1
+Live in: {$z1: boolean}
+Live out: {}
+---------------------------------------
+---------------------------------------
+$r1 = staticinvoke <org.slf4j.LoggerFactory: org.slf4j.Logger getLogger(java.lang.Class)>(class "Lorg/apache/hadoop/hdfs/server/blockmanagement/ProvidedStorageMap;")
+Live in: {}
+Live out: {$r1: org.slf4j.Logger}
+---------------------------------------
+---------------------------------------
+<org.apache.hadoop.hdfs.server.blockmanagement.ProvidedStorageMap: org.slf4j.Logger LOG> = $r1
+Live in: {$r1: org.slf4j.Logger}
+Live out: {}
+---------------------------------------
+---------------------------------------
+return
+Live in: {}
+Live out: {}
+---------------------------------------
+=======================================
