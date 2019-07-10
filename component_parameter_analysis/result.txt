@@ -1,0 +1,6 @@
+org.apache.hadoop.hdfs.server.namenode.NameNode
+
+org.apache.hadoop.hdfs.server.datanode.DataNode
+
+org.apache.hadoop.hdfs.qjournal.server.JournalNode
+
