@@ -117,12 +117,12 @@ public class ComponentAnalysis {
                 // get(java.lang.String)
                 Set<String> paraSetGet1 = new HashSet<String>();
                 funcMap.put("get1", paraSetGet1);
-                ComponentAnalysis.edgeAnalysis("get1", new ArrayList<Type>(Arrays.asList(stringType)), paraSetGet1);
+                ComponentAnalysis.edgeAnalysis("get", new ArrayList<Type>(Arrays.asList(stringType)), paraSetGet1);
                 
                 // get(java.lang.String, java.lang.String)
                 Set<String> paraSetGet2 = new HashSet<String>();
                 funcMap.put("get2", paraSetGet2);
-                ComponentAnalysis.edgeAnalysis("get2", new ArrayList<Type>(Arrays.asList(stringType, stringType)), paraSetGet2);
+                ComponentAnalysis.edgeAnalysis("get", new ArrayList<Type>(Arrays.asList(stringType, stringType)), paraSetGet2);
 
                 for ( String func : functionsWithType ) {
                         Set<String> paraSet = new HashSet<String>();
