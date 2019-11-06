@@ -27,33 +27,26 @@ import soot.toolkits.graph.*;
 import java.util.*;
 import java.lang.Exception;
 
-public class JUnitTestAnalysis {
-    private static CallGraph cg = null;
-    private static final String clusterInvolvedKey = "MiniDFS";
+public abstract class JUnitTestAnalysis {
+    private String clusterInvolvedKey;
+    private CallGraph cg = null;
     private static final String junitTestKey = "Lorg/junit/Test";
+    private static final int exploreDepth = 3;
+    
+    protected ArrayList<String> processDirs = new ArrayList<String>();
 
-    public static void start() {
+    public JUnitTestAnalysis(String key) {
+	this.clusterInvolvedKey = key;
+    }
 
-/*        String classPath = "/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/hadoop-hdfs-3.1.2.jar";
-        classPath += ":/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/hadoop-hdfs-client-3.1.2.jar";
-        classPath += ":/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/hadoop-hdfs-httpfs-3.1.2.jar";
-        classPath += ":/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/hadoop-hdfs-nfs-3.1.2.jar";
+    protected abstract void initProcessDir();
 
-        classPath += ":/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/hadoop-common-3.1.2.jar";
-        classPath += ":/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/hadoop-nfs-3.1.2.jar";
-        classPath += ":/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/hadoop-kms-3.1.2.jar";
-        classPath += ":/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/client/hadoop-client-api-3.1.2.jar";
-        classPath += ":/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/client/hadoop-client-runtime-3.1.2.jar";
-*/
-        ArrayList<String> processDirs = new ArrayList<String>();
-        processDirs.add("/root/hadoop-3.1.2-src/hadoop-hdfs-project/hadoop-hdfs/target/test-classes");
-        processDirs.add("/root/hadoop-3.1.2-src/hadoop-hdfs-project/hadoop-hdfs-client/target/test-classes");
-        processDirs.add("/root/hadoop-3.1.2-src/hadoop-hdfs-project/hadoop-hdfs-httpfs/target/test-classes");
-        processDirs.add("/root/hadoop-3.1.2-src/hadoop-hdfs-project/hadoop-hdfs-native-client/target/test-classes");
-        processDirs.add("/root/hadoop-3.1.2-src/hadoop-hdfs-project/hadoop-hdfs-nfs/target/test-classes");
-        processDirs.add("/root/hadoop-3.1.2-src/hadoop-hdfs-project/hadoop-hdfs-rbf/target/test-classes");
-        
-//        Options.v().set_soot_classpath(classPath);
+    public void start() {	
+	initProcessDir();
+
+	// NO CLASSPATH 
+	//String classPath = "/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/hadoop-hdfs-3.1.2-tests.jar";
+        //Options.v().set_soot_classpath(classPath);
         Options.v().set_whole_program(true);  // process whole program
         Options.v().set_allow_phantom_refs(true); // load phantom references
         Options.v().set_prepend_classpath(true); // prepend class path
@@ -68,24 +61,17 @@ public class JUnitTestAnalysis {
         Scene.v().loadNecessaryClasses();
         CHATransformer.v().transform();
         cg = Scene.v().getCallGraph();
-        //ReachableMethods methods = Scene.v().getReachableMethods();
-        //System.out.println("size of methods = " + methods.size());
-        Chain<SootClass> classChain = Scene.v().getClasses();
-        System.out.println("size of classes = " + classChain.size());
-        Iterator<SootClass> it = classChain.iterator();
-        //final String junitType = "Test";
+
 	int numOfJunitTests = 0;
 	int numOfClusterJunitTests = 0;
-        while (it.hasNext()) {
-     	    SootClass sootClass = it.next();
-	    boolean testFuncExistInClass = false;
-	    List<SootMethod> junitTestMethods = new ArrayList<SootMethod>();
-	    List<SootMethod> clusterInvolvedMethods = new ArrayList<SootMethod>();
-	    List<SootMethod> junitClusterTests = new ArrayList<SootMethod>();
+
+	List<SootClass> sootClassList = Scene.v().getClasses(1);
+	for (SootClass sootClass : sootClassList) {
 	    // tmp
-	    if ( !sootClass.getName().contains("TestXAttrConfigFlag") )
-		continue;
+	    //if ( !sootClass.getName().contains("TestXAttrConfigFlag") )
 	    //if (!sootClass.getName().contains("TestBlockScanner"))
+	    //if (!sootClass.getName().contains("org.apache.hadoop.hdfs.TestRead"))
+		//continue;
     	   
 	    for (SootMethod sootMethod : sootClass.getMethods()) {
 		boolean isJunitTest = false;
@@ -94,79 +80,69 @@ public class JUnitTestAnalysis {
     	                VisibilityAnnotationTag vaTag = (VisibilityAnnotationTag) tag;
 	    	        for (AnnotationTag aTag : vaTag.getAnnotations()) {
 	    		    if (aTag.getType().contains(junitTestKey)) {
-				junitTestMethods.add(sootMethod);
 	    		        numOfJunitTests ++;
-				testFuncExistInClass = true;	
 				isJunitTest = true;
+				break;
 	    		    }
 	    	        }
 		    }	
+		    if (isJunitTest)
+			break;
     	        }
-		if (isJunitTest)
-		    goThroughMethod(sootMethod);
+
+		if (isJunitTest) {
+		    if (goThroughMethod(sootMethod, 0)) { 
+			System.out.println(sootMethod + " is a cluster junit test!");
+			numOfClusterJunitTests ++;
+		    } else {
+			System.out.println(sootMethod + " is a junit test!");
+		    }
+		    System.out.println("");
+		}
 	    }
+	}
 	    
+        System.out.println("num of classes: " + sootClassList.size());
 	System.out.println("numOfJunitTests: " + numOfJunitTests);
+	System.out.println("numOfClusterJunitTests: " + numOfClusterJunitTests);
     }
 
-    private void goThroughMethod(SootMethod sootMethod) {
+    private boolean goThroughMethod(SootMethod sootMethod, int level) {
+	boolean finished = false;
+	String levelPrefix = "[" + level + "] ";
+	System.out.println(levelPrefix + sootMethod);
 	Body b = sootMethod.retrieveActiveBody(); 
 	UnitGraph graph = new ExceptionalUnitGraph(b);
+	
 	for (Unit unit : graph) {
+	    System.out.println(levelPrefix + "unit:" + unit);
 	    if (unit instanceof InvokeStmt) {
-		System.out.println("InvokeStmt:" + unit);
+		InvokeStmt invokeStmt = (InvokeStmt) unit;
+		System.out.println(levelPrefix + "InvokeStmt:" + invokeStmt);
+		try {
+		    SootMethod invokedMethod = invokeStmt.getInvokeExpr().getMethod();
+		    if (level <= exploreDepth)
+		        finished = goThroughMethod(invokedMethod, level+1);
+		} catch (Exception e) {
+		    System.out.println(levelPrefix + "touched the boundary");
+		} 
+	    } else {
+		if (unit.toString().contains(clusterInvolvedKey)) {
+		    System.out.println(levelPrefix + "clusterInvolvedKey matches!");
+		    finished = true;
+		}
 	    }
-	    //if (unit.toString().contains(clusterInvolvedKey)) {
-	    //	System.out.println("clusterInvolvedKey matches!");
-	    //	return;
-	    //}
-	}	
+	    if (finished)
+		break;
+	}
+	return finished;
     }
-   
+    
     public static void main(String[] args) {
-        // init once and perform analysises for different functions
-        JUnitTestAnalysis.start();
+	//HdfsAnalysis hdfsAnalysis = new HdfsAnalysis("MiniDFS");
+	//hdfsAnalysis.start();
+	
+        YarnAnalysis yarnAnalysis = new YarnAnalysis("MiniYARN");
+	yarnAnalysis.start();
     }
 }
-	    // intra analysis for all functions in this class
-	    /*if (testFuncExistInClass) {
-		for (SootMethod sootMethod : sootClass.getMethods()) { 
-		    Body b = sootMethod.retrieveActiveBody(); 
-		    UnitGraph graph = new ExceptionalUnitGraph(b);
-		    for (Unit unit : graph) {
-		        if (unit.toString().contains(clusterInvolvedKey)) {
-			    clusterInvolvedMethods.add(sootMethod);
-			    break;
-			}
-		    }
-		}
-	    }	
-	    
-            System.out.println(sootClass);
-            
-	    System.out.println("clusterInvolvedMethods:");
-	    for (SootMethod m : clusterInvolvedMethods)
-		System.out.println(m);
-
-            System.out.println("junitTestMethods:");
-	    for (SootMethod m : junitTestMethods)
- 	        System.out.println(m);
-	    
-	    for (SootMethod junitTest : junitTestMethods) {
-		Body b = junitTest.retrieveActiveBody();
-		UnitGraph graph = new ExceptionalUnitGraph(b);
-		boolean found = false;
-	        for (Unit unit : graph) {
-		    for (SootMethod clusterInvolvedMethod : clusterInvolvedMethods) {
-		        if (unit.toString().contains(clusterInvolvedMethod.toString())) {
-			    found = true;
-			    break; 
-			}
-		    }
-		    if (found)
-			break;
-	 	}
-		if (found)
-		    System.out.println("yes: " + junitTest);
-	    }
-    	}*/
