@@ -139,10 +139,14 @@ public abstract class JUnitTestAnalysis {
     }
     
     public static void main(String[] args) {
-	//HdfsAnalysis hdfsAnalysis = new HdfsAnalysis("MiniDFS");
-	//hdfsAnalysis.start();
+	HdfsAnalysis hdfsAnalysis = new HdfsAnalysis("org.apache.hadoop.hdfs.MiniDFS");
+	hdfsAnalysis.start();
 	
-        YarnAnalysis yarnAnalysis = new YarnAnalysis("MiniYARN");
-	yarnAnalysis.start();
+        //YarnAnalysis yarnAnalysis = new YarnAnalysis("org.apache.hadoop.yarn.server.MiniYARN");
+//	yarnAnalysis.start();
+        
+        //MapreduceAnalysis mapreduceAnalysis = new MapreduceAnalysis("Cluster");
+        //MapreduceAnalysis mapreduceAnalysis = new MapreduceAnalysis("org.apache.hadoop.mapreduce.Cluster");
+	//mapreduceAnalysis.start();
     }
 }
