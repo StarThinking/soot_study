@@ -1,7 +1,9 @@
-public class HdfsAnalysis extends JUnitTestAnalysis {
+public class HdfsAnalysis extends JunitTestAnalysis {
 
-    public HdfsAnalysis(String clusterInvolvedKey) {
-	super(clusterInvolvedKey);
+//    private static final String clusterInvolvedKey = "org.apache.hadoop.hdfs.MiniDFS";
+
+    public HdfsAnalysis() {
+	super(new String[] {"org.apache.hadoop.hdfs.MiniDFS"});
     }
 
     @Override
@@ -12,5 +14,10 @@ public class HdfsAnalysis extends JUnitTestAnalysis {
         processDirs.add("/root/hadoop-3.1.2-src/hadoop-hdfs-project/hadoop-hdfs-native-client/target/test-classes");
         processDirs.add("/root/hadoop-3.1.2-src/hadoop-hdfs-project/hadoop-hdfs-nfs/target/test-classes");
         processDirs.add("/root/hadoop-3.1.2-src/hadoop-hdfs-project/hadoop-hdfs-rbf/target/test-classes");
+    }
+
+    public static void main(String[] args) {
+        HdfsAnalysis analysis = new HdfsAnalysis();
+        analysis.start();
     }
 } 

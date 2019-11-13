@@ -1,7 +1,9 @@
-public class MapreduceAnalysis extends JUnitTestAnalysis {
+public class MapreduceAnalysis extends JunitTestAnalysis {
 
-    public MapreduceAnalysis(String clusterInvolvedKey) {
-	super(clusterInvolvedKey);
+//    private static final String clusterInvolvedKey = "org.apache.hadoop.mapreduce.Cluster";
+
+    public MapreduceAnalysis() {
+	super(new String[] {"org.apache.hadoop.mapreduce.Cluster"});
     }
 
     @Override
@@ -16,5 +18,10 @@ public class MapreduceAnalysis extends JUnitTestAnalysis {
         processDirs.add(base + "hadoop-mapreduce-client-nativetask/target/test-classes");
         processDirs.add(base + "hadoop-mapreduce-client-shuffle/target/test-classes");
         processDirs.add(base + "hadoop-mapreduce-client-uploader/target/test-classes");
+    }
+	
+    public static void main(String[] args) {
+        MapreduceAnalysis analysis = new MapreduceAnalysis();
+        analysis.start();
     }
 } 

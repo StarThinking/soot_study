@@ -27,16 +27,32 @@ import soot.toolkits.graph.*;
 import java.util.*;
 import java.lang.Exception;
 
-public abstract class JUnitTestAnalysis {
-    private String clusterInvolvedKey;
+public abstract class JunitTestAnalysis {
+    private Map<String, Set<String>> stats;
     private CallGraph cg = null;
     private static final String junitTestKey = "Lorg/junit/Test";
     private static final int exploreDepth = 3;
     
     protected ArrayList<String> processDirs = new ArrayList<String>();
+    private static ArrayList<String> excludePackagesList = new ArrayList<String>();
 
-    public JUnitTestAnalysis(String key) {
-	this.clusterInvolvedKey = key;
+    static { 
+	excludePackagesList.add("java."); 
+	excludePackagesList.add("android."); 
+	excludePackagesList.add("javax."); 
+	excludePackagesList.add("android.support."); 
+	excludePackagesList.add("sun."); 
+	excludePackagesList.add("com.google."); 
+	excludePackagesList.add("com.android."); 
+	excludePackagesList.add("dalvik."); 
+	excludePackagesList.add("org.junit."); 
+    }
+
+    public JunitTestAnalysis(String[] keys) {
+        stats = new HashMap<String, Set<String>>();
+	for (String key : keys) {
+	    stats.put(key, new HashSet<String>());
+	}
     }
 
     protected abstract void initProcessDir();
@@ -52,6 +68,8 @@ public abstract class JUnitTestAnalysis {
         Options.v().set_prepend_classpath(true); // prepend class path
         Options.v().set_src_prec(Options.src_prec_class); // process only .class files
         Options.v().set_process_dir(processDirs); // process all .class files in directory
+        Options.v().set_no_bodies_for_excluded(true);
+	Options.v().set_exclude(excludePackagesList);
         Options.v().setPhaseOption("cg.spark", "on"); // use spark for call graph
         Options.v().set_output_dir("/tmp/sootOutput"); // use spark for call graph
         Options.v().set_keep_line_number(true);
@@ -62,17 +80,12 @@ public abstract class JUnitTestAnalysis {
         CHATransformer.v().transform();
         cg = Scene.v().getCallGraph();
 
-	int numOfJunitTests = 0;
-	int numOfClusterJunitTests = 0;
+	int junitTests = 0;
+	int clusterInvolvedTests = 0;
+	int rebootInvolvedTests = 0;
 
 	List<SootClass> sootClassList = Scene.v().getClasses(1);
 	for (SootClass sootClass : sootClassList) {
-	    // tmp
-	    //if ( !sootClass.getName().contains("TestXAttrConfigFlag") )
-	    //if (!sootClass.getName().contains("TestBlockScanner"))
-	    //if (!sootClass.getName().contains("org.apache.hadoop.hdfs.TestRead"))
-		//continue;
-    	   
 	    for (SootMethod sootMethod : sootClass.getMethods()) {
 		boolean isJunitTest = false;
     	        for (Tag tag : sootMethod.getTags()) {
@@ -80,7 +93,6 @@ public abstract class JUnitTestAnalysis {
     	                VisibilityAnnotationTag vaTag = (VisibilityAnnotationTag) tag;
 	    	        for (AnnotationTag aTag : vaTag.getAnnotations()) {
 	    		    if (aTag.getType().contains(junitTestKey)) {
-	    		        numOfJunitTests ++;
 				isJunitTest = true;
 				break;
 	    		    }
@@ -91,62 +103,61 @@ public abstract class JUnitTestAnalysis {
     	        }
 
 		if (isJunitTest) {
-		    if (goThroughMethod(sootMethod, 0)) { 
-			System.out.println(sootMethod + " is a cluster junit test!");
-			numOfClusterJunitTests ++;
-		    } else {
-			System.out.println(sootMethod + " is a junit test!");
+	            junitTests ++;
+		    Map<String, Boolean> keyMap = new HashMap<String, Boolean>();
+		    for (String key : stats.keySet()) {
+			keyMap.put(key, false);
 		    }
-		    System.out.println("");
+		    
+		    goThroughMethod(keyMap, sootMethod, 0);
+		   
+		    // merge the result for this method with the global stats
+	 	    for (String key : keyMap.keySet()) {
+			if (keyMap.get(key) == true) {
+			    stats.get(key).add(sootMethod.toString());
+			    //System.out.println(sootMethod);
+			}
+		    }
 		}
 	    }
 	}
 	    
         System.out.println("num of classes: " + sootClassList.size());
-	System.out.println("numOfJunitTests: " + numOfJunitTests);
-	System.out.println("numOfClusterJunitTests: " + numOfClusterJunitTests);
+        System.out.println("num of junitTests: " + junitTests);
+	for (String key : stats.keySet()) {
+	    System.out.println(key + ": " + stats.get(key).size());
+	}
     }
 
-    private boolean goThroughMethod(SootMethod sootMethod, int level) {
-	boolean finished = false;
+    private void goThroughMethod(Map<String, Boolean> keyMap, SootMethod sootMethod, int level) {
+	boolean clusterInvolved = false;
+	boolean rebootInvolved = false;
 	String levelPrefix = "[" + level + "] ";
-	System.out.println(levelPrefix + sootMethod);
+	//System.out.println(levelPrefix + sootMethod);
 	Body b = sootMethod.retrieveActiveBody(); 
 	UnitGraph graph = new ExceptionalUnitGraph(b);
 	
 	for (Unit unit : graph) {
-	    System.out.println(levelPrefix + "unit:" + unit);
+	    //System.out.println(levelPrefix + "unit:" + unit);
 	    if (unit instanceof InvokeStmt) {
 		InvokeStmt invokeStmt = (InvokeStmt) unit;
-		System.out.println(levelPrefix + "InvokeStmt:" + invokeStmt);
+		//System.out.println(levelPrefix + "InvokeStmt:" + invokeStmt);
 		try {
 		    SootMethod invokedMethod = invokeStmt.getInvokeExpr().getMethod();
-		    if (level <= exploreDepth)
-		        finished = goThroughMethod(invokedMethod, level+1);
+		    if (level <= exploreDepth) {
+		        goThroughMethod(keyMap, invokedMethod, level+1);
+		    }
 		} catch (Exception e) {
-		    System.out.println(levelPrefix + "touched the boundary");
+		    //System.out.println(levelPrefix + "touched the boundary");
 		} 
 	    } else {
-		if (unit.toString().contains(clusterInvolvedKey)) {
-		    System.out.println(levelPrefix + "clusterInvolvedKey matches!");
-		    finished = true;
+		for (String key : keyMap.keySet()) { 
+		    if (unit.toString().contains(key)) {
+			keyMap.put(key, true);
+		    }
 		}
 	    }
-	    if (finished)
-		break;
 	}
-	return finished;
-    }
-    
-    public static void main(String[] args) {
-	HdfsAnalysis hdfsAnalysis = new HdfsAnalysis("org.apache.hadoop.hdfs.MiniDFS");
-	hdfsAnalysis.start();
-	
-        //YarnAnalysis yarnAnalysis = new YarnAnalysis("org.apache.hadoop.yarn.server.MiniYARN");
-//	yarnAnalysis.start();
-        
-        //MapreduceAnalysis mapreduceAnalysis = new MapreduceAnalysis("Cluster");
-        //MapreduceAnalysis mapreduceAnalysis = new MapreduceAnalysis("org.apache.hadoop.mapreduce.Cluster");
-	//mapreduceAnalysis.start();
+	return;
     }
 }

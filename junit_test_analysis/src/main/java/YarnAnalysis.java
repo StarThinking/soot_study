@@ -1,7 +1,9 @@
-public class YarnAnalysis extends JUnitTestAnalysis {
+public class YarnAnalysis extends JunitTestAnalysis {
 
-    public YarnAnalysis(String clusterInvolvedKey) {
-	super(clusterInvolvedKey);
+//    private static final String clusterInvolvedKey = "org.apache.hadoop.yarn.server.MiniYARN";
+
+    public YarnAnalysis() {
+	super(new String[] {"org.apache.hadoop.yarn.server.MiniYARN"});
     }
 
     @Override
@@ -29,5 +31,10 @@ public class YarnAnalysis extends JUnitTestAnalysis {
         processDirs.add(base + "/hadoop-yarn-server/hadoop-yarn-server-timelineservice-hbase/hadoop-yarn-server-timelineservice-hbase-server/hadoop-yarn-server-timelineservice-hbase-server-1/target/test-classes");
         processDirs.add(base + "/hadoop-yarn-server/hadoop-yarn-server-timelineservice-hbase-tests/target/test-classes");
         processDirs.add(base + "/hadoop-yarn-server/hadoop-yarn-server-web-proxy/target/test-classes");   
+    }
+
+    public static void main(String[] args) {
+        YarnAnalysis analysis = new YarnAnalysis();
+        analysis.start();
     }
 } 
