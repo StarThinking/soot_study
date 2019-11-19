@@ -1,14 +1,11 @@
+import java.util.*;
+
 public class YarnAnalysis extends JunitTestAnalysis {
+    private static List<String> processDirs = new ArrayList<String>();
+    private static List<String> keys = new ArrayList<String>();
+    private static String base = "/root/hadoop-3.1.2-src/hadoop-yarn-project/hadoop-yarn";
 
-//    private static final String clusterInvolvedKey = "org.apache.hadoop.yarn.server.MiniYARN";
-
-    public YarnAnalysis() {
-	super(new String[] {"org.apache.hadoop.yarn.server.MiniYARN"});
-    }
-
-    @Override
-    protected void initProcessDir() {
-        String base = "/root/hadoop-3.1.2-src/hadoop-yarn-project/hadoop-yarn";
+    static {
         processDirs.add(base + "/hadoop-yarn-api/target/test-classes");
         processDirs.add(base + "/hadoop-yarn-applications/hadoop-yarn-applications-distributedshell/target/test-classes");
         processDirs.add(base + "/hadoop-yarn-applications/hadoop-yarn-services/hadoop-yarn-services-api/target/test-classes");
@@ -31,10 +28,18 @@ public class YarnAnalysis extends JunitTestAnalysis {
         processDirs.add(base + "/hadoop-yarn-server/hadoop-yarn-server-timelineservice-hbase/hadoop-yarn-server-timelineservice-hbase-server/hadoop-yarn-server-timelineservice-hbase-server-1/target/test-classes");
         processDirs.add(base + "/hadoop-yarn-server/hadoop-yarn-server-timelineservice-hbase-tests/target/test-classes");
         processDirs.add(base + "/hadoop-yarn-server/hadoop-yarn-server-web-proxy/target/test-classes");   
+
+	keys.add("org.apache.hadoop.yarn.server.MiniYARNCluster");
+	keys.add("restartResourceManager"); // only have restartResourceManager
+    }
+
+    public YarnAnalysis() {
+	super(processDirs, keys);
     }
 
     public static void main(String[] args) {
         YarnAnalysis analysis = new YarnAnalysis();
         analysis.start();
+	analysis.analysisByKey(1);
     }
 } 

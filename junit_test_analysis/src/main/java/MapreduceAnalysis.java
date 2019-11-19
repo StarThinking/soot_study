@@ -1,14 +1,11 @@
+import java.util.*;
+
 public class MapreduceAnalysis extends JunitTestAnalysis {
+    private static List<String> processDirs = new ArrayList<String>();
+    private static List<String> keys = new ArrayList<String>();
+    private static String base = "/root/hadoop-3.1.2-src/hadoop-mapreduce-project/hadoop-mapreduce-client/";
 
-//    private static final String clusterInvolvedKey = "org.apache.hadoop.mapreduce.Cluster";
-
-    public MapreduceAnalysis() {
-	super(new String[] {"org.apache.hadoop.mapreduce.Cluster"});
-    }
-
-    @Override
-    protected void initProcessDir() {
-	String base = "/root/hadoop-3.1.2-src/hadoop-mapreduce-project/hadoop-mapreduce-client/";
+    static {
         processDirs.add(base + "hadoop-mapreduce-client-app/target/test-classes");
         processDirs.add(base + "hadoop-mapreduce-client-common/target/test-classes");
         processDirs.add(base + "hadoop-mapreduce-client-core/target/test-classes");
@@ -18,10 +15,23 @@ public class MapreduceAnalysis extends JunitTestAnalysis {
         processDirs.add(base + "hadoop-mapreduce-client-nativetask/target/test-classes");
         processDirs.add(base + "hadoop-mapreduce-client-shuffle/target/test-classes");
         processDirs.add(base + "hadoop-mapreduce-client-uploader/target/test-classes");
+
+	//keys.add("org.apache.hadoop.mapred.MiniMRYarnClusterAdapter"); // implements MiniMRClientCluster
+	keys.add("org.apache.hadoop.mapred.MiniMRClientCluster");  
+	keys.add("restart()"); 
+	keys.add("org.apache.hadoop.mapred.MiniMRYarnCluster"); // field of MiniMRYarnClusterAdapter
+	keys.add("org.apache.hadoop.mapred.MiniMRCluster"); // @Deprecated
+	keys.add("org.apache.hadoop.mapreduce.v2.MiniMRYarnCluster");
+	keys.add("org.apache.hadoop.hdfs.MiniDFSCluster"); 
+    }
+
+    public MapreduceAnalysis() {
+	super(processDirs, keys);
     }
 	
     public static void main(String[] args) {
         MapreduceAnalysis analysis = new MapreduceAnalysis();
         analysis.start();
+	analysis.analysisByKey(1);
     }
 } 

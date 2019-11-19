@@ -27,15 +27,16 @@ import soot.toolkits.graph.*;
 import java.util.*;
 import java.lang.Exception;
 
-public abstract class JunitTestAnalysis {
+public abstract class JunitTestAnalysis implements AnalysisUtil {
     private List<String> processDirs = null;
     private List<String> keys = null;
-    private Map<String, Map<String, Integer>> keyStatByMethod = new HashMap<String, Map<String, Integer>>();
     private CallGraph cg = null;
     private static final String junitTestKey = "Lorg/junit/Test";
-    private static final int exploreDepth = 3;
-    private int junitTests = 0;
+    private static final int exploreDepth = 5;
     private static List<String> excludePackagesList = new ArrayList<String>();
+    private Map<String, Map<String, Integer>> keyStatByMethod = new HashMap<String, Map<String, Integer>>();
+    private Map<String, Boolean> restartStatByMethod = new HashMap<String, Boolean>(); // start after stop
+    private int junitTests = 0;
 
     static { 
 	excludePackagesList.add("java."); 
@@ -99,8 +100,13 @@ public abstract class JunitTestAnalysis {
 		    for (String key : keys) {
 			keyStat.put(key, 0);
 		    }
-		    goThroughMethod(keyStat, sootMethod, 0);
-		    // add the result of this method to global stat
+		    Map<String, Integer> stopStartStat = new HashMap<String, Integer>();
+		    stopStartStat.put("stop", 0);
+		    stopStartStat.put("startAfterStop", 0);
+		    goThroughMethod(keyStat, stopStartStat, sootMethod, 0);
+
+		    // combine the result of this method to global stat
+		    restartStatByMethod.put(sootMethod.toString(), (stopStartStat.get("startAfterStop") == 1) ? true : false);
 		    keyStatByMethod.put(sootMethod.toString(), keyStat);
 		}
 	    }
@@ -110,7 +116,8 @@ public abstract class JunitTestAnalysis {
         System.out.println("num of junitTests: " + junitTests);
     }
 
-    private void goThroughMethod(Map<String, Integer> keyStat, SootMethod sootMethod, int level) {
+    private void goThroughMethod(Map<String, Integer> keyStat, Map<String, Integer> stopStartStat,
+				SootMethod sootMethod, int level) {
 	boolean clusterInvolved = false;
 	boolean rebootInvolved = false;
 	String levelPrefix = "[" + level + "] ";
@@ -126,13 +133,21 @@ public abstract class JunitTestAnalysis {
 		}
 	    }
 	    
+	    if (unit.toString().contains("stop")) {
+		stopStartStat.put("stop", stopStartStat.get("stop")+1);
+	    }
+	
+	    if (stopStartStat.get("stop") >= 1  && unit.toString().contains("start")) {
+		stopStartStat.put("startAfterStop", 1);
+	    }
+
 	    if (unit instanceof InvokeStmt) {
 		InvokeStmt invokeStmt = (InvokeStmt) unit;
 		//System.out.println(levelPrefix + "InvokeStmt:" + invokeStmt);
 		try {
 		    SootMethod invokedMethod = invokeStmt.getInvokeExpr().getMethod();
 		    if (level <= exploreDepth) {
-		        goThroughMethod(keyStat, invokedMethod, level+1);
+		        goThroughMethod(keyStat, stopStartStat, invokedMethod, level+1);
 		    }
 		} catch (Exception e) {
 		    //System.out.println(levelPrefix + "touched the boundary");
@@ -140,6 +155,38 @@ public abstract class JunitTestAnalysis {
 	    } 
 	}
 	return;
+    }
+
+    @Override
+    public void analysisByKey(int occurance) {
+        Map<String, Set<String>> methodSetByKey = new HashMap<String, Set<String>>();
+        for (String key : keys) {
+            methodSetByKey.put(key, new HashSet<String>());
+        }
+
+        for (String method : keyStatByMethod.keySet()) {
+            Map<String, Integer> keyStat =  keyStatByMethod.get(method);
+            for (String key : keyStat.keySet()) {
+                if (keyStat.get(key) >= occurance) {
+                    methodSetByKey.get(key).add(method);
+                }
+            }
+        }
+
+        for (String key : keys) {
+            System.out.println("num of methods involving " + key + " : " + methodSetByKey.get(key).size());
+        }
+
+	System.out.println("num of restartStatByMethod : " + restartStatByMethod.size());
+
+	int restartMethod = 0;
+	for (String method : restartStatByMethod.keySet()) {
+	    if (restartStatByMethod.get(method) == true) {
+		System.out.println(method);
+		restartMethod++;
+	    }
+	}
+	System.out.println("num of restartMethod : " + restartMethod);
     }
 
     public Map<String, Map<String, Integer>> getKeyStatByMethod() {
