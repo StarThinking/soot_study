@@ -1,0 +1,22 @@
+import java.util.*;
+
+public class CassandraAnalysis extends JunitTestAnalysis {
+    private static List<String> processDirs = new ArrayList<String>();
+    private static List<String> keys = new ArrayList<String>();
+
+    static {
+        processDirs.add("/root/cassandra-cassandra-3.11.5/build/test/classes");
+
+	keys.add("org.apache.cassandra.distributed.Cluster");
+    }
+
+    public CassandraAnalysis() {
+	super(processDirs, keys, "start", "stop");
+    }
+
+    public static void main(String[] args) {
+        CassandraAnalysis analysis = new CassandraAnalysis();
+        analysis.start();
+	analysis.analysisByKey(1);
+    }
+} 

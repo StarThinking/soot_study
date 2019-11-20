@@ -27,17 +27,17 @@ import soot.toolkits.graph.*;
 import java.util.*;
 import java.lang.Exception;
 
-public abstract class JunitTestAnalysis implements AnalysisUtil {
-    private List<String> processDirs = null;
-    private List<String> keys = null;
+public class JunitTestAnalysis implements AnalysisUtil {
     private CallGraph cg = null;
     private static final String junitTestKey = "Lorg/junit/Test";
-    private static final int exploreDepth = 5;
+    private static final int exploreDepth = 8;
     private static List<String> excludePackagesList = new ArrayList<String>();
     private Map<String, Map<String, Integer>> keyStatByMethod = new HashMap<String, Map<String, Integer>>();
-    private Map<String, Boolean> restartStatByMethod = new HashMap<String, Boolean>(); // start after stop
     private int junitTests = 0;
-
+    private List<String> processDirs = null;
+    private List<String> keys = null;
+    private List<StartAfterStop> sasList = null;
+   
     static { 
 	excludePackagesList.add("java."); 
 	excludePackagesList.add("android."); 
@@ -50,14 +50,15 @@ public abstract class JunitTestAnalysis implements AnalysisUtil {
 	excludePackagesList.add("org.junit."); 
     }
 
-    public JunitTestAnalysis(List<String> processDirs, List<String> keys) {
+    public JunitTestAnalysis(List<String> processDirs, List<String> keys, List<StartAfterStop> sasList) {
         this.processDirs = processDirs;
 	this.keys = keys;
+	this.sasList = sasList;
     }
 
     public void start() {	
-	if (processDirs == null) {
-	    System.out.println("processDirs is null, exit.");
+	if (processDirs == null || keys == null) {
+	    System.out.println("processDirs or keys is null, exit.");
 	    System.exit(1);
 	}
 
@@ -100,14 +101,23 @@ public abstract class JunitTestAnalysis implements AnalysisUtil {
 		    for (String key : keys) {
 			keyStat.put(key, 0);
 		    }
-		    Map<String, Integer> stopStartStat = new HashMap<String, Integer>();
-		    stopStartStat.put("stop", 0);
-		    stopStartStat.put("startAfterStop", 0);
-		    goThroughMethod(keyStat, stopStartStat, sootMethod, 0);
+		    // clear up for every round
+		    for (StartAfterStop sas : sasList) {
+			sas.hasStopped = false;
+			if (sas.stopKey.equals("")) {
+			    sas.hasStopped = true;
+			}
+			sas.startAfterStop = false;
+		    }
+		    goThroughMethod(keyStat, sootMethod, 0);
 
 		    // combine the result of this method to global stat
-		    restartStatByMethod.put(sootMethod.toString(), (stopStartStat.get("startAfterStop") == 1) ? true : false);
 		    keyStatByMethod.put(sootMethod.toString(), keyStat);
+		    for (StartAfterStop sas : sasList) {
+		        if (sas.startAfterStop == true) {
+			    sas.methodSet.add(sootMethod.toString());
+		        }
+		    }
 		}
 	    }
 	}
@@ -116,10 +126,8 @@ public abstract class JunitTestAnalysis implements AnalysisUtil {
         System.out.println("num of junitTests: " + junitTests);
     }
 
-    private void goThroughMethod(Map<String, Integer> keyStat, Map<String, Integer> stopStartStat,
+    private void goThroughMethod(Map<String, Integer> keyStat, 
 				SootMethod sootMethod, int level) {
-	boolean clusterInvolved = false;
-	boolean rebootInvolved = false;
 	String levelPrefix = "[" + level + "] ";
 	//System.out.println(levelPrefix + sootMethod);
 	Body b = sootMethod.retrieveActiveBody(); 
@@ -129,16 +137,22 @@ public abstract class JunitTestAnalysis implements AnalysisUtil {
 	    //System.out.println(levelPrefix + "unit:" + unit);
 	    for (String key : keyStat.keySet()) { 
 		if (unit.toString().contains(key)) {
-		    keyStat.put(key, keyStat.get(key)+1);
+		    keyStat.put(key, keyStat.get(key) + 1);
 		}
 	    }
-	    
-	    if (unit.toString().contains("stop")) {
-		stopStartStat.put("stop", stopStartStat.get("stop")+1);
-	    }
-	
-	    if (stopStartStat.get("stop") >= 1  && unit.toString().contains("start")) {
-		stopStartStat.put("startAfterStop", 1);
+
+	    if (sasList != null) {
+	        for (StartAfterStop sas : sasList) { 
+	    	    if (unit.toString().contains(sas.stopKey)) {
+			//System.out.println("stopKey - " + unit.toString());
+		        sas.hasStopped = true;
+		    }
+	            //if (sas.hasStopped == true && unit.toString().contains(sas.startKey)) {
+	            if (unit.toString().contains(sas.startKey) && sas.hasStopped == true) {
+			//System.out.println("startKey - " + unit.toString());
+	                sas.startAfterStop = true;
+		    }
+	        }
 	    }
 
 	    if (unit instanceof InvokeStmt) {
@@ -147,7 +161,7 @@ public abstract class JunitTestAnalysis implements AnalysisUtil {
 		try {
 		    SootMethod invokedMethod = invokeStmt.getInvokeExpr().getMethod();
 		    if (level <= exploreDepth) {
-		        goThroughMethod(keyStat, stopStartStat, invokedMethod, level+1);
+		        goThroughMethod(keyStat, invokedMethod, level + 1);
 		    }
 		} catch (Exception e) {
 		    //System.out.println(levelPrefix + "touched the boundary");
@@ -155,6 +169,28 @@ public abstract class JunitTestAnalysis implements AnalysisUtil {
 	    } 
 	}
 	return;
+    }
+
+    private int methodsInSets(Set<String> methodSet, Map<String, Set<String>> methodSetByKey) {
+	int num = 0;
+	for (String method : methodSet) {
+	    boolean found = false;
+	    for (String key : methodSetByKey.keySet()) {
+		Set<String> setOfKey = methodSetByKey.get(key);
+		for (String m : setOfKey) {
+		    if (method == m) {
+			found = true;
+			System.out.println(method);
+			num ++;
+		 	break;
+		    }
+		}
+		if (found) {
+		    break;
+		}
+	    }
+	}
+	return num;
     }
 
     @Override
@@ -169,6 +205,7 @@ public abstract class JunitTestAnalysis implements AnalysisUtil {
             for (String key : keyStat.keySet()) {
                 if (keyStat.get(key) >= occurance) {
                     methodSetByKey.get(key).add(method);
+		    //System.out.println(method);
                 }
             }
         }
@@ -177,19 +214,29 @@ public abstract class JunitTestAnalysis implements AnalysisUtil {
             System.out.println("num of methods involving " + key + " : " + methodSetByKey.get(key).size());
         }
 
-	System.out.println("num of restartStatByMethod : " + restartStatByMethod.size());
-
-	int restartMethod = 0;
-	for (String method : restartStatByMethod.keySet()) {
-	    if (restartStatByMethod.get(method) == true) {
-		System.out.println(method);
-		restartMethod++;
-	    }
+	for (StartAfterStop sas : sasList) {
+	    System.out.println("sas " + sas + " size : " + sas.methodSet.size());
+            System.out.println("sas " + sas + " size (wrt cluster keys) : " + methodsInSets(sas.methodSet, methodSetByKey));
 	}
-	System.out.println("num of restartMethod : " + restartMethod);
     }
 
-    public Map<String, Map<String, Integer>> getKeyStatByMethod() {
-	return keyStatByMethod;
+    // Helper Class
+    static class StartAfterStop {
+	public String stopKey = null;
+	public String startKey = null;
+	public Set<String> methodSet = null;
+	public Boolean hasStopped = false; // always set to false for each method iteration
+	public Boolean startAfterStop = false; // always set to false for each method iteration
+
+	public StartAfterStop(String stopKey, String startKey) {
+	    this.stopKey = stopKey;
+	    this.startKey = startKey;
+	    this.methodSet = new HashSet<String>();
+	}
+
+	@Override
+	public String toString() {
+	    return startKey + " after " + stopKey;
+	}
     }
 }

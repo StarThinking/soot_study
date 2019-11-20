@@ -34,7 +34,7 @@ public class YarnAnalysis extends JunitTestAnalysis {
     }
 
     public YarnAnalysis() {
-	super(processDirs, keys);
+	super(processDirs, keys, "start", "stop");
     }
 
     public static void main(String[] args) {
