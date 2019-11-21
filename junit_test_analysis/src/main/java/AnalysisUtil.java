@@ -1,4 +1,4 @@
 public interface AnalysisUtil {
     
-    public void analysisByKey(int occurance);
+    public void analysis();
 } 
