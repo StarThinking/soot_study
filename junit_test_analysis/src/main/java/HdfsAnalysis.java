@@ -1,6 +1,7 @@
 import java.util.*;
 
 public class HdfsAnalysis extends JunitTestAnalysis {
+    private static String classPath = "";
     private static List<String> processDirs = new ArrayList<String>();
     private static List<String> clusterKeys = new ArrayList<String>();
     private static List<StartAfterStop> sasList = new ArrayList<StartAfterStop>();
@@ -24,15 +25,22 @@ public class HdfsAnalysis extends JunitTestAnalysis {
          * but they have different tests, no subset relation
          */
         //sasList.add(new StartAfterStop("", "restartJournalNode"));
-        sasList.add(new StartAfterStop("org.apache.hadoop.hdfs.qjournal.server.JournalNode: void stop", 
-                    "org.apache.hadoop.hdfs.qjournal.server.JournalNode: void start"));
+        sasList.add(new StartAfterStop("", "org.apache.hadoop.hdfs.qjournal.server.JournalNode: void start()"));
+        sasList.add(new StartAfterStop("", "org.apache.hadoop.hdfs.qjournal.server.JournalNode: void stop(int)"));
+        sasList.add(new StartAfterStop("", "org.apache.hadoop.hdfs.qjournal.server.JournalNode: void stopAndJoin(int)"));
+        /* there're two stops for JournalNode: stop(int) and stopAndJoin(int). Som we use 'void stop' to search */
+        /* we need to be careful in regard with finding out all start and stop method sets for a component */
+        sasList.add(new StartAfterStop("org.apache.hadoop.hdfs.qjournal.server.JournalNode: void stop",
+                    "org.apache.hadoop.hdfs.qjournal.server.JournalNode: void start()"));
 
         /* 
          * DataNode
          */
 	//sasList.add(new StartAfterStop("", "restartDataNode"));
-	sasList.add(new StartAfterStop("org.apache.hadoop.hdfs.server.datanode.DataNode: void shutdown", 
-                    "org.apache.hadoop.hdfs.server.datanode.DataNode: void runDatanodeDaemon"));
+	sasList.add(new StartAfterStop("", "org.apache.hadoop.hdfs.server.datanode.DataNode: void runDatanodeDaemon()"));
+	sasList.add(new StartAfterStop("", "org.apache.hadoop.hdfs.server.datanode.DataNode: void shutdown()"));
+	sasList.add(new StartAfterStop("org.apache.hadoop.hdfs.server.datanode.DataNode: void shutdown()", 
+                    "org.apache.hadoop.hdfs.server.datanode.DataNode: void runDatanodeDaemon()"));
 	
         /* 
          * NameNode
@@ -45,12 +53,14 @@ public class HdfsAnalysis extends JunitTestAnalysis {
          * <org.apache.hadoop.hdfs.qjournal.TestNNWithQJM: void testMismatchedNNIsRejected()>
          */
         //sasList.add(new StartAfterStop("", "restartNameNode"));
-	sasList.add(new StartAfterStop("org.apache.hadoop.hdfs.server.namenode.NameNode: void stop", 
-                    "org.apache.hadoop.hdfs.server.namenode.NameNode: org.apache.hadoop.hdfs.server.namenode.NameNode createNameNode"));
+	sasList.add(new StartAfterStop("", "org.apache.hadoop.hdfs.server.namenode.NameNode: void stop()"));
+	sasList.add(new StartAfterStop("", "org.apache.hadoop.hdfs.server.namenode.NameNode: org.apache.hadoop.hdfs.server.namenode.NameNode createNameNode(java.lang.String[],org.apache.hadoop.conf.Configuration)"));
+	sasList.add(new StartAfterStop("org.apache.hadoop.hdfs.server.namenode.NameNode: void stop()", 
+                    "org.apache.hadoop.hdfs.server.namenode.NameNode: org.apache.hadoop.hdfs.server.namenode.NameNode createNameNode(java.lang.String[],org.apache.hadoop.conf.Configuration)"));
     }
 
     public HdfsAnalysis() {
-	super(processDirs, clusterKeys, sasList);
+	super(classPath, processDirs, clusterKeys, sasList);
     }
 
     public static void main(String[] args) {

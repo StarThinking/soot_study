@@ -1,6 +1,7 @@
 import java.util.*;
 
 public class MapreduceAnalysis extends JunitTestAnalysis {
+    private static String classPath = "";
     private static List<String> processDirs = new ArrayList<String>();
     private static List<String> keys = new ArrayList<String>();
     private static String base = "/root/hadoop-3.1.2-src/hadoop-mapreduce-project/hadoop-mapreduce-client/";

@@ -1,0 +1,27 @@
+exploreDepth: 8
+num of classes: 4834
+num of junitTests: 4437
+num of methods involving org.apache.hadoop.hdfs.MiniDFSClusterWithNodeGroup : 3
+num of methods involving org.apache.hadoop.hdfs.MiniDFS : 2013
+num of methods involving org.apache.hadoop.hdfs.qjournal.MiniQJMHACluster : 65
+num of methods involving org.apache.hadoop.hdfs.qjournal.MiniJournalCluster : 111
+num of solely org.apache.hadoop.hdfs.qjournal.server.JournalNode: void start() : 89
+num of solely org.apache.hadoop.hdfs.qjournal.server.JournalNode: void start() (wrt cluster keys) : 87
+num of solely org.apache.hadoop.hdfs.qjournal.server.JournalNode: void stop(int) : 3
+num of solely org.apache.hadoop.hdfs.qjournal.server.JournalNode: void stop(int) (wrt cluster keys) : 2
+num of solely org.apache.hadoop.hdfs.qjournal.server.JournalNode: void stopAndJoin(int) : 38
+num of solely org.apache.hadoop.hdfs.qjournal.server.JournalNode: void stopAndJoin(int) (wrt cluster keys) : 38
+num of org.apache.hadoop.hdfs.qjournal.server.JournalNode: void stop --> org.apache.hadoop.hdfs.qjournal.server.JournalNode: void start() : 12
+num of org.apache.hadoop.hdfs.qjournal.server.JournalNode: void stop --> org.apache.hadoop.hdfs.qjournal.server.JournalNode: void start() (wrt cluster keys) : 12
+num of solely org.apache.hadoop.hdfs.server.datanode.DataNode: void runDatanodeDaemon() : 1357
+num of solely org.apache.hadoop.hdfs.server.datanode.DataNode: void runDatanodeDaemon() (wrt cluster keys) : 1357
+num of solely org.apache.hadoop.hdfs.server.datanode.DataNode: void shutdown() : 1396
+num of solely org.apache.hadoop.hdfs.server.datanode.DataNode: void shutdown() (wrt cluster keys) : 1392
+num of org.apache.hadoop.hdfs.server.datanode.DataNode: void shutdown() --> org.apache.hadoop.hdfs.server.datanode.DataNode: void runDatanodeDaemon() : 1124
+num of org.apache.hadoop.hdfs.server.datanode.DataNode: void shutdown() --> org.apache.hadoop.hdfs.server.datanode.DataNode: void runDatanodeDaemon() (wrt cluster keys) : 1124
+num of solely org.apache.hadoop.hdfs.server.namenode.NameNode: void stop() : 1453
+num of solely org.apache.hadoop.hdfs.server.namenode.NameNode: void stop() (wrt cluster keys) : 1447
+num of solely org.apache.hadoop.hdfs.server.namenode.NameNode: org.apache.hadoop.hdfs.server.namenode.NameNode createNameNode(java.lang.String[],org.apache.hadoop.conf.Configuration) : 1453
+num of solely org.apache.hadoop.hdfs.server.namenode.NameNode: org.apache.hadoop.hdfs.server.namenode.NameNode createNameNode(java.lang.String[],org.apache.hadoop.conf.Configuration) (wrt cluster keys) : 1436
+num of org.apache.hadoop.hdfs.server.namenode.NameNode: void stop() --> org.apache.hadoop.hdfs.server.namenode.NameNode: org.apache.hadoop.hdfs.server.namenode.NameNode createNameNode(java.lang.String[],org.apache.hadoop.conf.Configuration) : 486
+num of org.apache.hadoop.hdfs.server.namenode.NameNode: void stop() --> org.apache.hadoop.hdfs.server.namenode.NameNode: org.apache.hadoop.hdfs.server.namenode.NameNode createNameNode(java.lang.String[],org.apache.hadoop.conf.Configuration) (wrt cluster keys) : 485
