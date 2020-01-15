@@ -1,0 +1,257 @@
+edgeAnalysis for function get [java.lang.String]
+edgeAnalysis for function get [java.lang.String, java.lang.String]
+edgeAnalysis for function getInt
+edgeAnalysis for function getInts
+edgeAnalysis for function getLong
+edgeAnalysis for function getLongBytes
+edgeAnalysis for function getHexDigits
+edgeAnalysis for function getFloat
+edgeAnalysis for function getDouble
+edgeAnalysis for function getBoolean
+Results: parameters statically used on component org.apache.hadoop.hdfs.server.datanode.DataNode
+46 parameters read from function getLong:
+"dfs.datanode.lifeline.interval.seconds" $l20
+"dfs.disk.balancer.max.disk.throughputInMBperSec" 10L
+"dfs.client.hedged.read.threshold.millis" 500L
+"dfs.datanode.cached-dfsused.check.interval.ms" 600000L
+"dfs.datanode.available-space-volume-choosing-policy.balanced-space-threshold" 10737418240L
+"dfs.datanode.scan.period.hours" 504L
+"dfs.journalnode.sync.interval" 120000L
+"dfs.datatransfer.client.variableBlackList.cache.secs" 3600L
+"dfs.client.mmap.cache.timeout.ms" 3600000L
+"dfs.datanode.max.locked.memory" 0L
+"dfs.namenode.num.extra.edits.retained" 1000000L
+"dfs.datanode.readahead.bytes" 4194304L
+"dfs.datanode.cache.revocation.polling.ms" 500L
+"dfs.client.socketcache.expiryMsec" 3000L
+"dfs.client.read.shortcircuit.streams.cache.expiry.ms" 300000L
+"dfs.namenode.max-num-blocks-to-log" 1000L
+"dfs.client.write.byte-array-manager.count-reset-time-period-ms" 10000L
+"dfs.datanode.xceiver.stop.timeout.millis" 60000L
+"dfs.namenode.stale.datanode.interval" 30000L
+"dfs.datatransfer.server.variableBlackList.cache.secs" 3600L
+"dfs.cachereport.intervalMsec" 10000L
+"dfs.blockreport.incremental.intervalMsec" 0L
+"dfs.blockreport.split.threshold" 1000000L
+"dfs.datatransfer.server.variablewhitelist.cache.secs" 3600L
+"dfs.ha.tail-edits.max-txns-per-lock" 9223372036854775807L
+"dfs.client.mmap.retry.timeout.ms" 300000L
+"dfs.client.slow.io.warning.threshold.ms" 30000L
+"dfs.client.write.exclude.nodes.cache.expiry.interval.millis" 600000L
+"dfs.datatransfer.client.variablewhitelist.cache.secs" 3600L
+"dfs.edit.log.transfer.bandwidthPerSec" 0L
+"dfs.image.transfer-bootstrap-standby.bandwidthPerSec" 0L
+"dfs.namenode.checkpoint.txns" 1000000L
+"dfs.client.server-defaults.validity.period.ms" $l7
+"dfs.image.transfer.bandwidthPerSec" 0L
+"dfs.disk.balancer.block.tolerance.percent" 10L
+"dfs.client.read.short.circuit.replica.stale.threshold.ms" 1800000L
+"dfs.client.read.prefetch.size" $l23
+"dfs.datanode.restart.replica.expiration" 50L
+"dfs.blockreport.intervalMsec" 21600000L
+"dfs.block.scanner.volume.bytes.per.second" 1048576L
+"dfs.domain.socket.disable.interval.seconds" 600L
+"dfs.client.key.provider.cache.expiry" $l3
+"dfs.datanode.cache.revocation.timeout.ms" 900000L
+"dfs.datanode.slow.io.warning.threshold.ms" 300L
+"dfs.disk.balancer.max.disk.errors" 5L
+"dfs.client.cache.readahead" 0L
+
+75 parameters read from function getInt:
+"dfs.client.write.byte-array-manager.count-threshold" 128
+"dfs.image.transfer.timeout" 60000
+"dfs.client.block.write.locateFollowingBlock.initial.delay.ms" 400
+"dfs.namenode.checkpoint.max-retries" 3
+"dfs.provided.aliasmap.inmemory.batch-size" 500
+"dfs.provided.aliasmap.load.retries" 0
+"dfs.namenode.num.checkpoints.retained" 2
+"dfs.datanode.directoryscan.threads" 1
+"dfs.datanode.block.id.layout.upgrade.threads" 12
+"dfs.namenode.upgrade.domain.factor" 3
+"dfs.ha.zkfc.port" 8019
+"dfs.webhdfs.ugi.expire.after.access" 600000
+"dfs.namenode.inotify.max.events.per.rpc" 1000
+"dfs.datanode.ec.reconstruction.stripedread.buffer.size" 65536
+"dfs.client.failover.max.attempts" 15
+"dfs.datanode.ec.reconstruction.stripedread.timeout.millis" 5000
+"dfs.client.cached.conn.retry" 3
+"dfs.datanode.socket.write.timeout" 480000
+"dfs.datanode.transfer.socket.recv.buffer.size" 0
+"dfs.namenode.edits.dir.minimum" 1
+"dfs.datanode.parallel.volumes.load.threads.num" i0
+"dfs.client.failover.sleep.base.millis" 500
+"dfs.client.read.striped.threadpool.size" 18
+"dfs.client.socketcache.capacity" 16
+"dfs.client.retry.interval-ms.get-last-block-length" 4000
+"dfs.datanode.failed.volumes.tolerated" 0
+"dfs.datanode.http.internal-proxy.port" 0
+"dfs.client.retry.max.attempts" 10
+"dfs.ha.zkfc.nn.http.timeout.ms" 20000
+"dfs.client.socket-timeout" 60000
+"dfs.client.block.write.replace-datanode-on-failure.min-replication" 0
+"dfs.namenode.replication.min" 1
+"dfs.ha.tail-edits.namenode-retries" 3
+"dfs.client.block.write.locateFollowingBlock.retries" 5
+"dfs.client.retry.window.base" 3000
+"dfs.edit.log.transfer.timeout" 30000
+"dfs.datanode.ec.reconstruction.threads" 8
+"dfs.datanode.fsdatasetcache.max.threads.per.volume" 4
+"dfs.namenode.tolerate.heartbeat.multiplier" 4
+"dfs.client.retry.times.get-last-block-length" 3
+"dfs.datanode.network.counts.cache.max.size" 2147483647
+"dfs.client.read.shortcircuit.streams.cache.size" 256
+"dfs.datanode.socket.reuse.keepalive" 4000
+"dfs.client.block.write.retries" 3
+"dfs.ha.log-roll.rpc.timeout" 20000
+"dfs.image.transfer.chunksize" 65536
+"dfs.client.hedged.read.threadpool.size" 0
+"dfs.datanode.volumes.replica-add.threadpool.size" i1
+"dfs.short.circuit.shared.memory.watcher.interrupt.check.ms" 60000
+"dfs.webhdfs.netty.high.watermark" 65535
+"dfs.datanode.max.transfer.threads" 4096
+"dfs.disk.balancer.max.disk.throughputInMBperSec" 10
+"dfs.client-write-packet-size" 65536
+"dfs.client.max.block.acquire.failures" 3
+"dfs.datanode.handler.count" 10
+"dfs.datanode.directoryscan.throttle.limit.ms.per.sec" 1000
+"dfs.client.write.max-packets-in-flight" 80
+"dfs.webhdfs.netty.low.watermark" 32768
+"dfs.client.socket.send.buffer.size" 0
+"dfs.namenode.max.extra.edits.segments.retained" 10000
+"dfs.datanode.fileio.profiling.sampling.percentage" 0
+"dfs.datanode.metrics.logger.period.seconds" 600
+"dfs.encrypt.data.transfer.cipher.key.bitlength" 128
+"dfs.ha.tail-edits.rolledits.timeout" 60
+"dfs.client.failover.sleep.max.millis" 15000
+"dfs.datanode.transfer.socket.send.buffer.size" 0
+"dfs.datanode.balance.max.concurrent.moves" 50
+"dfs.client.read.shortcircuit.buffer.size" 1048576
+"dfs.client.test.drop.namenode.response.number" 0
+"dfs.replication" 3
+"dfs.client.read.shortcircuit.metrics.sampling.percentage" 0
+"dfs.client.write.byte-array-manager.count-limit" 2048
+"dfs.bytes-per-checksum" 512
+"dfs.datanode.lazywriter.interval.sec" 60
+"dfs.client.mmap.cache.size" 256
+
+2 parameters read from function getLongBytes:
+"dfs.blocksize" 134217728L
+"dfs.datanode.balance.bandwidthPerSec" 10485760L
+
+0 parameters read from function getHexDigits:
+
+2 parameters read from function getDouble:
+"dfs.namenode.redundancy.considerLoad.factor" 2.0
+"dfs.namenode.checkpoint.check.quiet-multiplier" 1.5
+
+1 parameters read from function getInts:
+"dfs.metrics.percentiles.intervals"
+
+45 parameters read from function getBoolean:
+"dfs.webhdfs.rest-csrf.enabled" 0
+"dfs.image.compress" 0
+"dfs.data.transfer.client.tcpnodelay" 1
+"dfs.namenode.redundancy.considerLoad" 1
+"dfs.client.mmap.enabled" 1
+"dfs.datanode.use.datanode.hostname" 0
+"dfs.datatransfer.server.variableBlackList.enable" 0
+"dfs.pipeline.ecn" 0
+"dfs.datanode.duplicate.replica.deletion" 1
+"dfs.client.cache.drop.behind.reads" 0
+"dfs.namenode.name.dir.restore" 0
+"dfs.datanode.block-pinning.enabled" 0
+"dfs.client.write.byte-array-manager.enabled" 0
+"dfs.client.use.datanode.hostname" 0
+"dfs.data.transfer.server.tcpnodelay" 1
+"dfs.client.block.write.replace-datanode-on-failure.enable" 1
+"dfs.client.read.shortcircuit.skip.checksum" 0
+"dfs.datatransfer.client.variableBlackList.enable" 0
+"dfs.datatransfer.server.variablewhitelist.enable" 0
+"dfs.datanode.transferTo.allowed" 1
+"dfs.namenode.block-placement-policy.default.prefer-local-node" 1
+"dfs.block.access.token.enable" 0
+"dfs.permissions.enabled" 1
+"dfs.datanode.drop.cache.behind.reads" 0
+"dfs.ha.tail-edits.in-progress" 0
+"dfs.xframe.enabled" 1
+"dfs.datanode.sync.behind.writes.in.background" 0
+"dfs.datatransfer.client.variablewhitelist.enable" 0
+"dfs.client.cache.drop.behind.writes" 0
+"dfs.datanode.enable.fileio.fault.injection" 0
+"dfs.ha.automatic-failover.enabled" 0
+"dfs.client.domain.socket.data.traffic" 0
+"dfs.namenode.edits.noeditlogchannelflush" 0
+"dfs.client.use.legacy.blockreader.local" 0
+"dfs.client.block.write.replace-datanode-on-failure.best-effort" 0
+"dfs.encrypt.data.transfer" 0
+"dfs.block.access.token.protobuf.enable" 0
+"dfs.datanode.sync.behind.writes" 0
+"dfs.namenode.edits.asynclogging" 1
+"dfs.datanode.non.local.lazy.persist" 0
+"dfs.datanode.drop.cache.behind.writes" 0
+"dfs.datanode.synconclose" 0
+"dfs.datanode.peer.stats.enabled" 0
+"dfs.journalnode.enable.sync" 1
+"dfs.disk.balancer.enabled" 1
+
+20 parameters read from function get1:
+"dfs.namenode.shared.edits.dir"
+"dfs.datanode.data.dir"
+"dfs.client.cache.drop.behind.writes"
+"dfs.nameservice.id"
+"dfs.provided.aliasmap.text.codec"
+"dfs.client.cache.readahead"
+"dfs.encrypt.data.transfer.cipher.suites"
+"dfs.namenode.legacy-oiv-image.dir"
+"dfs.datanode.plugins"
+"dfs.datanode.hostname"
+"dfs.provided.aliasmap.leveldb.path"
+"dfs.encrypt.data.transfer.algorithm"
+"dfs.datanode.dns.interface"
+"dfs.ha.namenode.id"
+"dfs.client.cache.drop.behind.reads"
+"dfs.data.transfer.protection"
+"dfs.metrics.session-id"
+"dfs.namenode.rpc-address"
+"dfs.nameservices"
+"dfs.datanode.dns.nameserver"
+
+3 parameters read from function getFloat:
+"dfs.datanode.available-space-volume-choosing-policy.balanced-space-preference-fraction" 0.75F
+"dfs.namenode.available-space-block-placement-policy.balanced-space-preference-fraction" 0.6F
+"dfs.datanode.ec.reconstruction.xmits.weight" 0.5F
+
+32 parameters read from function get2:
+"dfs.disk.balancer.plan.valid.interval" "1d"
+"dfs.provided.aliasmap.text.write.dir" $r4
+"dfs.namenode.kerberos.principal" ""
+"dfs.permissions.superusergroup" "supergroup"
+"dfs.provided.storage.id" "DS-PROVIDED"
+"dfs.datanode.startup" $r3
+"dfs.datatransfer.client.variablewhitelist.file" r5
+"dfs.client.context" "default"
+"dfs.datatransfer.server.variablewhitelist.file" "/etc/hadoop/whitelist"
+"dfs.provided.aliasmap.text.read.file" "file:///tmp/blocks.csv"
+"dfs.provided.aliasmap.text.delimiter" ","
+"dfs.hosts.exclude" ""
+"dfs.user.home.dir.prefix" "/user"
+"dfs.image.compression.codec" "org.apache.hadoop.io.compress.DefaultCodec"
+"dfs.hosts" ""
+"dfs.journalnode.edits.dir" "/tmp/hadoop/dfs/journalnode/"
+"dfs.checksum.combine.mode" "MD5MD5CRC"
+"dfs.datanode.min.supported.namenode.version" "2.1.0-beta"
+"dfs.datatransfer.server.variableBlackList.file" "/etc/hadoop/blackList"
+"dfs.datatransfer.client.fixedwhitelist.file" r4
+"dfs.datatransfer.server.fixedwhitelist.file" "/etc/hadoop/fixedwhitelist"
+"dfs.cluster.administrators" " "
+"dfs.datanode.oob.timeout-ms" "1500,0,0,0"
+"dfs.datatransfer.client.fixedBlackList.file" r4
+"dfs.datatransfer.client.variableBlackList.file" r5
+"dfs.client.block.write.replace-datanode-on-failure.policy" "DEFAULT"
+"dfs.datanode.data.dir.perm" "700"
+"dfs.http.policy" $r3
+"hadoop.hdfs.configuration.version" "UNSPECIFIED"
+"dfs.datatransfer.server.fixedBlackList.file" "/etc/hadoop/fixedBlackList"
+"dfs.checksum.type" "CRC32C"
+"dfs.namenode.startup" $r2
+

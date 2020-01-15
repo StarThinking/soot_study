@@ -97,7 +97,10 @@ public class ComponentAnalysis {
                                         firstArgument = twoArguments;
                                         //System.out.println("firstArgument = " + firstArgument);
                                 }
-                                paraSet.add(firstArgument);
+				if (secondArgument.equals(""))
+                                	paraSet.add(firstArgument);
+				else
+					paraSet.add(firstArgument + " " + secondArgument);
                         }
 		}
                 return 0;
