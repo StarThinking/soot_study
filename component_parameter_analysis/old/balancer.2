@@ -1,0 +1,237 @@
+edgeAnalysis for function get [java.lang.String]
+edgeAnalysis for function get [java.lang.String, java.lang.String]
+edgeAnalysis for function getInt
+edgeAnalysis for function getInts
+edgeAnalysis for function getLong
+edgeAnalysis for function getLongBytes
+edgeAnalysis for function getHexDigits
+edgeAnalysis for function getFloat
+edgeAnalysis for function getDouble
+edgeAnalysis for function getBoolean
+Results: parameters statically used on component org.apache.hadoop.hdfs.server.balancer.Balancer
+35 parameters read from function getLong:
+dfs.datatransfer.client.variablewhitelist.cache.secs 3600L
+dfs.namenode.num.extra.edits.retained 1000000L
+dfs.client.socketcache.expiryMsec 3000L
+dfs.datatransfer.client.variableBlackList.cache.secs 3600L
+dfs.client.key.provider.cache.expiry $l3
+dfs.ha.tail-edits.max-txns-per-lock 9223372036854775807L
+dfs.disk.balancer.block.tolerance.percent 10L
+dfs.datanode.available-space-volume-choosing-policy.balanced-space-threshold 10737418240L
+dfs.datatransfer.server.variablewhitelist.cache.secs 3600L
+dfs.namenode.stale.datanode.interval 30000L
+dfs.datanode.cache.revocation.timeout.ms 900000L
+dfs.client.hedged.read.threshold.millis 500L
+dfs.edit.log.transfer.bandwidthPerSec 0L
+dfs.datanode.cached-dfsused.check.interval.ms 600000L
+dfs.client.cache.readahead 0L
+dfs.client.server-defaults.validity.period.ms $l7
+dfs.disk.balancer.max.disk.errors 5L
+dfs.journalnode.sync.interval 120000L
+dfs.image.transfer-bootstrap-standby.bandwidthPerSec 0L
+dfs.client.mmap.retry.timeout.ms 300000L
+dfs.client.write.byte-array-manager.count-reset-time-period-ms 10000L
+dfs.datatransfer.server.variableBlackList.cache.secs 3600L
+dfs.disk.balancer.max.disk.throughputInMBperSec 10L
+dfs.client.read.short.circuit.replica.stale.threshold.ms 1800000L
+dfs.client.read.shortcircuit.streams.cache.expiry.ms 300000L
+dfs.balancer.max-iteration-time 1200000L
+dfs.client.mmap.cache.timeout.ms 3600000L
+dfs.domain.socket.disable.interval.seconds 600L
+dfs.client.slow.io.warning.threshold.ms 30000L
+dfs.mover.movedWinWidth 5400000L
+dfs.client.read.prefetch.size $l23
+dfs.client.write.exclude.nodes.cache.expiry.interval.millis 600000L
+dfs.image.transfer.bandwidthPerSec 0L
+dfs.namenode.checkpoint.txns 1000000L
+dfs.datanode.cache.revocation.polling.ms 500L
+
+72 parameters read from function getInt:
+dfs.client.read.shortcircuit.buffer.size 1048576
+dfs.client.failover.sleep.base.millis 500
+dfs.http.client.failover.sleep.max.millis 15000
+dfs.client.failover.max.attempts 15
+dfs.client.retry.window.base 3000
+dfs.disk.balancer.max.disk.throughputInMBperSec 10
+dfs.ha.tail-edits.rolledits.timeout 60
+dfs.provided.aliasmap.inmemory.batch-size 500
+dfs.mover.max-no-move-interval 60000
+dfs.client.block.write.replace-datanode-on-failure.min-replication 0
+dfs.namenode.upgrade.domain.factor 3
+dfs.datanode.directoryscan.threads 1
+dfs.http.client.retry.max.attempts 10
+dfs.client-write-packet-size 65536
+dfs.namenode.checkpoint.max-retries 3
+dfs.namenode.tolerate.heartbeat.multiplier 4
+dfs.client.write.byte-array-manager.count-threshold 128
+dfs.client.cached.conn.retry 3
+dfs.datanode.fsdatasetcache.max.threads.per.volume 4
+dfs.client.block.write.retries 3
+dfs.client.read.striped.threadpool.size 18
+dfs.client.test.drop.namenode.response.number 0
+dfs.http.client.failover.max.attempts 15
+dfs.datanode.fileio.profiling.sampling.percentage 0
+dfs.client.hedged.read.threadpool.size 0
+dfs.short.circuit.shared.memory.watcher.interrupt.check.ms 60000
+dfs.provided.aliasmap.load.retries 0
+dfs.mover.moverThreads 1000
+dfs.encrypt.data.transfer.cipher.key.bitlength 128
+dfs.balancer.block-move.timeout 0
+dfs.client.socket-timeout 60000
+dfs.client.retry.times.get-last-block-length 3
+dfs.namenode.max.extra.edits.segments.retained 10000
+dfs.client.write.byte-array-manager.count-limit 2048
+dfs.bytes-per-checksum 512
+dfs.datanode.ec.reconstruction.stripedread.timeout.millis 5000
+dfs.ha.zkfc.nn.http.timeout.ms 20000
+dfs.client.read.shortcircuit.metrics.sampling.percentage 0
+dfs.balancer.max-no-move-interval 60000
+dfs.image.transfer.timeout 60000
+dfs.datanode.volumes.replica-add.threadpool.size i1
+dfs.ha.zkfc.port 8019
+dfs.client.block.write.locateFollowingBlock.initial.delay.ms 400
+dfs.datanode.balance.max.concurrent.moves 50
+dfs.replication 3
+dfs.image.transfer.chunksize 65536
+dfs.datanode.ec.reconstruction.stripedread.buffer.size 65536
+dfs.datanode.directoryscan.throttle.limit.ms.per.sec 1000
+dfs.ha.log-roll.rpc.timeout 20000
+dfs.datanode.block.id.layout.upgrade.threads 12
+dfs.client.socketcache.capacity 16
+dfs.namenode.num.checkpoints.retained 2
+dfs.client.block.write.locateFollowingBlock.retries 5
+dfs.mover.retry.max.attempts 10
+dfs.namenode.missing.checkpoint.periods.before.shutdown 3
+dfs.client.socket.send.buffer.size 0
+dfs.datanode.lazywriter.interval.sec 60
+dfs.client.write.max-packets-in-flight 80
+dfs.client.max.block.acquire.failures 3
+dfs.client.read.shortcircuit.streams.cache.size 256
+dfs.namenode.edits.dir.minimum 1
+dfs.client.retry.interval-ms.get-last-block-length 4000
+dfs.datanode.parallel.volumes.load.threads.num i0
+dfs.client.failover.sleep.max.millis 15000
+dfs.client.mmap.cache.size 256
+dfs.ha.tail-edits.namenode-retries 3
+dfs.namenode.replication.min 1
+dfs.edit.log.transfer.timeout 30000
+dfs.client.retry.max.attempts 10
+dfs.datanode.socket.write.timeout 480000
+dfs.namenode.inotify.max.events.per.rpc 1000
+dfs.http.client.failover.sleep.base.millis 500
+
+1 parameters read from function getLongBytes:
+dfs.blocksize 134217728L
+
+0 parameters read from function getHexDigits:
+
+3 parameters read from function getDouble:
+dfs.namenode.redundancy.considerLoad.factor 2.0
+dfs.namenode.checkpoint.check.quiet-multiplier 1.5
+dfs.disk.balancer.plan.threshold.percent 10.0
+
+1 parameters read from function getInts:
+dfs.metrics.percentiles.intervals
+
+35 parameters read from function getBoolean:
+dfs.namenode.redundancy.considerLoad 1
+dfs.client.block.write.replace-datanode-on-failure.best-effort 0
+dfs.datatransfer.client.variablewhitelist.enable 0
+dfs.datanode.duplicate.replica.deletion 1
+dfs.data.transfer.client.tcpnodelay 1
+dfs.image.compress 0
+dfs.client.domain.socket.data.traffic 0
+dfs.client.write.byte-array-manager.enabled 0
+dfs.client.block.write.replace-datanode-on-failure.enable 1
+dfs.datatransfer.server.variablewhitelist.enable 0
+dfs.datatransfer.server.variableBlackList.enable 0
+dfs.mover.keytab.enabled 0
+dfs.namenode.edits.asynclogging 1
+dfs.client.cache.drop.behind.reads 0
+dfs.namenode.edits.noeditlogchannelflush 0
+dfs.balancer.keytab.enabled 0
+dfs.ha.automatic-failover.enabled 0
+dfs.datanode.enable.fileio.fault.injection 0
+dfs.client.https.need-auth 0
+dfs.datanode.block-pinning.enabled 0
+dfs.webhdfs.oauth2.enabled 0
+dfs.webhdfs.rest-csrf.enabled 0
+dfs.namenode.name.dir.restore 0
+dfs.disk.balancer.enabled 1
+dfs.client.read.shortcircuit.skip.checksum 0
+dfs.namenode.block-placement-policy.default.prefer-local-node 1
+dfs.ha.tail-edits.in-progress 0
+dfs.client.mmap.enabled 1
+dfs.journalnode.enable.sync 1
+dfs.namenode.support.allow.format 1
+dfs.client.use.legacy.blockreader.local 0
+dfs.client.cache.drop.behind.writes 0
+dfs.client.use.datanode.hostname 0
+dfs.block.access.token.protobuf.enable 0
+dfs.datatransfer.client.variableBlackList.enable 0
+
+19 parameters read from function get1:
+dfs.client.cache.drop.behind.writes
+dfs.namenode.shared.edits.dir
+dfs.namenode.legacy-oiv-image.dir
+dfs.encrypt.data.transfer.cipher.suites
+dfs.ha.namenode.id
+dfs.federation.router.store.driver.fs.path
+dfs.federation.router.store.driver.file.directory
+dfs.nameservices
+dfs.client.cache.readahead
+dfs.client.cache.drop.behind.reads
+dfs.provided.aliasmap.text.codec
+dfs.encrypt.data.transfer.algorithm
+dfs.data.transfer.protection
+dfs.provided.aliasmap.leveldb.path
+dfs.web.authentication.kerberos.keytab
+dfs.nameservice.id
+dfs.namenode.rpc-address
+dfs.datanode.data.dir
+dfs.metrics.session-id
+
+2 parameters read from function getFloat:
+dfs.datanode.available-space-volume-choosing-policy.balanced-space-preference-fraction 0.75F
+dfs.namenode.available-space-block-placement-policy.balanced-space-preference-fraction 0.6F
+
+38 parameters read from function get2:
+dfs.namenode.kerberos.principal ""
+dfs.federation.router.store.driver.zk.parent-path "/hdfs-federation"
+dfs.client.context "default"
+dfs.user.home.dir.prefix "/user"
+dfs.http.policy $r3
+dfs.datatransfer.server.variablewhitelist.file "/etc/hadoop/whitelist"
+dfs.datatransfer.client.variablewhitelist.file r5
+dfs.balancer.address "0.0.0.0:0"
+dfs.datanode.data.dir.perm "700"
+dfs.datatransfer.client.variableBlackList.file r5
+dfs.webhdfs.acl.provider.permission.pattern "^(default:
+dfs.datatransfer.client.fixedBlackList.file r4
+dfs.datatransfer.client.fixedwhitelist.file r4
+dfs.journalnode.edits.dir "/tmp/hadoop/dfs/journalnode/"
+dfs.checksum.type "CRC32C"
+dfs.disk.balancer.plan.valid.interval "1d"
+dfs.datanode.kerberos.principal ""
+dfs.provided.aliasmap.text.delimiter ","
+dfs.checksum.combine.mode "MD5MD5CRC"
+dfs.namenode.startup $r2
+dfs.journalnode.rpc-address "0.0.0.0:8485"
+dfs.datatransfer.server.variableBlackList.file "/etc/hadoop/blackList"
+dfs.hosts ""
+dfs.datatransfer.server.fixedBlackList.file "/etc/hadoop/fixedBlackList"
+dfs.datatransfer.server.fixedwhitelist.file "/etc/hadoop/fixedwhitelist"
+dfs.webhdfs.user.provider.user.pattern "^[A-Za-z_][A-Za-z0-9._-]*[$]?$"
+dfs.client.block.write.replace-datanode-on-failure.policy "DEFAULT"
+dfs.hosts.exclude ""
+dfs.provided.aliasmap.text.read.file "file:///tmp/blocks.csv"
+dfs.provided.aliasmap.text.write.dir $r4
+dfs.cluster.administrators " "
+dfs.journalnode.https-address "0.0.0.0:8481"
+dfs.mover.address "0.0.0.0:0"
+dfs.journalnode.http-address "0.0.0.0:8480"
+dfs.provided.storage.id "DS-PROVIDED"
+dfs.image.compression.codec "org.apache.hadoop.io.compress.DefaultCodec"
+dfs.datanode.startup $r3
+dfs.https.server.keystore.resource "ssl-server.xml"
+
