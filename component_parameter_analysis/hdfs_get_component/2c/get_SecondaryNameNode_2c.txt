@@ -1,0 +1,69 @@
+dfs.namenode.rpc-address
+dfs.nameservices
+dfs.nameservice.id
+dfs.namenode.shared.edits.dir
+dfs.federation.router.store.driver.fs.path
+dfs.federation.router.store.driver.file.directory
+dfs.encrypt.data.transfer.cipher.suites
+dfs.data.transfer.protection
+dfs.client.cache.drop.behind.writes
+dfs.client.cache.readahead
+dfs.client.cache.drop.behind.reads
+dfs.ha.namenode.id
+dfs.encrypt.data.transfer.cipher.suites
+dfs.encrypt.data.transfer.cipher.suites
+dfs.namenode.top.windows.minutes
+dfs.namenode.top.num.users
+dfs.namenode.top.window.num.buckets
+dfs.encrypt.data.transfer.algorithm
+dfs.datanode.data.dir
+dfs.provided.aliasmap.leveldb.path
+dfs.provided.aliasmap.text.codec
+dfs.namenode.shared.edits.dir
+dfs.namenode.legacy-oiv-image.dir
+dfs.namenode.legacy-oiv-image.dir
+dfs.metrics.session-id
+dfs.web.authentication.kerberos.keytab
+dfs.ha.namenode.id
+dfs.nameservice.id
+dfs.namenode.rpc-address
+dfs.http.policy $r3
+dfs.disk.balancer.plan.valid.interval "1d"
+dfs.journalnode.edits.dir "/tmp/hadoop/dfs/journalnode/"
+dfs.datanode.data.dir.perm "700"
+dfs.client.context "default"
+dfs.datanode.startup $r3
+dfs.provided.storage.id "DS-PROVIDED"
+dfs.federation.router.store.driver.zk.parent-path "/hdfs-federation"
+dfs.checksum.type "CRC32C"
+dfs.checksum.combine.mode "MD5MD5CRC"
+dfs.hosts.exclude ""
+dfs.hosts ""
+dfs.hosts ""
+dfs.webhdfs.acl.provider.permission.pattern "^(default:
+dfs.webhdfs.user.provider.user.pattern "^[A-Za-z_][A-Za-z0-9._-]*[$]?$"
+dfs.user.home.dir.prefix "/user"
+dfs.namenode.startup $r2
+dfs.provided.storage.id "DS-PROVIDED"
+dfs.permissions.superusergroup "supergroup"
+dfs.image.compression.codec "org.apache.hadoop.io.compress.DefaultCodec"
+dfs.namenode.kerberos.principal ""
+dfs.datatransfer.client.variablewhitelist.file r5
+dfs.datatransfer.client.fixedwhitelist.file r4
+dfs.datatransfer.server.variablewhitelist.file "/etc/hadoop/whitelist"
+dfs.datatransfer.server.fixedwhitelist.file "/etc/hadoop/fixedwhitelist"
+dfs.datatransfer.client.variableBlackList.file r5
+dfs.datatransfer.client.fixedBlackList.file r4
+dfs.datatransfer.server.variableBlackList.file "/etc/hadoop/blackList"
+dfs.datatransfer.server.fixedBlackList.file "/etc/hadoop/fixedBlackList"
+dfs.namenode.kerberos.principal ""
+dfs.provided.aliasmap.text.delimiter "
+dfs.provided.aliasmap.text.write.dir $r4
+dfs.journalnode.edits.dir "/tmp/hadoop/dfs/journalnode/"
+dfs.provided.aliasmap.text.delimiter "
+dfs.provided.aliasmap.text.read.file "file:///tmp/blocks.csv"
+dfs.client.block.write.replace-datanode-on-failure.policy "DEFAULT"
+dfs.checksum.type "CRC32C"
+dfs.permissions.superusergroup "supergroup"
+dfs.https.server.keystore.resource "ssl-server.xml"
+dfs.cluster.administrators " "

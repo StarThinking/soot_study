@@ -1,0 +1,2 @@
+dfs.namenode.redundancy.considerLoad.factor 2.0
+dfs.namenode.checkpoint.check.quiet-multiplier 1.5

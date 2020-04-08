@@ -1,0 +1,5 @@
+dfs.blocksize 134217728L
+dfs.blocksize 134217728L
+dfs.blocksize 134217728L
+dfs.blocksize 134217728L
+dfs.datanode.balance.bandwidthPerSec 10485760L

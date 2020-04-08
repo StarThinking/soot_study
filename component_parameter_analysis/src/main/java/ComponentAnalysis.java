@@ -95,10 +95,12 @@ public class ComponentAnalysis {
                 if (secondArgument.equals("")) {
                     System.out.println(firstArgument.replaceAll("^\"|\"$", ""));
                 } else {
-                    if (getMethod.getName().contains("Boolean")) {
+                    if (getMethod.getName().equals("Boolean")) {
                         Boolean boolSecondArgument = (secondArgument.equals("1"))? true : false;
-                        System.out.println((firstArgument.replaceAll("^\"|\"$", "") + " " + boolSecondArgument));
+                        // remove "parameter"
+			System.out.println((firstArgument.replaceAll("^\"|\"$", "") + " " + boolSecondArgument));
                     } else {
+                        // remove "parameter"
                         System.out.println((firstArgument.replaceAll("^\"|\"$", "") + " " + secondArgument));
                     }
                 }
@@ -108,17 +110,20 @@ public class ComponentAnalysis {
     }
 
     public static void main(String[] args) {
-        String componentClass = args[0];
-
-        //String[] functionsWithType = {"getInt", "getInts", "getLong", "getLongBytes", "getHexDigits", "getFloat",
-        //                              "getDouble", "getBoolean"};
+	String selectedMethod = args[0];
+        String componentClass = args[1];
+        //String[] selection = {"getLong"};
+        //String[] selection = {"getInt", "getLong", "getLongBytes", "getBoolean"};
+        //List<String> selectionList = Arrays.asList(selection);
         //RefType stringType = RefType.v("java.lang.String");
                 
         // init once and perform analysises for different functions
         ComponentAnalysis.init(componentClass);
 
         for (SootMethod getMethod : Scene.v().getSootClass(confClass).getMethods()) {
-            if (getMethod.isPublic() && getMethod.getName().startsWith("get")) {
+            //if (getMethod.isPublic() && getMethod.getName().startsWith("get")) {
+            if (getMethod.isPublic() && selectedMethod.equals(getMethod.getName())) {
+                //System.out.println(getMethod.getName());
             	ComponentAnalysis.edgeAnalysis(getMethod);
             }
         }

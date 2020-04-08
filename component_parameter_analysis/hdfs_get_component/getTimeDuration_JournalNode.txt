@@ -1,0 +1,17 @@
+dfs.heartbeat.interval
+dfs.namenode.checkpoint.period
+dfs.namenode.checkpoint.check.period
+dfs.ha.tail-edits.period
+dfs.ha.log-roll.period
+dfs.lock.suppress.warning.interval
+dfs.datanode.directoryscan.interval
+dfs.datanode.directoryscan.interval
+dfs.heartbeat.interval
+dfs.client.datanode-restart.timeout
+dfs.webhdfs.socket.read-timeout
+dfs.webhdfs.socket.connect-timeout
+dfs.namenode.checkpoint.period
+dfs.namenode.redundancy.interval.seconds
+dfs.heartbeat.interval
+dfs.namenode.redundancy.interval.seconds
+dfs.disk.balancer.plan.valid.interval

@@ -1,0 +1,3 @@
+dfs.namenode.redundancy.considerLoad.factor
+dfs.namenode.checkpoint.check.quiet-multiplier
+dfs.disk.balancer.plan.threshold.percent
