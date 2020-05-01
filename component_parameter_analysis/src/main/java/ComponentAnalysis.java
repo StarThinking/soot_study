@@ -75,7 +75,14 @@ public class ComponentAnalysis {
         Options.v().setPhaseOption("cg.spark", "on"); // use spark for call graph
     	Options.v().set_output_dir("/tmp/sootOutput"); // use spark for call graph
         Options.v().set_keep_line_number(true);
-                    
+                   
+        List<String> excludeList = new ArrayList<String>();
+	excludeList.add("org.apache.hadoop.hbase.replication.regionserver.WALFileLengthProvider");	
+	excludeList.add("org.apache.hadoop.hbase.hbtop.screen.top.TopScreenPresenter");	
+	//excludeList.add("org.apache.hadoop.hbase.wal.*");
+ 	Options.v().set_no_bodies_for_excluded(true);	
+	Options.v().set_exclude(excludeList);
+
         SootClass sootClass = Scene.v().loadClassAndSupport(componentClass);
         sootClass.setApplicationClass();
         Scene.v().loadNecessaryClasses();
@@ -90,7 +97,7 @@ public class ComponentAnalysis {
             Edge e = edges.next();
             Unit unit = e.srcUnit();
             SootMethod method = e.src();
-            if (unit.toString().contains("dfs.")) { // pattern of parameters
+            //if (unit.toString().contains("dfs.")) { // pattern of parameters
                 //System.out.println("LOC: " + method + ":" + unit.getTags().get(0));
                 String raw = unit.toString();
                 int fristLeft = raw.indexOf("(");
@@ -117,7 +124,7 @@ public class ComponentAnalysis {
                         System.out.println((firstArgument.replaceAll("^\"|\"$", "") + " " + secondArgument));
                     }
                 }
-            }
+            //}
     	}
         return;
     }
@@ -134,11 +141,12 @@ public class ComponentAnalysis {
         
 	loadClassPath(classPathPath);
 	loadProcDirList(procDirListPath);
-        /*System.out.println("classPath = " + classPath);	
+        
+	/*System.out.println("classPath = " + classPath);	
         for (String s : procDirList ) {
 	    System.out.println("procDir = " + s);
 	}	
-        System.exit(0);*/     
+        System.exit(0);*/
 
         // init once and perform analysises for different functions
         ComponentAnalysis.init(componentClass);
