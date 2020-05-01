@@ -1,0 +1,7 @@
+mapreduce.job.cache.files
+mapreduce.jdbc.output.field.names
+mapreduce.job.cache.local.files
+mapreduce.jdbc.input.field.names
+mapreduce.job.net.static.resolutions
+mapreduce.job.cache.archives
+hadoop.ssl.enabled.protocols

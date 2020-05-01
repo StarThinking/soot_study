@@ -1,0 +1,2 @@
+hadoop.service.shutdown.timeout 30L
+r1 l0

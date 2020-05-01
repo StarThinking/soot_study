@@ -1,0 +1,157 @@
+mapred.task.maxvmem
+r64
+r1
+mapreduce.jobhistory.address
+mapreduce.task.attempt.id
+mapreduce.jdbc.output.table.name
+r1
+$r8
+textinputformat.record.delimiter
+textinputformat.record.delimiter
+mapreduce.job.user.name
+mapreduce.output.fileoutputformat.compress.codec
+mapreduce.task.output.dir
+r1
+mapreduce.map.input.file
+mapreduce.task.attempt.id
+mapreduce.output.fileoutputformat.compress.codec
+mapreduce.task.attempt.id
+mapreduce.task.files.preserve.filepattern
+mapreduce.job.combine.class
+mapred.combiner.class
+mapreduce.map.output.compress.codec
+map.sort.class
+map.sort.class
+mapreduce.job.output.key.comparator.class
+mapreduce.job.working.dir
+mapreduce.map.output.compress.codec
+r2
+r1
+mapreduce.task.attempt.id
+mapreduce.task.attempt.id
+mapreduce.task.attempt.id
+mapreduce.task.attempt.id
+mapreduce.map.input.file
+r1
+mapreduce.jdbc.input.orderby
+mapreduce.jdbc.input.query
+mapreduce.task.attempt.id
+mapreduce.cluster.local.dir
+mapreduce.job.dir
+mapreduce.output.fileoutputformat.outputdir
+mapreduce.job.skip.outdir
+r5
+mapreduce.task.attempt.id
+mapreduce.task.attempt.id
+io.compression.codecs
+mapreduce.map.input.file
+$r3
+mapreduce.output.fileoutputformat.outputdir
+fs.permissions.umask-mode
+io.seqfile.compression.type
+$r8
+mapreduce.output.fileoutputformat.outputdir
+$r10
+$r7
+mapreduce.jdbc.password
+mapreduce.jdbc.username
+mapreduce.jdbc.url
+mapreduce.jdbc.url
+mapreduce.jdbc.username
+mapreduce.jdbc.driver.class
+mapred.output.committer.class
+mapreduce.task.attempt.id
+mapreduce.pipes.executable.interpretor
+mapreduce.job.dir
+mapreduce.jobhistory.recovery.store.leveldb.path
+mapreduce.job.end-notification.url
+mapred.output.committer.class
+mapreduce.job.end-notification.url
+mapreduce.jdbc.input.conditions
+mapreduce.jdbc.input.table.name
+r1
+mapreduce.jobhistory.done-dir
+r1
+r1
+tmpjars
+r1
+r3
+r1
+r1
+mapreduce.input.sequencefileinputfilter.regex
+$r7
+num.key.fields.for.partition
+$r4
+mapreduce.job.end-notification.proxy
+mapreduce.job.end-notification.url
+hadoop.security.dns.nameserver
+hadoop.security.dns.interface
+r1
+mapreduce.jobhistory.loadedtasks.cache.size
+r1
+mapreduce.jobhistory.recovery.store.fs.uri
+hadoop.kerberos.min.seconds.before.relogin
+fs.defaultFS
+hadoop.token.files
+mapreduce.jobhistory.intermediate-done-dir
+mapreduce.jobhistory.intermediate-user-done-dir.permissions
+mapreduce.reduce.node-label-expression
+mapreduce.map.node-label-expression
+mapreduce.reduce.ulimit
+mapreduce.map.ulimit
+mapred.child.ulimit
+mapreduce.jobhistory.jhist.format "binary"
+mapred.join.expr null
+oracle.sessionTimeZone "GMT"
+hadoop.ssl.hostname.verifier "DEFAULT"
+mapreduce.input.keyvaluelinerecordreader.key.value.separator "\t"
+mapreduce.input.keyvaluelinerecordreader.key.value.separator "\t"
+mapreduce.join.expr null
+hadoop.ssl.server.conf "ssl-server.xml"
+hadoop.ssl.client.conf "ssl-client.xml"
+mapreduce.output.basename "part"
+mapreduce.output.fileoutputformat.compress.type $r4
+$r6 "\t"
+mo.namedOutputs ""
+mapreduce.output.fileoutputformat.compress.type $r3
+mapreduce.output.textoutputformat.separator "\t"
+mo.config.namedOutput null
+mapreduce.outputcommitter.named.classname ""
+mapreduce.job.name ""
+r0 null
+r0 null
+mapreduce.jobhistory.http.policy $r1
+mapreduce.jobhistory.address "0.0.0.0:10020"
+mapreduce.job.queuename "default"
+mapreduce.fieldsel.map.output.key.value.fields.spec "0-:"
+mapreduce.fieldsel.data.field.separator "\t"
+mapreduce.input.fileinputformat.inputdir ""
+mapreduce.fieldsel.reduce.output.key.value.fields.spec "0-:"
+mapreduce.fieldsel.data.field.separator "\t"
+hadoop.user.group.static.mapping.overrides "dr.who=;"
+mapreduce.job.queuename "default"
+mapreduce.job.name "<missing job name>"
+mapreduce.jobhistory.principal ""
+yarn.app.mapreduce.am.staging-dir "/tmp/hadoop-yarn/staging"
+r3 $r18
+hadoop.security.crypto.cipher.suite "AES/CTR/NoPadding"
+mapreduce.jobhistory.webapp.address "0.0.0.0:19888"
+mapreduce.jobhistory.webapp.https.address "0.0.0.0:19890"
+mapreduce.totalorderpartitioner.path "_partition.lst"
+mapreduce.map.output.key.field.separator "\t"
+mapreduce.map.output.key.field.separator "\t"
+hadoop.kerberos.kinit.command "kinit"
+r2 $r8
+mapreduce.cluster.administrators " "
+hadoop.security.authentication "simple"
+hadoop.security.auth_to_local.mechanism "hadoop"
+hadoop.security.auth_to_local r8
+fs.defaultFS ""
+fs.defaultFS "file:///"
+mapreduce.jobhistory.http.policy $r3
+yarn.http.policy $r1
+yarn.app.mapreduce.am.staging-dir "/tmp/hadoop-yarn/staging"
+yarn.app.mapreduce.am.staging-dir "/tmp/hadoop-yarn/staging"
+fs.defaultFS "file:///"
+mapreduce.job.name "<missing app name>"
+mapreduce.jobhistory.admin.acl "*"

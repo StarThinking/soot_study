@@ -1,0 +1,10 @@
+mapreduce.job.reduce.slowstart.completedmaps 0.05F
+mapreduce.reduce.input.buffer.percent 0.0F
+mapreduce.reduce.shuffle.merge.percent 0.66F
+mapreduce.reduce.shuffle.memory.limit.percent 0.25F
+mapreduce.reduce.shuffle.input.buffer.percent 0.7F
+mapreduce.job.speculative.slowtaskthreshold 1.0F
+mapreduce.map.sort.spill.percent 0.8F
+mapreduce.reduce.shuffle.max-fetch-failures-fraction 0.5F
+yarn.app.mapreduce.am.job.reduce.preemption.limit 0.5F
+yarn.app.mapreduce.am.job.reduce.rampup.limit 0.5F
