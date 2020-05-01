@@ -17,3 +17,4 @@ mapreduce.reduce.skip.proc-count.auto-incr
 mapreduce.reduce.speculative
 mapreduce.shuffle.ssl.enabled
 mapreduce.task.files.preserve.failedtasks
+yarn.nodemanager.recovery.enabled

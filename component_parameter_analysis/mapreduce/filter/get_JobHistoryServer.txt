@@ -22,3 +22,4 @@ mapreduce.output.fileoutputformat.compress.codec
 mapreduce.output.fileoutputformat.compress.type
 mapreduce.reduce.node-label-expression
 yarn.app.mapreduce.am.staging-dir
+yarn.http.policy
