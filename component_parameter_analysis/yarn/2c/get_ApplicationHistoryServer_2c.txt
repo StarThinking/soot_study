@@ -1,0 +1,313 @@
+hadoop.kerberos.min.seconds.before.relogin
+yarn.app.attempt.diagnostics.limit.kc
+r64
+r5
+$r14
+yarn.scheduler.capacity.multi-node-sorting.policy
+$r7
+$r7
+$r7
+$r10
+yarn.nodemanager.log-aggregation.policy.parameters
+r4
+$r5
+yarn.nodemanager.runtime.linux.type
+hadoop.registry.dns.domain-name
+$r7
+yarn.scheduler.configuration.leveldb-store.path
+$r8
+io.compression.codec.lzo.class
+$r9
+$r8
+yarn.web-proxy.address
+r1
+r1
+$r7
+r5
+yarn.resourcemanager.leveldb-state-store.path
+hadoop.registry.dns.zone-subnet
+bind.address
+hadoop.http.temp.dir
+r68
+r8
+r7
+yarn.nodemanager.resource-plugins.fpga.allowed-fpga-devices
+hadoop.tmp.dir
+hadoop.registry.dns.zone-mask
+hadoop.registry.dns.split-reverse-zone-range
+hadoop.registry.dns.zone-subnet
+hadoop.registry.dns.public-key
+yarn.scheduler.configuration.fs.path
+yarn.nodemanager.recovery.dir
+hadoop.zk.address
+yarn.nodemanager.recovery.dir
+$r11
+yarn.resourcemanager.cluster-id
+r4
+r3
+ssl.server.exclude.cipher.list
+ssl.server.truststore.location
+$r76
+$r72
+r1
+r1
+hadoop.registry.dns.split-reverse-zone-range
+hadoop.registry.dns.zone-mask
+hadoop.registry.dns.zone-subnet
+hadoop.registry.dns.zones-dir
+yarn.scheduler.increment-allocation-vcores
+r73
+yarn.scheduler.increment-allocation-vcores
+yarn.scheduler.increment-allocation-mb
+r71
+yarn.scheduler.increment-allocation-mb
+r4
+yarn.nodemanager.runtime.linux.type
+$r14
+fs.permissions.umask-mode
+tmpjars
+r1
+yarn.timeline-service.leveldb-timeline-store.path
+$r32
+$r28
+yarn.timeline-service.webapp.address
+yarn.timeline-service.leveldb-state-store.path
+r4
+yarn.webapp.ui2.war-file-path
+r1
+r1
+r1
+yarn.nodemanager.windows-secure-container-executor.group
+yarn.nodemanager.container-executor.os.sched.priority.adjustment
+r1
+r1
+yarn.resourcemanager.invariant-checker.file
+yarn.federation.state-store.sql.url
+yarn.federation.state-store.sql.password
+yarn.federation.state-store.sql.username
+yarn.nodemanager.recovery.dir
+hadoop.registry.dns.bind-address
+hadoop.registry.dns.domain-name
+hadoop.security.dns.nameserver
+hadoop.security.dns.interface
+yarn.timeline-service.generic-application-history.store-class
+yarn.timeline-service.generic-application-history.store-class
+yarn.timeline-service.generic-application-history.store-class
+r1
+
+
+yarn.nodemanager.log-dirs
+yarn.nodemanager.local-dirs
+yarn.resourcemanager.fs.state-store.uri
+r1
+yarn.timeline-service.leveldb-timeline-store.path
+r1
+ssl.server.exclude.cipher.list
+ssl.server.truststore.location
+ssl.server.keystore.location
+hadoop.tmp.dir
+yarn.nodemanager.bind-host
+hadoop.security.dns.nameserver
+hadoop.security.dns.interface
+yarn.resourcemanager.ha.rm-ids
+yarn.resourcemanager.ha.id
+hadoop.token.files
+yarn.timeline-service.versions
+yarn.web-proxy.address
+yarn.nodemanager.health-checker.script.path
+yarn.timeline-service.hbase.configuration.file
+r2
+yarn.resourcemanager.principal
+yarn.resourcemanager.cluster-id
+yarn.ipc.rpc.class
+yarn.ipc.rpc.class
+r1
+yarn.web-proxy.address
+hadoop.security.authentication
+yarn.timeline-service.generic-application-history.store-class
+yarn.timeline-service.generic-application-history.store-class
+yarn.timeline-service.generic-application-history.store-class
+yarn.nodemanager.recovery.dir
+yarn.nodemanager.node-labels.provider.script.path
+hadoop.tmp.dir
+yarn.timeline-service.leveldb-timeline-store.path
+yarn.nodemanager.node-attributes.provider.script.path
+yarn.timeline-service.leveldb-timeline-store.path
+yarn.service.system-service.dir
+hadoop.tmp.dir
+yarn.resourcemanager.zk-address
+yarn.client.app-submission.poll-interval
+$r29
+$r27
+r178
+yarn.nodemanager.recovery.dir
+yarn.timeline-service.leveldb-timeline-store.path
+yarn.resourcemanager.ha.id
+yarn.http.policy $r1
+$r10 r4
+$r11 r4
+$r9 "fifo"
+$r7 "org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.queuemanagement.GuaranteedOrZeroCapacityOverTimePolicy"
+yarn.federation.policy-manager-params ""
+yarn.federation.policy-manager "org.apache.hadoop.yarn.server.federation.policies.manager.UniformBroadcastPolicyManager"
+yarn.router.clientrm.interceptor-class.pipeline "org.apache.hadoop.yarn.server.router.clientrm.DefaultClientRequestInterceptor"
+yarn.nodemanager.log-aggregation.compression-type "none"
+$r10 r4
+$r7 "org.apache.hadoop.yarn.server.resourcemanager.reservation.planning.SimpleCapacityReplanner"
+$r7 "org.apache.hadoop.yarn.server.resourcemanager.reservation.planning.AlignedPlannerWithGreedy"
+$r7 "org.apache.hadoop.yarn.server.resourcemanager.reservation.CapacityOverTimePolicy"
+$r9 r20
+yarn.timeline-service.generic-application-history.fs-history-store.compression-type "none"
+yarn.admin.acl ""
+yarn.timeline-service.read.allowed.users ""
+yarn.nodemanager.log-aggregation.compression-type "none"
+yarn.nodemanager.remote-app-log-dir-suffix "logs"
+yarn.nodemanager.remote-app-log-dir "/tmp/logs"
+yarn.nodemanager.resource-plugins.gpu.path-to-discovery-executables "nvidia-smi"
+yarn.federation.registry.base-dir "yarnfederation/"
+yarn.nodemanager.amrmproxy.interceptor-class.pipeline "org.apache.hadoop.yarn.server.nodemanager.amrmproxy.DefaultRequestInterceptor"
+yarn.service.base.path $r8
+yarn.nodemanager.linux-container-executor.cgroups.hierarchy "/hadoop-yarn"
+yarn.nodemanager.resource-plugins.fpga.vendor-plugin.class "org.apache.hadoop.yarn.server.nodemanager.containermanager.resourceplugin.fpga.IntelFpgaOpenclPlugin"
+yarn.nodemanager.numa-awareness.numactl.cmd "/usr/bin/numactl"
+yarn.nodemanager.default-container-executor.log-dirs.permissions "710"
+yarn.federation.policy-manager-params ""
+yarn.federation.policy-manager "org.apache.hadoop.yarn.server.federation.policies.manager.UniformBroadcastPolicyManager"
+yarn.sharedcache.root-dir "/sharedcache"
+yarn.nodemanager.resource-plugins.gpu.allowed-gpu-devices "auto"
+yarn.nodemanager.resource-plugins.gpu.allowed-gpu-devices "auto"
+yarn.nodemanager.remote-app-log-dir-suffix "logs"
+yarn.nodemanager.remote-app-log-dir "/tmp/logs"
+yarn.resourcemanager.cluster-id "yarn_cluster"
+yarn.nodemanager.linux-container-executor.cgroups.mount-path null
+yarn.federation.machine-list ""
+yarn.nodemanager.runtime.linux.sandbox-mode "disabled"
+yarn.nodemanager.resource-plugins.gpu.docker-plugin "nvidia-docker-v1"
+yarn.nodemanager.network-tagging.mapping-file.path ""
+yarn.nodemanager.resource-plugins.fpga.path-to-discovery-executables ""
+hadoop.registry.dns.private-key-file "/etc/hadoop/conf/registryDNS.private"
+yarn.scheduler.configuration.zk-store.parent-path "/confstore"
+hadoop.ssl.hostname.verifier "DEFAULT"
+yarn.resourcemanager.placement-constraints.algorithm.iterator $r35
+yarn.resourcemanager.metrics.runtime.buckets "60
+hadoop.user.group.static.mapping.overrides "dr.who=;"
+yarn.sharedcache.root-dir "/sharedcache"
+yarn.timeline-service.entity-group-fs-store.active-dir "/tmp/entity-file-history/active"
+ssl.server.truststore.type "jks"
+ssl.server.keystore.type "jks"
+hadoop.registry.zk.root "/registry"
+hadoop.registry.zk.root "/registry"
+r1 r2
+yarn.admin.acl "*"
+yarn.node-attribute.fs-store.root-dir $r6
+yarn.nodemanager.node-attributes.provider.configured-node-attributes null
+yarn.nodemanager.node-labels.provider.configured-node-partition null
+yarn.node-labels.fs-store.root-dir $r6
+hadoop.http.filter.initializers ""
+yarn.ipc.server.factory.class "org.apache.hadoop.yarn.factories.impl.pb.RpcServerFactoryPBImpl"
+yarn.nodemanager.linux-container-executor.cgroups.hierarchy "/hadoop-yarn"
+yarn.nodemanager.linux-container-executor.path r3
+yarn.resourcemanager.principal ""
+yarn.resourcemanager.monitor.capacity.preemption.intra-queue-preemption.preemption-order-policy "userlimit_first"
+yarn.sharedcache.root-dir "/sharedcache"
+yarn.nodemanager.resource.network.interface "eth0"
+yarn.ipc.client.factory.class "org.apache.hadoop.yarn.factories.impl.pb.RpcClientFactoryPBImpl"
+r1 r2
+yarn.nodemanager.elastic-memory-control.oom-listener.path r2
+yarn.nodemanager.container-localizer.log.level "INFO"
+yarn.nodemanager.container-localizer.java.opts "-Xmx256m"
+$r47 "org.apache.hadoop.yarn.server.resourcemanager.scheduler.placement.ResourceUsageMultiNodeLookupPolicy"
+yarn.scheduler.configuration.store.class "memory"
+hadoop.ssl.server.conf "ssl-server.xml"
+hadoop.ssl.client.conf "ssl-client.xml"
+yarn.resourcemanager.cluster-id "yarn_cluster"
+yarn.timeline-service.hbase-schema.prefix "prod."
+$r4 $r3
+yarn.nodemanager.disk-validator "basic"
+yarn.resourcemanager.nm-container-queuing.load-comparator "QUEUE_LENGTH"
+yarn.resourcemanager.resource-profiles.source-file "resource-profiles.json"
+yarn.resourcemanager.configuration.file-system-based-store "/yarn/conf"
+yarn.resourcemanager.placement-constraints.handler "disabled"
+yarn.timeline-service.rolling-period "hourly"
+yarn.sharedcache.root-dir "/sharedcache"
+hadoop.registry.zk.service.allow.failed.sasl.clients "true"
+yarn.timeline-service.collector.webapp.address "0.0.0.0:8188"
+yarn.timeline-service.collector.webapp.https.address "0.0.0.0:8190"
+0.0.0.0 "0.0.0.0"
+hadoop.http.filter.initializers ""
+hadoop.http.filter.initializers ""
+yarn.resourcemanager.submission-preprocessor.file-path ""
+r3 ""
+yarn.nodemanager.numa-awareness.numactl.cmd "/usr/bin/numactl"
+yarn.resourcemanager.principal ""
+yarn.nodemanager.env-whitelist $r2
+yarn.nodemanager.linux-container-executor.nonsecure-mode.user-pattern "^[_.A-Za-z0-9][-@_.A-Za-z0-9]{0
+yarn.nodemanager.linux-container-executor.nonsecure-mode.local-user "nobody"
+r1 r2
+hadoop.kerberos.kinit.command "kinit"
+yarn.admin.acl "*"
+yarn.timeline-service.generic-application-history.store-class $r9
+yarn.federation.state-store.sql.jdbc-class "org.hsqldb.jdbc.JDBCDataSource"
+yarn.federation.zk-state-store.parent-path "/federationstore"
+yarn.nodemanager.node-attributes.provider null
+yarn.nodemanager.node-labels.provider null
+yarn.sharedcache.webapp.address "0.0.0.0:8788"
+hadoop.registry.user.accounts ""
+hadoop.registry.kerberos.realm $r17
+yarn.resourcemanager.reservation-system.plan.follower $r3
+yarn.resourcemanager.nodes.exclude-path ""
+yarn.resourcemanager.nodes.include-path ""
+yarn.scheduler.configuration.store.class "file"
+yarn.admin.acl "*"
+yarn.nodemanager.disk-validator "basic"
+yarn.resourcemanager.reservation-system.class $r4
+yarn.resourcemanager.scheduler.class "org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacityScheduler"
+yarn.resourcemanager.zk-state-store.parent-path "/rmstore"
+yarn.timeline-service.reader.class "org.apache.hadoop.yarn.server.timelineservice.storage.HBaseTimelineReaderImpl"
+yarn.timeline-service.writer.class "org.apache.hadoop.yarn.server.timelineservice.storage.HBaseTimelineWriterImpl"
+yarn.admin.acl "*"
+yarn.scheduler.fair.allocation.file "fair-scheduler.xml"
+ssl.server.truststore.type "jks"
+ssl.server.keystore.type "jks"
+yarn.sharedcache.root-dir "/sharedcache"
+yarn.timeline-service.generic-application-history.fs-history-store.uri $r9
+$r20 $r22
+$r15 ""
+fs.defaultFS "file:///"
+fs.defaultFS "file:///"
+yarn.resourcemanager.webapp.address "0.0.0.0:8088"
+yarn.resourcemanager.webapp.https.address "0.0.0.0:8090"
+r1 r2
+yarn.router.webapp.address "0.0.0.0:8089"
+yarn.router.webapp.https.address "0.0.0.0:8091"
+yarn.timeline-service.webapp.address "0.0.0.0:8188"
+yarn.timeline-service.webapp.https.address "0.0.0.0:8190"
+yarn.ipc.record.factory.class "org.apache.hadoop.yarn.factories.impl.pb.RecordFactoryPBImpl"
+hadoop.zk.acl "world:anyone:rwcda"
+yarn.timeline-service.reader.webapp.address "0.0.0.0:8188"
+yarn.timeline-service.reader.webapp.https.address "0.0.0.0:8190"
+r2 $r8
+yarn.nodemanager.webapp.address "0.0.0.0:8042"
+yarn.nodemanager.webapp.https.address "0.0.0.0:8044"
+yarn.node-labels.configuration-type "centralized"
+yarn.node-labels.configuration-type "centralized"
+yarn.node-labels.configuration-type "centralized"
+yarn.timeline-service.webapp.address "0.0.0.0:8188"
+yarn.timeline-service.webapp.https.address "0.0.0.0:8190"
+yarn.resourcemanager.ha.automatic-failover.zk-base-path "/yarn-leader-election"
+yarn.admin.acl "*"
+yarn.timeline-service.fs-writer.root-dir $r9
+yarn.resourcemanager.cluster-id "yarn_cluster"
+yarn.timeline-service.entity-group-fs-store.done-dir "/tmp/entity-file-history/done"
+yarn.timeline-service.entity-group-fs-store.active-dir "/tmp/entity-file-history/active"
+yarn.resourcemanager.nodes.exclude-path ""
+yarn.resourcemanager.nodes.include-path ""
+yarn.timeline-service.fs-writer.root-dir $r9
+yarn.resourcemanager.ha.automatic-failover.zk-base-path "/yarn-leader-election"
+yarn.nodemanager.resourcemanager.minimum.version "NONE"
+yarn.resourcemanager.cluster-id "yarn_cluster"
+yarn.resourcemanager.nodemanager.minimum.version "NONE"
+yarn.sharedcache.root-dir "/sharedcache"
+hadoop.security.authentication "simple"
+hadoop.security.auth_to_local.mechanism "hadoop"
+hadoop.security.auth_to_local r8

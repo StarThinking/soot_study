@@ -1,0 +1,4 @@
+hadoop.service.shutdown.timeout 30L
+yarn.resourcemanager.reservation-system.planfollower.time-step 1000L
+hadoop.registry.dns.dns-ttl 1L
+r1 l0

@@ -1,0 +1,9 @@
+yarn.resource-types
+yarn.resource.dynamic.nodes
+$r15
+yarn.nodemanager.resource-plugins
+yarn.resourcemanager.scheduler.monitor.policies
+yarn.nodemanager.node-attributes.provider.script.opts $r4
+hadoop.ssl.enabled.protocols $r7
+yarn.nodemanager.health-checker.script.opts $r3
+yarn.nodemanager.node-labels.provider.script.opts $r4
