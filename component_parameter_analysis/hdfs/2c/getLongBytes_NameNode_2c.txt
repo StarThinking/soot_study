@@ -1,0 +1,5 @@
+dfs.blocksize 134217728L
+dfs.blocksize 134217728L
+dfs.blocksize 134217728L
+dfs.blocksize 134217728L
+r1 l0

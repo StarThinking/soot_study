@@ -1,0 +1,236 @@
+dfs.namenode.shared.edits.dir
+r64
+r3
+r3
+$r29
+$r15
+hadoop.zk.address
+dfs.encrypt.data.transfer.cipher.suites
+dfs.namenode.shared.edits.dir
+dfs.encrypt.data.overwrite.downstream.new.qop
+dfs.namenode.decommission.nodes.per.interval
+dfs.federation.router.store.driver.fs.path
+dfs.federation.router.store.driver.file.directory
+r2
+dfs.namenode.legacy-oiv-image.dir
+r1
+dfs.encrypt.data.transfer.cipher.suites
+dfs.encrypt.data.transfer.cipher.suites
+r1
+bind.address
+hadoop.http.temp.dir
+r1
+r1
+dfs.federation.router.monitor.namenode
+r1
+r5
+httpfs.fs.user
+httpfs.fs.user
+io.compression.codecs
+ha.zookeeper.quorum
+dfs.nameservices
+r1
+r4
+r3
+ssl.server.exclude.cipher.list
+ssl.server.truststore.location
+r3
+dfs.metrics.session-id
+r17
+r15
+r3
+r2
+r2
+r12
+dfs.web.authentication.simple.anonymous.allowed
+$r21
+dfs.web.authentication.kerberos.principal
+r2
+r2
+r2
+r2
+r2
+r23
+$r7
+dfs.client.cache.drop.behind.writes
+dfs.client.cache.readahead
+dfs.client.cache.drop.behind.reads
+$r11
+dfs.namenode.plugins
+tmpjars
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+dfs.datanode.data.dir
+r1
+dfs.encrypt.data.transfer.algorithm
+dfs.data.transfer.protection
+$r7
+dfs.web.authentication.kerberos.keytab
+r3
+ssl.server.exclude.cipher.list
+ssl.server.truststore.location
+ssl.server.keystore.location
+r4
+dfs.nameservice.id
+fs.permissions.umask-mode
+r1
+dfs.namenode.top.windows.minutes
+dfs.namenode.top.num.users
+dfs.namenode.top.window.num.buckets
+dfs.metrics.percentiles.intervals
+hadoop.user.group.metrics.percentiles.intervals
+r3
+r1
+dfs.ha.namenode.id
+$r5
+dfs.metrics.session-id
+hadoop.security.kerberos.ticket.cache.path
+r1
+r1
+dfs.provided.aliasmap.inmemory.dnrpc-address
+dfs.provided.aliasmap.inmemory.dnrpc-address
+r3
+dfs.provided.aliasmap.text.codec
+dfs.provided.aliasmap.leveldb.path
+dfs.encrypt.data.transfer.algorithm
+r18
+fs.defaultFS
+r3
+r34
+$r18
+$r16
+r1
+r1
+r1
+r7
+dfs.namenode.shared.edits.dir
+hadoop.token.files
+hadoop.security.dns.nameserver
+hadoop.security.dns.interface
+hadoop.kerberos.min.seconds.before.relogin
+dfs.metrics.session-id
+dfs.ha.namenode.id
+dfs.nameservice.id
+r10
+$r9
+$r7
+r1
+dfs.namenode.rpc-address
+dfs.namenode.rpc-address
+r2 $r8
+dfs.journalnode.edits.dir.perm "700"
+dfs.journalnode.edits.dir "/tmp/hadoop/dfs/journalnode/"
+dfs.datanode.data.dir.perm "700"
+dfs.disk.balancer.plan.valid.interval "1d"
+dfs.permissions.superusergroup "supergroup"
+r1 r2
+dfs.provided.storage.id "DS-PROVIDED"
+hadoop.zk.acl "world:anyone:rwcda"
+dfs.federation.router.store.driver.zk.parent-path "/hdfs-federation"
+hadoop.security.crypto.cipher.suite "AES/CTR/NoPadding"
+dfs.permissions.superusergroup "supergroup"
+dfs.federation.router.admin-bind-host $r13
+ha.zookeeper.parent-znode "/hadoop-ha"
+$r44 r9
+r15 r8
+$r32 r6
+$r25 r5
+$r23 ""
+r7 "*"
+security.service.authorization.default.acl.blocked ""
+security.service.authorization.default.acl "*"
+dfs.namenode.backup.http-address "0.0.0.0:50105"
+fs.defaultFS "file:///"
+ha.zookeeper.acl "world:anyone:rwcda"
+dfs.namenode.kerberos.principal ""
+dfs.datanode.startup $r3
+ssl.server.truststore.type "jks"
+ssl.server.keystore.type "jks"
+r3 $r18
+dfs.storage.policy.satisfier.mode $r4
+r2 "0.0.0.0:9870"
+dfs.namenode.min.supported.datanode.version "2.1.0-beta"
+r1 r2
+dfs.web.authentication.filter "org.apache.hadoop.hdfs.web.AuthFilter"
+dfs.webhdfs.acl.provider.permission.pattern "^(default:
+dfs.webhdfs.user.provider.user.pattern "^[A-Za-z_][A-Za-z0-9._-]*[$]?$"
+dfs.image.compression.codec "org.apache.hadoop.io.compress.DefaultCodec"
+dfs.client.context "default"
+dfs.datanode.kerberos.principal ""
+hadoop.security.crypto.jceks.key.serialfilter "java.lang.Enum;java.security.KeyRep;java.security.KeyRep$Type;javax.crypto.spec.SecretKeySpec;org.apache.hadoop.crypto.key.JavaKeyStoreProvider$KeyMetadata;!*"
+dfs.hosts.exclude ""
+dfs.hosts ""
+dfs.hosts ""
+dfs.storage.policy.satisfier.mode $r8
+hadoop.security.sensitive-config-keys $r7
+hadoop.ssl.hostname.verifier "DEFAULT"
+hadoop.user.group.static.mapping.overrides "dr.who=;"
+dfs.user.home.dir.prefix "/user"
+r1 r2
+dfs.datanode.kerberos.principal ""
+dfs.https.server.keystore.resource "ssl-server.xml"
+ssl.server.truststore.type "jks"
+ssl.server.keystore.type "jks"
+dfs.cluster.administrators " "
+dfs.journalnode.http-address "0.0.0.0:8480"
+dfs.journalnode.https-address "0.0.0.0:8481"
+dfs.namenode.storage.dir.perm "700"
+dfs.namenode.storage.dir.perm "700"
+dfs.checksum.combine.mode "MD5MD5CRC"
+mapreduce.task.attempt.id "NONMAPREDUCE"
+dfs.provided.storage.id "DS-PROVIDED"
+hadoop.ssl.server.conf "ssl-server.xml"
+hadoop.ssl.client.conf "ssl-client.xml"
+fs.viewfs.rename.strategy $r9
+dfs.webhdfs.acl.provider.permission.pattern "^(default:
+dfs.webhdfs.user.provider.user.pattern "^[A-Za-z_][A-Za-z0-9._-]*[$]?$"
+dfs.http.policy $r3
+r1 r2
+dfs.namenode.kerberos.principal ""
+dfs.namenode.kerberos.principal ""
+dfs.namenode.kerberos.principal ""
+dfs.namenode.kerberos.principal ""
+dfs.namenode.kerberos.principal ""
+dfs.journalnode.rpc-address "0.0.0.0:8485"
+dfs.checksum.type "CRC32C"
+r2 r3
+hadoop.rpc.socket.factory.class.default "org.apache.hadoop.net.StandardSocketFactory"
+dfs.datatransfer.client.variableBlackList.file r5
+dfs.datatransfer.client.fixedBlackList.file r4
+dfs.datatransfer.server.variableBlackList.file "/etc/hadoop/blackList"
+dfs.datatransfer.server.fixedBlackList.file "/etc/hadoop/fixedBlackList"
+dfs.datatransfer.client.variablewhitelist.file r5
+dfs.datatransfer.client.fixedwhitelist.file r4
+dfs.datatransfer.server.variablewhitelist.file "/etc/hadoop/whitelist"
+dfs.datatransfer.server.fixedwhitelist.file "/etc/hadoop/fixedwhitelist"
+dfs.provided.aliasmap.text.delimiter "
+dfs.provided.aliasmap.text.write.dir $r4
+dfs.provided.aliasmap.text.delimiter "
+dfs.provided.aliasmap.text.read.file "file:///tmp/blocks.csv"
+dfs.permissions.superusergroup "supergroup"
+hadoop.kerberos.kinit.command "kinit"
+dfs.mover.address "0.0.0.0:0"
+dfs.balancer.address "0.0.0.0:0"
+dfs.namenode.kerberos.principal ""
+dfs.journalnode.edits.dir "/tmp/hadoop/dfs/journalnode/"
+r1 r2
+dfs.namenode.kerberos.principal ""
+dfs.client.block.write.replace-datanode-on-failure.policy "DEFAULT"
+dfs.checksum.type "CRC32C"
+dfs.permissions.superusergroup "supergroup"
+hadoop.security.authentication "simple"
+hadoop.security.auth_to_local.mechanism "hadoop"
+hadoop.security.auth_to_local r8
+fs.defaultFS "file:///"
+dfs.namenode.startup $r2

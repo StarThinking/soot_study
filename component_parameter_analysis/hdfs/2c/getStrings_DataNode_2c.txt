@@ -1,0 +1,3 @@
+dfs.nameservices
+$r6 $r8
+hadoop.ssl.enabled.protocols $r7

@@ -1,0 +1,6 @@
+dfs.namenode.storageinfo.defragment.ratio 0.75
+dfs.namenode.checkpoint.check.quiet-multiplier 1.5
+dfs.namenode.reencrypt.throttle.limit.updater.ratio 1.0
+dfs.disk.balancer.plan.threshold.percent 10.0
+dfs.namenode.reencrypt.throttle.limit.handler.ratio 1.0
+dfs.namenode.redundancy.considerLoad.factor 2.0

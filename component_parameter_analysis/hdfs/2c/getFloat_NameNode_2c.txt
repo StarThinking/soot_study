@@ -1,0 +1,11 @@
+dfs.namenode.edit.log.autoroll.multiplier.threshold 0.5F
+dfs.namenode.lifeline.handler.ratio 0.1F
+dfs.namenode.available-space-block-placement-policy.balanced-space-preference-fraction 0.6F
+dfs.namenode.replqueue.threshold-pct $f1
+dfs.namenode.safemode.threshold-pct 0.999F
+dfs.namenode.write.stale.datanode.ratio 0.5F
+dfs.datanode.available-space-volume-choosing-policy.balanced-space-preference-fraction 0.75F
+dfs.namenode.invalidate.work.pct.per.iteration 0.32F
+dfs.namenode.path.based.cache.block.map.allocation.percent 0.25F
+r1 f0
+dfs.namenode.retrycache.heap.percent 0.03F
