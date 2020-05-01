@@ -1,0 +1,6 @@
+hbase.region.replica.storefile.refresh.memstore.multiplier
+hbase.ipc.server.callqueue.codel.lifo.threshold
+hbase.master.quotas.observer.report.percent
+hbase.util.default.lossycounting.errorrate
+hbase.hregion.max.filesize.jitter
+r1

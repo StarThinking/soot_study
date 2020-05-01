@@ -1,0 +1,485 @@
+hbase.defaults.for.version
+r65
+r45
+hbase.regionserver.hlog.splitlog.corrupt.dir
+hbase.regionserver.scan.visibility.label.generator.class
+hbase.replication.conf.dir
+hbase.mapred.outputtable
+hbase.snapshot.enabled
+hbase.status.multicast.ni.name
+dfs.encrypt.data.transfer.cipher.suites
+mapreduce.output.fileoutputformat.compress.codec
+hbase.mapreduce.hfileoutputformat.datablock.encoding
+hbase.mapreduce.hfileoutputformat.compression
+hbase.mapreduce.hfileoutputformat.table.name
+hbase.hstore.block.storage.policy
+hbase.hfile.quarantine.dir
+hbase.mapreduce.splittable
+hbase.mapreduce.splittable
+io.serializations
+zookeeper.znode.parent
+hbase.zookeeper.property.clientPort
+hbase.zookeeper.quorum
+hbase.security.authentication
+RowPrefixBloomFilter.prefix_length
+hbase.client.bufferedmutator.classname
+$r4
+hbase.hstore.block.storage.policy
+STORAGE_POLICY
+io.compression.codecs
+hbase.mapreduce.inputtable
+mapreduce.input.fileinputformat.inputdir
+hbase.import.version
+importtsv.separator
+hbase.crypto.master.alternate.key.name
+hbase.crypto.wal.key.name
+$r8
+hbase.security.authentication
+hbase.client.zookeeper.quorum
+hbase.coprocessor.classloader.included.classes
+hbase.coprocessor.classloader.included.classes
+$r23
+hbase.examples.coprocessor.value.rewrite.replaced
+hbase.examples.coprocessor.value.rewrite.orig
+hbase.examples.coprocessor.scanmodifying.qualifier
+hbase.examples.coprocessor.scanmodifying.family
+hbase.wal.meta_provider
+hbase.client.zookeeper.quorum
+hbase.replication.rpc.codec
+hbase.regionserver.global.memstore.upperLimit
+hbase.wal.async.event-loop.config
+dfs.web.ugi
+hbase.rootdir
+hbase.rootdir
+hbase.skip.errors
+r3
+r3
+$r29
+hbase.mapred.tablecolumns
+hbase.mapreduce.tableinput.mappers.per.region
+mapreduce.job.log4j-properties-file
+mapreduce.job.jar
+hbase.mapreduce.scan.column.family
+hbase.mapreduce.inputtable
+importtsv.columns
+dfs.encrypt.data.transfer.cipher.suites
+verifyrep.peerQuorumAddress
+verifyrep.tableName
+importtsv.bulk.output
+importtsv.separator
+importtsv.separator
+r2
+hbase.rootdir
+hbase.TableSnapshotInputFormat.snapshot.name
+hbase.mapred.tablecolumns
+hbase.mapred.tablecolumns
+hbase.mapreduce.scan
+hbase.mapreduce.scan
+hbase.mapreduce.split.algorithm
+hbase.TableSnapshotInputFormat.restore.dir
+hbase.mapreduce.inputtable.shufflemaps
+hbase.mapreduce.inputtable.shufflemaps
+snapshot.export.format.snapshot.dir
+io.compression.codec.lzo.class
+HBASE_IMPORTER_RENAME_CFS
+r1
+r2
+sync.table.source.hash.dir
+import.table.name
+import.wal.durability
+import.table.name
+index.familyname
+index.tablename
+snapshot.export.input.root
+snapshot.export.output.root
+snapshot.export.files.attributes.user
+snapshot.export.files.attributes.group
+importtsv.columns
+$r3
+importtsv.columns
+hbase.coprocessor.classloader.included.classes
+hbase.coprocessor.classloader.included.classes
+hbase.node.health.script.location
+hbase.bulkload.staging.dir
+hbase.node.health.script.location
+hbase.client.zookeeper.quorum
+hbase.replication.rpc.codec
+mapreduce.job.cache.files
+mapreduce.job.classpath.files
+tmparchives
+tmpjars
+tmpfiles
+mapreduce.job.credentials.json
+mapreduce.job.credentials.binary
+mapreduce.output.fileoutputformat.outputdir
+hbase.mapred.outputtable
+hbase.mapred.outputtable
+hbase.crypto.algorithm.rng.provider
+hbase.crypto.algorithm.aes.provider
+hbase.crypto.algorithm.rng.provider
+r1
+hbase.hstore.checksum.algorithm
+$r11
+hbase.zookeeper.useMulti
+r3
+$r7
+dfs.data.transfer.protection
+dfs.client.cache.drop.behind.writes
+dfs.client.cache.readahead
+dfs.client.cache.drop.behind.reads
+hbase.crypto.alternate.key.algorithm
+hbase.crypto.master.alternate.key.name
+hbase.rpc.client.impl
+mapreduce.task.attempt.id
+hbase.rootdir
+r1
+r3
+r2
+tmpjars
+mapreduce.job.cache.archives
+r1
+mapreduce.reduce.ulimit
+mapreduce.map.ulimit
+mapred.child.ulimit
+mapred.task.maxvmem
+hbase.tmp.dir
+r2
+hbase.security.authentication
+mapreduce.job.working.dir
+hbase.client.zookeeper.quorum
+r2
+r2
+r1
+r1
+r1
+ssl.server.truststore.location
+ssl.server.keystore.location
+r1
+hbase.thrift.keytab.file
+hbase.thrift.spnego.keytab.file
+hbase.thrift.kerberos.principal
+hbase.thrift.spnego.principal
+r3
+fs.permissions.umask-mode
+r2
+r1
+hbase.regionserver.global.memstore.lowerLimit
+hbase.regionserver.global.memstore.size.lower.limit
+$r4
+hbase.mapred.output.rs.impl
+hbase.mapred.output.rs.class
+hbase.mapred.output.quorum
+hbase.mapred.outputtable
+hbase.mapreduce.scan
+hbase.mapreduce.scan
+$r7
+num.key.fields.for.partition
+hbase.mapred.outputtable
+r1
+r2
+r1
+hbase.client.keytab.principal
+hbase.client.keytab.file
+hbase.security.authentication
+r1
+hbase.rootdir
+hbase.rootdir
+r1
+mapreduce.input.fileinputformat.inputdir
+yarn.resourcemanager.ha.id
+yarn.resourcemanager.principal
+mapreduce.jobtracker.kerberos.principal
+mapreduce.job.credentials.binary
+hadoop.security.authentication
+mapreduce.input.fileinputformat.inputdir
+io.serializations
+hbase.replication.cluster.id
+hbase.replication.cluster.id
+wal.bulk.output
+hadoop.security.dns.nameserver
+hadoop.security.dns.interface
+r1
+r3
+hbase.zookeeper.quorum
+hbase.zookeeper.property.dataDir
+hbase.canary.region.read.table.timeout
+hbase.regionserver.thrift.ipaddress
+hbase.thrift.kerberos.principal
+hbase.thrift.ssl.keystore.store
+hbase.thrift.security.qop
+hbase.rootdir
+r2
+r2
+hbase.snapshot.working.dir
+r1
+io.seqfile.compression.type
+hbase.security.authentication
+hbase.zookeeper.server.kerberos.principal
+hbase.zookeeper.client.kerberos.principal
+hadoop.kerberos.min.seconds.before.relogin
+io.serializations
+io.serializations
+hbase.mapred.output.quorum
+hbase.export.visibility.labels
+hbase.mapreduce.include.deleted.rows
+hbase.mapreduce.scan.row.stop
+hbase.mapreduce.scan.row.stop
+hbase.mapreduce.scan.row.start
+hbase.mapreduce.scan.row.start
+io.serializations
+hbase.mapreduce.scan.batchsize
+hbase.mapreduce.scan.batchsize
+hbase.mapreduce.scan.cachedrows
+hbase.mapreduce.scan.cachedrows
+hbase.mapreduce.scan.maxversions
+hbase.mapreduce.scan.maxversions
+hbase.mapreduce.scan.timerange.end
+hbase.mapreduce.scan.timerange.start
+hbase.mapreduce.scan.timerange.end
+hbase.mapreduce.scan.timerange.start
+hbase.mapreduce.scan.timestamp
+hbase.mapreduce.scan.timestamp
+hbase.mapreduce.scan.columns
+hbase.mapreduce.scan.columns
+hbase.mapreduce.scan.row.stop
+hbase.mapreduce.scan.row.stop
+hbase.mapreduce.scan.row.start
+hbase.mapreduce.scan.row.start
+hbase.client.keytab.principal
+hbase.balancer.tablesOnMaster
+hbase.mapreduce.scan.maxversions
+hbase.rootdir
+io.serializations
+credentials_location
+credentials_location
+importtsv.bulk.output
+importtsv.mapper.class
+importtsv.separator
+import.bulk.output
+import.bulk.output
+import.wal.durability
+import.table.name
+hbase.rootdir
+hbase.unsafe.stream.capability.enforce
+hbase.rootdir
+hbase.rootdir
+importtsv.mapper.class
+r1
+r1
+r1
+mapreduce.job.name $r16
+zookeeper.znode.visibility.user.auths.parent "visibility/user_auths"
+zookeeper.znode.visibility.label.parent "visibility/labels"
+hbase.wal.storage.policy "NONE"
+hbase.rpc.crypto.encryption.aes.cipher.transform "AES/CTR/NoPadding"
+hbase.rpc.crypto.encryption.aes.cipher.class "org.apache.commons.crypto.cipher.JceCipher"
+hbase.crypto.sasl.encryption.aes.crypto.random "org.apache.commons.crypto.random.JavaCryptoRandom"
+mapreduce.output.basename "part"
+hbase.hstore.compaction.date.tiered.window.factory.class $r7
+hbase.hstore.compaction.date.tiered.window.policy.class $r4
+zookeeper.znode.acl.parent "acl"
+hbase.status.multicast.bind.address.ip "0.0.0.0"
+hbase.status.multicast.address.ip "226.1.1.3"
+hbase.hash.type "murmur"
+r1 ""
+hfile.compression $r19
+$r5 "\t"
+$r9 $r10
+zookeeper.znode.metaserver "meta-region-server"
+zookeeper.znode.replication.peers.tableCFs "tableCFs"
+zookeeper.znode.replication.peers "peers"
+zookeeper.znode.replication "replication"
+r2 "700"
+hbase.wal.storage.policy "NONE"
+hbase.crypto.wal.key.name $r17
+hbase.crypto.master.key.name $r16
+hbase.crypto.wal.algorithm "AES"
+hbase.ipc.server.callqueue.type "fifo"
+hbase.cleaner.scan.dir.concurrent.size "0.25"
+hbase.fs.tmp.dir $r8
+hbase.master.quotas.snapshot.chore.timeunit $r1
+hbase.master.quotas.observer.chore.timeunit $r1
+dfs.datanode.address "0.0.0.0:50010"
+hbase.cleaner.scan.dir.concurrent.size "0.25"
+zookeeper.znode.switch.merge "merge"
+zookeeper.znode.switch.split "split"
+hbase.regionserver.mslab.class $r3
+hbase.hstore.defaultengine.compactionpolicy.class $r16
+hbase.regionserver.visibility.label.service.class $r7
+hbase.client.statistics.backoff-policy $r3
+wal.input.separator "
+mapreduce.job.name ""
+hbase.crypto.wal.algorithm "AES"
+hbase.crypto.master.key.name $r33
+hbase.rpc.protection $r10
+hbase.rpc.crypto.encryption.aes.cipher.class "org.apache.commons.crypto.cipher.JceCipher"
+hbase.rootdir.perms "700"
+hbase.hstore.defaultengine.storeflusher.class $r6
+hbase.hstore.defaultengine.compactionpolicy.class $r6
+hbase.hstore.defaultengine.compactor.class $r6
+$r13 "default"
+$r7 "default"
+hbase.wal.provider $r7
+zookeeper.znode.quota.rpc.throttle "rpc-throttle"
+r2 r3
+r1 r2
+hbase.http.staticuser.user "dr.stack"
+hbase.wal.dir $r6
+DFS_REPLICATION $r7
+mapreduce.input.fileinputformat.inputdir ""
+mapreduce.input.fileinputformat.inputdir ""
+$r20 "\t"
+verifyrep.peerTableName $r50
+verifyrep.peerHBaseRootAddress null
+verifyrep.peerFSAddress null
+verifyrep.peerSnapshotTmpDir null
+verifyrep.peerSnapshotName null
+verifyrep.rowPrefixes null
+verifyrep.families null
+verifyrep.delimiter ""
+hbase.local.dir "/tmp/hbase-local-dir"
+hbase.regionserver.wal.codec $r13
+hbase.replication.source.fs.conf.provider $r10
+hbase.regionserver.throughput.controller $r3
+hbase.regionserver.quotas.fs.utilization.chore.timeunit $r1
+hbase.http.filter.xframeoptions.mode "DENY"
+hbase.http.filter.csp.value ""
+hbase.http.filter.hsts.value ""
+mapreduce.job.log4j-properties-file ""
+ReportSeparator ":"
+hbase.crypto.keyprovider $r5
+hbase.crypto.cipherprovider $r5
+hbase.crypto.master.key.name "hbase"
+hbase.master.info.bindAddress "0.0.0.0"
+hbase.hstore.engine.class $r5
+hbase.hregion.compacting.memstore.type $r18
+hbase.systemtables.compacting.memstore.type "NONE"
+hadoop.security.crypto.jceks.key.serialfilter "java.lang.Enum;java.security.KeyRep;java.security.KeyRep$Type;javax.crypto.spec.SecretKeySpec;org.apache.hadoop.crypto.key.JavaKeyStoreProvider$KeyMetadata;!*"
+r1 r2
+hbase.regionserver.region.split.policy $r4
+hbase.regionserver.flush.policy $r4
+mapreduce.output.fileoutputformat.compress.type $r4
+hbase.crypto.algorithm.rng "SHA1PRNG"
+hbase.crypto.algorithm.aes.mode "AES/CTR/NoPadding"
+hbase.crypto.commons.cipher.jce.provider ""
+hbase.crypto.commons.cipher.classes ""
+hbase.crypto.algorithm.rng "SHA1PRNG"
+hbase.crypto.commons.mode "AES/CTR/NoPadding"
+dfs.checksum.type "CRC32C"
+mapreduce.task.attempt.id "NONMAPREDUCE"
+hbase.rpc.controllerfactory.class $r5
+hbase.coprocessor.region.classes ""
+hbase.hstore.block.storage.policy "HOT"
+hbase.regionserver.quotas.region.size.reporting.chore.timeunit $r1
+hbase.regionserver.quotas.policy.refresher.chore.timeunit $r1
+hbase.regionserver.flush.throughput.controller $r4
+hbase.replication.sink.service "org.apache.hadoop.hbase.replication.regionserver.Replication"
+hbase.replication.source.service "org.apache.hadoop.hbase.replication.regionserver.Replication"
+zookeeper.znode.parent "/hbase"
+hbase.thrift.accept.policy $r4
+hbase.coprocessor.region.classes ""
+hbase.rpc.callerfactory.class r3
+hadoop.user.group.static.mapping.overrides "dr.who=;"
+hbase.mob.compactor.class $r9
+hadoop.kerberos.kinit.command "kinit"
+r2 r3
+dfs.client.block.write.replace-datanode-on-failure.policy "DEFAULT"
+dfs.client.context "default"
+hbase.crypto.key.algorithm "AES"
+hbase.crypto.key.algorithm "AES"
+hbase.crypto.master.key.name $r7
+replication.replicationsource.implementation r16
+zookeeper.znode.replication.hfile.refs "hfile-refs"
+zookeeper.znode.replication.rs "rs"
+zookeeper.znode.replication.peers "peers"
+zookeeper.znode.replication "replication"
+zookeeper.znode.masterMaintenance "master-maintenance"
+zookeeper.znode.namespace "namespace"
+zookeeper.znode.switch "switch"
+zookeeper.znode.regionNormalizer "normalizer"
+zookeeper.znode.balancer "balancer"
+zookeeper.znode.splitlog "splitWAL"
+zookeeper.znode.clusterId "hbaseid"
+zookeeper.znode.tableEnableDisable "table"
+zookeeper.znode.state "running"
+zookeeper.znode.backup.masters "backup-masters"
+zookeeper.znode.master "master"
+zookeeper.znode.draining.rs "draining"
+zookeeper.znode.rs "rs"
+zookeeper.znode.metaserver "meta-region-server"
+zookeeper.znode.parent "/hbase"
+hbase.canary.region.write.table.name $r11
+hbase.security.authentication.spnego.admin.groups null
+hbase.security.authentication.spnego.admin.users null
+zookeeper.znode.replication "replication"
+create.table "yes"
+hbase.rpc.protection $r13
+hadoop.rpc.socket.factory.class.default "org.apache.hadoop.net.StandardSocketFactory"
+mapreduce.application.framework.path ""
+mapreduce.job.queuename "default"
+zookeeper.znode.hfile.archive "hfilearchive"
+hbase.crypto.keyprovider.parameters ""
+hbase.crypto.keyprovider $r4
+hbase.crypto.cipherprovider $r3
+hbase.crypto.key.algorithm "AES"
+hbase.crypto.master.key.name $r13
+yarn.http.policy $r1
+r1 r2
+hbase.regionserver.abort.timeout.task $r67
+zookeeper.znode.replication.regions "regions"
+zookeeper.znode.replication.hfile.refs "hfile-refs"
+zookeeper.znode.replication.rs "rs"
+yarn.ipc.record.factory.class "org.apache.hadoop.yarn.factories.impl.pb.RecordFactoryPBImpl"
+yarn.nodemanager.remote-app-log-dir-suffix "logs"
+yarn.nodemanager.remote-app-log-dir "/tmp/logs"
+hbase.master.init.timeout.localHBaseCluster "200000"
+hbase.master.start.timeout.localHBaseCluster "30000"
+hbase.client.dns.nameserver "default"
+hbase.client.dns.interface "default"
+hbase.regionserver.thrift.ipaddress "0.0.0.0"
+hbase.security.authentication.ui null
+ssl.server.truststore.type "jks"
+ssl.server.keystore.type "jks"
+r2 $r8
+zookeeper.znode.replication.peers "peers"
+zookeeper.znode.replication.peers.state "peer-state"
+mapreduce.client.output.filter "FAILED"
+ignore.unmatched.families ""
+mapreduce.job.name $r18
+r3 $r18
+hadoop.security.crypto.cipher.suite "AES/CTR/NoPadding"
+fs.defaultFS "file:///"
+fs.defaultFS "file:///"
+mapreduce.map.output.key.field.separator "\t"
+mapreduce.map.output.key.field.separator "\t"
+hbase.mapred.groupingtablemap.columns ""
+dfs.user.home.dir.prefix "/user"
+r1 r2
+mapreduce.job.name r2
+mapreduce.jobtracker.address "localhost:8012"
+mapreduce.framework.name "yarn"
+mapreduce.framework.name "yarn"
+mapreduce.job.name $r20
+mapreduce.job.name $r14
+mapreduce.job.name $r18
+r2 $r11
+zookeeper.znode.replication.peers.state "peer-state"
+hbase.regionserver.thrift.server.type $r5
+r1 r2
+hbase.thrift.info.bindAddress "0.0.0.0"
+hbase.thrift.dns.nameserver "default"
+hbase.thrift.dns.interface "default"
+mapreduce.job.name $r26
+hbase.snapshot.working.dir $r4
+hadoop.security.authentication "simple"
+hadoop.security.auth_to_local r7
+hbase.fs.tmp.dir $r6
+mapreduce.totalorderpartitioner.path "_partition.lst"
+fs.defaultFS "file:///"
+hbase.client.connection.impl $r6
+create.table "yes"
+mapreduce.job.name $r28
+mapreduce.job.name $r13
+mapreduce.job.name $r27
+hbase.wal.dir $r4
+mapreduce.job.name $r12

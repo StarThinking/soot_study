@@ -1,0 +1,6 @@
+hbase.region.replica.storefile.refresh.memstore.multiplier 4.0
+hbase.ipc.server.callqueue.codel.lifo.threshold 0.8
+hbase.master.quotas.observer.report.percent 0.95
+hbase.util.default.lossycounting.errorrate 0.02
+hbase.hregion.max.filesize.jitter 0.25
+r1 d0

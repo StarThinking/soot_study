@@ -1,0 +1,2 @@
+hadoop.user.group.metrics.percentiles.intervals
+r1

@@ -1,0 +1,6 @@
+hbase.coprocessor.master.classes
+hbase.coprocessor.region.classes
+hbase.superuser
+hbase.zookeeper.quorum
+mapreduce.job.hdfs-servers
+yarn.resourcemanager.ha.rm-ids

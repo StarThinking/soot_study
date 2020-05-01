@@ -1,0 +1,7 @@
+hbase.hregion.majorcompaction.jitter
+hbase.hstore.compaction.ratio
+hbase.hstore.compaction.ratio.offpeak
+hbase.mob.cache.evict.remain.ratio
+hbase.regions.slop
+hbase.regionserver.global.memstore.size
+hfile.block.cache.size
