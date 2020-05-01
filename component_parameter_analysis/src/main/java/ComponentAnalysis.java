@@ -22,6 +22,12 @@ import soot.jimple.internal.*;
 import soot.util.*;
 import soot.Type;
 
+import java.io.File;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.InputStreamReader;
 import java.util.*;
 import java.lang.Exception;
 
@@ -31,25 +37,32 @@ public class ComponentAnalysis {
     private static ArrayList<String> procDirList = new ArrayList<String>();
     private static String classPath = ".";
 
-    static {	
-        procDirList.add("/root/hadoop-3.1.2-src/hadoop-hdfs-project/hadoop-hdfs/target/classes");
-        procDirList.add("/root/hadoop-3.1.2-src/hadoop-hdfs-project/hadoop-hdfs-client/target/classes");
-        procDirList.add("/root/hadoop-3.1.2-src/hadoop-hdfs-project/hadoop-hdfs-httpfs/target/classes");
-        procDirList.add("/root/hadoop-3.1.2-src/hadoop-hdfs-project/hadoop-hdfs-native-client/target/classes");
-        procDirList.add("/root/hadoop-3.1.2-src/hadoop-hdfs-project/hadoop-hdfs-nfs/target/classes");
-        procDirList.add("/root/hadoop-3.1.2-src/hadoop-hdfs-project/hadoop-hdfs-rbf/target/classes");
-
-        classPath += ":/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/hadoop-hdfs-3.1.2.jar";
-        classPath += ":/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/hadoop-hdfs-client-3.1.2.jar";
-        classPath += ":/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/hadoop-hdfs-httpfs-3.1.2.jar";
-        classPath += ":/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/hadoop-hdfs-native-client-3.1.2.jar";
-        classPath += ":/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/hadoop-hdfs-nfs-3.1.2.jar";
-        classPath += ":/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/hdfs/hadoop-hdfs-rbf-3.1.2.jar";
-        classPath += ":/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/hadoop-common-3.1.2.jar";
-        classPath += ":/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/hadoop-nfs-3.1.2.jar";
-        classPath += ":/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/common/hadoop-kms-3.1.2.jar";
-        classPath += ":/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/client/hadoop-client-api-3.1.2.jar";
-        classPath += ":/root/hadoop-3.1.2-src/hadoop-dist/target/hadoop-3.1.2/share/hadoop/client/hadoop-client-runtime-3.1.2.jar";
+    private static void loadClassPath(String classPathPath) {
+	try {
+	    BufferedReader reader = new BufferedReader(new FileReader(classPathPath));
+	    String buffer = "";
+	    while ((buffer = reader.readLine()) != null) {
+	        if (!buffer.equals("null"))
+	            classPath += ":" + buffer;
+            }
+            reader.close();
+	} catch(Exception e) {
+ 	    e.printStackTrace();
+	}
+    }
+    
+    private static void loadProcDirList(String procDirListPath) {
+	try {
+	    BufferedReader reader = new BufferedReader(new FileReader(procDirListPath));
+	    String buffer = "";
+	    while ((buffer = reader.readLine()) != null) {
+	        if (!buffer.equals("null"))
+	            procDirList.add(buffer);
+            }
+            reader.close();
+	} catch(Exception e) {
+ 	    e.printStackTrace();
+	}
     }
 
     public static void init(String componentClass) {
@@ -110,13 +123,23 @@ public class ComponentAnalysis {
     }
 
     public static void main(String[] args) {
-	String selectedMethod = args[0];
-        String componentClass = args[1];
-        //String[] selection = {"getLong"};
-        //String[] selection = {"getInt", "getLong", "getLongBytes", "getBoolean"};
-        //List<String> selectionList = Arrays.asList(selection);
-        //RefType stringType = RefType.v("java.lang.String");
-                
+	if (args.length != 4) {
+	    System.out.println("Wrong arguments: [procDirListPath] [classPathPath] [selectedMethod] [componentClass]");
+	    System.exit(-1);
+	}
+	String procDirListPath = args[0];
+	String classPathPath = args[1];
+	String selectedMethod = args[2];
+        String componentClass = args[3];
+        
+	loadClassPath(classPathPath);
+	loadProcDirList(procDirListPath);
+        /*System.out.println("classPath = " + classPath);	
+        for (String s : procDirList ) {
+	    System.out.println("procDir = " + s);
+	}	
+        System.exit(0);*/     
+
         // init once and perform analysises for different functions
         ComponentAnalysis.init(componentClass);
 
