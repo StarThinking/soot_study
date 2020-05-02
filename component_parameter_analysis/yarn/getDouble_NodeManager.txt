@@ -1,2 +1,0 @@
-yarn.resourcemanager.monitor.capacity.preemption.max_ignored_over_capacity
-yarn.resourcemanager.monitor.capacity.preemption.natural_termination_factor

@@ -1,5 +1,7 @@
 # Component Parameter Analysis
 
+Note that the .txt is filtered!
+
 ## Build
 gradle build
 

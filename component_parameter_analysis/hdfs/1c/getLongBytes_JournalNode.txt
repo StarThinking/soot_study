@@ -1,0 +1,4 @@
+r1
+dfs.blocksize
+dfs.blocksize
+dfs.blocksize

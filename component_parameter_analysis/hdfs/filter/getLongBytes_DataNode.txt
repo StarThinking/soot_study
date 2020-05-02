@@ -1,2 +1,0 @@
-dfs.blocksize
-dfs.datanode.balance.bandwidthPerSec

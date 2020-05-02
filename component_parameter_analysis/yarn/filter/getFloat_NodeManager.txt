@@ -1,8 +1,0 @@
-yarn.nodemanager.disk-health-checker.disk-utilization-watermark-low-per-disk-percentage
-yarn.nodemanager.disk-health-checker.max-disk-utilization-per-disk-percentage
-yarn.nodemanager.disk-health-checker.min-healthy-disks
-yarn.nodemanager.resource.memory.cgroups.soft-limit-percentage
-yarn.nodemanager.resource.pcores-vcores-multiplier
-yarn.nodemanager.vmem-pmem-ratio
-yarn.resourcemanager.nm-container-queuing.queue-limit-stdev
-yarn.timeline-service.version

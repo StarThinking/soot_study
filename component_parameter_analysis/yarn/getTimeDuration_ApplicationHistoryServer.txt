@@ -1,4 +1,1 @@
-hadoop.service.shutdown.timeout
 yarn.resourcemanager.reservation-system.planfollower.time-step
-hadoop.registry.dns.dns-ttl
-r1

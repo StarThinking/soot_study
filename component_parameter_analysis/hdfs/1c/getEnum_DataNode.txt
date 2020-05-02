@@ -1,0 +1,2 @@
+zlib.compress.strategy
+zlib.compress.level

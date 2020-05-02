@@ -1,2 +1,0 @@
-dfs.metrics.percentiles.intervals
-hadoop.user.group.metrics.percentiles.intervals

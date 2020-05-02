@@ -1,5 +1,1 @@
 dfs.blocksize
-dfs.blocksize
-dfs.blocksize
-dfs.blocksize
-r1

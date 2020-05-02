@@ -1,7 +1,0 @@
-mapreduce.job.reduce.slowstart.completedmaps
-mapreduce.job.speculative.slowtaskthreshold
-mapreduce.map.sort.spill.percent
-mapreduce.reduce.input.buffer.percent
-mapreduce.reduce.shuffle.input.buffer.percent
-mapreduce.reduce.shuffle.memory.limit.percent
-mapreduce.reduce.shuffle.merge.percent
