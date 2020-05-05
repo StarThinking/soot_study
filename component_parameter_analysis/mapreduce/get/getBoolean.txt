@@ -5,10 +5,10 @@ mapreduce.job.classloader
 mapreduce.job.emit-timeline-data
 mapreduce.job.encrypted-intermediate-data
 mapreduce.job.finish-when-all-reducers-done
-mapreduce.job.local-fs.single-disk-limit.check.kill-limit-exceed
 mapreduce.jobhistory.always-scan-user-dir
 mapreduce.jobhistory.cleaner.enable
 mapreduce.jobhistory.recovery.enable
+mapreduce.job.local-fs.single-disk-limit.check.kill-limit-exceed
 mapreduce.map.output.compress
 mapreduce.map.speculative
 mapreduce.output.fileoutputformat.compress

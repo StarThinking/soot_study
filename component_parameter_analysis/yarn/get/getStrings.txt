@@ -1,0 +1,6 @@
+yarn.nodemanager.health-checker.script.opts
+yarn.nodemanager.node-attributes.provider.script.opts
+yarn.nodemanager.node-labels.provider.script.opts
+yarn.nodemanager.resource-plugins
+yarn.resourcemanager.scheduler.monitor.policies
+yarn.resource-types

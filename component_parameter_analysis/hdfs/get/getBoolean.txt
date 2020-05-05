@@ -12,8 +12,6 @@ dfs.client.read.shortcircuit.skip.checksum
 dfs.client.use.datanode.hostname
 dfs.client.use.legacy.blockreader.local
 dfs.client.write.byte-array-manager.enabled
-dfs.data.transfer.client.tcpnodelay
-dfs.data.transfer.server.tcpnodelay
 dfs.datanode.block-pinning.enabled
 dfs.datanode.drop.cache.behind.reads
 dfs.datanode.drop.cache.behind.writes
@@ -22,6 +20,8 @@ dfs.datanode.sync.behind.writes
 dfs.datanode.sync.behind.writes.in.background
 dfs.datanode.transferTo.allowed
 dfs.datanode.use.datanode.hostname
+dfs.data.transfer.client.tcpnodelay
+dfs.data.transfer.server.tcpnodelay
 dfs.disk.balancer.enabled
 dfs.encrypt.data.overwrite.downstream.derived.qop
 dfs.encrypt.data.transfer
@@ -62,8 +62,8 @@ dfs.namenode.redundancy.considerLoad
 dfs.namenode.reject-unresolved-dn-topology-mapping
 dfs.namenode.send.qop.enabled
 dfs.namenode.snapshot.capture.openfiles
-dfs.namenode.snapshot.skip.capture.accesstime-only-change
 dfs.namenode.snapshotdiff.allow.snap-root-descendant
+dfs.namenode.snapshot.skip.capture.accesstime-only-change
 dfs.namenode.support.allow.format
 dfs.namenode.top.enabled
 dfs.namenode.xattrs.enabled

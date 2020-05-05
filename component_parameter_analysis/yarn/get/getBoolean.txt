@@ -25,11 +25,11 @@ yarn.nodemanager.opportunistic-containers-use-pause-for-preemption
 yarn.nodemanager.pmem-check-enabled
 yarn.nodemanager.recovery.enabled
 yarn.nodemanager.recovery.supervised
-yarn.nodemanager.resource-plugins.fail-fast
 yarn.nodemanager.resource.count-logical-processors-as-cores
 yarn.nodemanager.resource.detect-hardware-capabilities
 yarn.nodemanager.resource.memory.enabled
 yarn.nodemanager.resource.memory.enforced
+yarn.nodemanager.resource-plugins.fail-fast
 yarn.nodemanager.runtime.linux.docker.delayed-removal.allowed
 yarn.nodemanager.runtime.linux.docker.enable-userremapping.allowed
 yarn.nodemanager.vmem-check-enabled
